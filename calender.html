@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Live Chat - Settings</title>
+
+    <link rel="shortcut icon" href="./img/logo.png" type="image/png">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar accordion border-right bg-white toggled" id="accordionSidebar" style="z-index: 2;">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <img src="./img/logo.png" alt="logo">
+                </div>
+                <div class="sidebar-brand-text mx-3" style="text-transform: none; color: black;">LiveChat</div>
+            </a>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <img src="./img/inbox.png" alt="inbox">
+                    <span style="color: #858796;" id="sidebarlink">Inbox</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="archives.html">
+                    <img src="./img/archive.png" alt="archive">
+                    <span style="color: #858796;" id="sidebarlink">Archives</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="meetings.html">
+                    <img src="./img/video.png" alt="video">
+                    <span style="color: #858796;" id="sidebarlink">Meetings</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="settings.html">
+                    <img src="./img/settings-active.png" alt="settings-active">
+                    <span id="sidebarlink">Settings</span></a>
+            </li>
+
+            <li id="navitemtoggle" class="nav-item">
+                <div class="custom-control custom-switch nav-link">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                    <label class="custom-control-label" for="customSwitch1" style="margin-left: 44px;"></label>
+                    <span class="space-right">Agent</span>
+                </div>
+            </li>
+            <li id="navitemtoggle" class="nav-item">
+                <div class="custom-control custom-switch nav-link">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                    <label class="custom-control-label" for="customSwitch2" style="margin-left: 44px;"></label>
+                    <span class="space-right">Online</span>
+                </div>
+            </li>
+
+            <br>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content" class="bg-white">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar static-top border-bottom">
+                    <h2>Settings</h2>
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid pl-1 pr-2 arange">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 live-chat-setting" id="live-chat-setting-menu">
+
+                            <div class="live-chat-setting-functionalities">
+
+                                <ul class="live-chat-setting-section">
+                                    <li class="setting-item ">
+
+                                        <a class="setting-link" href="settings.html">
+                                            <img src="./img/profileicon.png" type="image">
+                                            <!-- <img class="icon-on-mobile" src="./img/profileicon.png" type="image"> -->
+
+                                            <span>Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item live-chat-active-customer-setting">
+
+                                        <a class="setting-link" href="#">
+                                            <img class="icon-on-desktop" src="./img/calender-icon.svg" type="image">
+                                            <img class="icon-on-mobile" src="./img/calendericon.png" type="image">
+                                            <span class="active-1">Calendar</span>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item ">
+
+                                        <a class="setting-link" href="canned-response.html">
+                                            <img src="./img/response.png" type="image">
+                                            <span>Canned Response</span>
+                                        </a>
+                                    </li>
+                                    <li class="setting-item ">
+
+                                        <a class="setting-link" href="#">
+                                            <img src="./img/g-settingicon.png" type="image">
+                                            <span>General Settings</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 live-chat-calendar-content-toggle" id="live-chat-setting-content" style="height: calc(100vh - 4.375rem); background: #FAFAFA;">
+
+                            <div class="live-chat-setting-calender-heading ">
+                                <div class="row">
+                                    <img src="./img/mobile-back.svg" class="back-arrow-div" id="live-chat-active-customers-opener-setting">
+                                    <img src="./img/calendericon.png" type="image">
+                                    <span>Calendar</span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-calender-date">
+
+                                        <select name="day">
+                                                <option>Days</option>
+                                                <option value="01">Monday</option>
+                                                <option value="02">Tuesday</option>
+                                                <option value="03">Wednesday</option>
+                                                <option value="04">Thursday</option>
+                                                <option value="05">Friday</option>
+                                                <option value="06">Saturday</option>
+                                                <option value="07">Sunday</option>
+                                                
+                                           </select>
+
+
+                                        <select name="month">
+                                                <option>Months</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                             </select>
+
+
+                                        <select name="year">
+                                                <option>Year</option>
+                                                
+                                                <option value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2000">2000</option>
+                                                <option value="1999">1999</option>
+                                                <option value="1998">1998</option>
+                                                <option value="1997">1997</option>
+                                                <option value="1996">1996</option>
+                                                <option value="1995">1995</option>
+                                              
+                                           </select>
+
+
+
+                                        <div class="search-container">
+                                            <form action="#">
+                                                <button type="submit"><img src="img/Vector-search.svg"></button>
+                                                <input type="text" placeholder="Search" name="search">
+
+                                            </form>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-calender-area">
+                                <table role="table" id="example" class="display">
+                                    <thead role="rowgroup">
+                                        <tr role="row">
+                                            <th role="columnheader">Date </th>
+                                            <th role="columnheader">Day</th>
+                                            <th role="columnheader">Start Time</th>
+                                            <th role="columnheader">End Time</th>
+                                            <th role="columnheader">Created By</th>
+                                            <th role="columnheader">Created Date</th>
+                                            <th role="columnheader">Modified By</th>
+                                            <th role="columnheader">Modified Date</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody role="rowgroup">
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <!-- <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr> -->
+
+                                    </tbody>
+                                </table>
+
+                                <div class="container-fluid">
+                                    <p>Showing 0 to 0 of 0 entries
+                                    </p>
+                                    <div class="pagination-div">
+                                        <ul class="pagination-content">
+                                            <li class="active-page"><a style="color: #0254D7;" href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>.</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/setting.js"></script>
+
+    </script>
+</body>
+
+</html>
