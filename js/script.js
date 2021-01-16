@@ -134,19 +134,3 @@ window.onclick = function(event) {
     }
 
 }
-
-
-function myLogoCollapse() {
-
-
-    var onCollapse = document.getElementById("oncollapse");
-    var withoutCollapse = document.getElementById("without-collapse");
-    if (getComputedStyle(withoutCollapse).display === 'none') {
-        onCollapse.style.display = "none";
-        withoutCollapse.style.display = "block";
-    } else {
-        onCollapse.style.display = "block";
-        withoutCollapse.style.display = "none";
-    }
-
-}

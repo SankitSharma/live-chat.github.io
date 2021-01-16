@@ -99,6 +99,46 @@ function myFunctionResponse() {
 
 
 
+// function activeProfileHandler() {
+//     console.log(node);
+
+//     if (window.innerWidth < 768) {
+//         var activeElement = document.getElementById('live-chat-setting-menu');
+//         if (getComputedStyle(activeElement).display === 'block') {
+//             activeElement.style.display = 'none';
+//             document.getElementById('live-chat-setting-content').style.display = 'block';
+
+//         } else {
+//             activeElement.style.display = 'block';
+//             document.getElementById('live-chat-setting-content').style.display = 'none';
+
+
+//         }
+//     }
+// }
+
+
+
+
+//document.querySelectorAll('.live-chat-active-customer-setting').forEach(node => node.addEventListener('click', activeProfileHandler));
+//document.getElementById('live-chat-active-customers-opener-setting').addEventListener('click', activeProfileHandler);
+
+
+// window.addEventListener("resize", () => {
+//     if (window.innerWidth >= 768) {
+
+//         document.getElementById('live-chat-setting-menu').style.display = 'block';
+//         document.getElementById('live-chat-setting-content').style.display = 'block';
+
+//     } else {
+
+//         document.getElementById('live-chat-setting-menu').style.display = 'block';
+//         document.getElementById('live-chat-setting-content').style.display = 'none';
+
+//     }
+// });
+
+
 
 $(document).ready(function() {
 
