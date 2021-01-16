@@ -30,6 +30,49 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
+
+        <!-- Canned Response modal -->
+        <div class="canned-response-model" id="myModel">
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-popup">
+                <form action="#" class="form-container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 canned-response-popup-content">
+                            <h6>Add Canned Response</h6>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label>Keyword</label>
+                            <input type="text" placeholder="Enter Keyword">
+
+                        </div>
+                        <div class="col-6">
+                            <label>Canned Response</label>
+                            <input type="text" placeholder="Enter Canned Response">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p>Visibilty: Public</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12" style="text-align: right; margin-top: 55px;">
+                            <button class="cancelBtn">Cancel</button>
+                            <button class="addBtn">Add</button>
+
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar accordion border-right bg-white toggled" id="accordionSidebar" style="z-index: 2;">
 
@@ -44,22 +87,22 @@
 
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
-                    <img src="./img/inbox.png" alt="inbox">
+                    <img src="./img/inbox.svg" alt="inbox">
                     <span style="color: #858796;" id="sidebarlink">Inbox</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="archives.html">
-                    <img src="./img/archive.png" alt="archive">
+                    <img src="./img/archive.svg" alt="archive">
                     <span style="color: #858796;" id="sidebarlink">Archives</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="meetings.html">
-                    <img src="./img/video.png" alt="video">
+                    <img src="./img/video.svg" alt="video">
                     <span style="color: #858796;" id="sidebarlink">Meetings</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="settings.html">
-                    <img src="./img/settings-active.png" alt="settings-active">
+                    <img src="./img/settings-active.svg" alt="settings-active">
                     <span id="sidebarlink">Settings</span></a>
             </li>
 
@@ -142,33 +185,35 @@
                             <div class="live-chat-setting-functionalities">
 
                                 <ul class="live-chat-setting-section">
-                                    <li class="setting-item live-chat-active-customer-setting">
+                                    <li class="setting-item live-chat-active-customer-setting" onclick="myFunctionProfile()">
 
-                                        <a class="setting-link" href="#">
-                                            <img class="icon-on-desktop" src="./img/profile-icon.png" type="image">
-                                            <img class="icon-on-mobile" src="./img/profileicon.png" type="image">
+                                        <a class="setting-link" id="live-chat-profile-div">
+                                            <img id="profile-blue-icon" src="./img/profile-icon.svg" type="image">
+                                            <img id="profile-gray-icon" src="./img/profileicon.svg" type="image">
 
-                                            <span class="active-1">Profile</span>
+                                            <span id="profile-color-change">Profile</span>
                                         </a>
                                     </li>
-                                    <li class="setting-item ">
+                                    <li class="setting-item " onclick="myFunctionCalendar()">
 
-                                        <a class="setting-link" href="calender.html">
-                                            <img src="./img/calendericon.png" type="image">
-                                            <span>Calendar</span>
+                                        <a class="setting-link" id="live-chat-calendar-div">
+                                            <img id="calendar-blue-icon" src="./img/calender-icon.svg" type="image">
+                                            <img id="calendar-gray-icon" src="./img/calendericon.svg" type="image">
+                                            <span id="calendar-color-change">Calendar</span>
                                         </a>
                                     </li>
-                                    <li class="setting-item ">
+                                    <li class="setting-item " onclick="myFunctionResponse()">
 
-                                        <a class="setting-link" href="canned-response.html">
-                                            <img src="./img/response.png" type="image">
-                                            <span>Canned Response</span>
+                                        <a class="setting-link" id="live-chat-canned-response-div">
+                                            <img id="response-blue-icon" src="./img/canned-response.svg" type="image">
+                                            <img id="response-gray-icon" src="./img/response.svg" type="image">
+                                            <span id="response-color-change">Canned Response</span>
                                         </a>
                                     </li>
                                     <li class="setting-item">
 
-                                        <a class="setting-link" href="#">
-                                            <img src="./img/g-settingicon.png" type="image">
+                                        <a class="setting-link">
+                                            <img src="./img/g-settingicon.svg" type="image">
                                             <span>General Settings</span>
                                         </a>
                                     </li>
@@ -177,11 +222,11 @@
 
                             </div>
                         </div>
-                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2" id="live-chat-setting-content" style="height: calc(100vh - 4.375rem); background: #FAFAFA;">
+                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-setting-content-p" style="height: calc(100vh - 4.375rem); background: #FAFAFA;">
 
                             <div class="live-chat-setting-profile-heading ">
-                                <img src="./img/mobile-back.svg" class="back-arrow-div" id="live-chat-active-customers-opener-setting">
-                                <img src="./img/profileicon.png" type="image">
+                                <img src="./img/mobile-back.svg" class="back-arrow-div" id="live-chat-active-customers-opener-setting" onclick="myFunctionArrow()">
+                                <img src="./img/profileicon.svg" type="image">
                                 <span>Profile Settings</span>
 
                             </div>
@@ -265,6 +310,374 @@
 
                         </div>
 
+                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-setting-content-c" style="height: calc(100vh - 4.375rem); background: #FAFAFA;">
+
+                            <div class="live-chat-setting-calender-heading ">
+                                <div class="row">
+                                    <img src="./img/mobile-back.svg" class="back-arrow-div" id="live-chat-active-customers-opener-setting" onclick="myFunctionArrow()">
+                                    <img src="./img/calendericon.svg" type="image" width="15px" height="15px">
+                                    <span>Calendar</span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-calender-date">
+
+                                        <select name="day">
+                                                <option>Days</option>
+                                                <option value="01">Monday</option>
+                                                <option value="02">Tuesday</option>
+                                                <option value="03">Wednesday</option>
+                                                <option value="04">Thursday</option>
+                                                <option value="05">Friday</option>
+                                                <option value="06">Saturday</option>
+                                                <option value="07">Sunday</option>
+                                                
+                                           </select>
+
+
+                                        <select name="month">
+                                                <option>Months</option>
+                                                <option value="01">January</option>
+                                                <option value="02">February</option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                             </select>
+
+
+                                        <select name="year">
+                                                <option>Year</option>
+                                                
+                                                <option value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2009">2009</option>
+                                                <option value="2008">2008</option>
+                                                <option value="2007">2007</option>
+                                                <option value="2006">2006</option>
+                                                <option value="2005">2005</option>
+                                                <option value="2004">2004</option>
+                                                <option value="2003">2003</option>
+                                                <option value="2002">2002</option>
+                                                <option value="2001">2001</option>
+                                                <option value="2000">2000</option>
+                                                <option value="1999">1999</option>
+                                                <option value="1998">1998</option>
+                                                <option value="1997">1997</option>
+                                                <option value="1996">1996</option>
+                                                <option value="1995">1995</option>
+                                              
+                                           </select>
+
+
+
+                                        <div class="search-container">
+                                            <form action="#">
+                                                <button type="submit"><img src="img/Vector-search.svg"></button>
+                                                <input type="text" placeholder="Search" name="search">
+
+                                            </form>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-calender-area">
+                                <table role="table" id="example" class="display">
+                                    <thead role="rowgroup">
+                                        <tr role="row">
+                                            <th role="columnheader">Date </th>
+                                            <th role="columnheader">Day</th>
+                                            <th role="columnheader">Start Time</th>
+                                            <th role="columnheader">End Time</th>
+                                            <th role="columnheader">Created By</th>
+                                            <th role="columnheader">Created Date</th>
+                                            <th role="columnheader">Modified By</th>
+                                            <th role="columnheader">Modified Date</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody role="rowgroup">
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11:00 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr>
+                                        <!-- <tr role="row">
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Wednesday</td>
+                                            <td role="cell">11 AM</td>
+                                            <td role="cell">3:00 PM</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">16/12/20</td>
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">17/12/20</td>
+
+                                        </tr> -->
+
+                                    </tbody>
+                                </table>
+
+                                <div class="container-fluid">
+                                    <p>Showing 0 to 0 of 0 entries
+                                    </p>
+                                    <div class="pagination-div">
+                                        <ul class="pagination-content">
+                                            <li class="active-page"><a style="color: #0254D7;" href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-setting-content-cr" style="height: calc(100vh - 4.375rem); background: #FAFAFA;">
+
+                            <div class="live-chat-setting-canned-response-heading ">
+                                <div class="row">
+                                    <img src="./img/mobile-back.svg" class="back-arrow-div" id="live-chat-active-customers-opener-setting" onclick="myFunctionArrow()">
+                                    <img src="./img/response.svg" type="image" width="15px" height="15px">
+                                    <span>Canned Response</span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-canned-response-popup">
+                                        <button class="open-button" id="myBtn">Add New</button>
+                                        <button class="delete-button">Delete</button>
+
+
+                                        <div class="search-container">
+                                            <form action="#">
+                                                <button type="submit"><img src="img/Vector-search.svg"></button>
+                                                <input type="text" placeholder="Search" name="search">
+
+                                            </form>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-canned-response-area">
+                                <table role="table" id="example" class="display">
+                                    <thead role="rowgroup">
+                                        <tr role="row">
+                                            <th id="left-space" role="columnheader">Keyword </th>
+                                            <th role="columnheader">Canned Response</th>
+                                            <th role="columnheader">Visibility</th>
+                                            <th role="columnheader"> </th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody role="rowgroup">
+                                        <tr role="row">
+                                            <td role="cell">
+                                                <label class="cam">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                  </label> printing
+
+                                            </td>
+                                            <td role="cell">distracted </td>
+                                            <td role="cell">Public</td>
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
+                                            </td>
+
+
+                                        </tr>
+                                        <tr role="row">
+
+                                            <td role="cell">
+                                                <label class="cam">
+                                                    <input type="checkbox" >
+                                                    <span class="checkmark"></span>
+                                                  </label> fact
+
+                                            </td>
+                                            <td role="cell">opposed </td>
+                                            <td role="cell">Public</td>
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row">
+
+                                            <td role="cell">
+                                                <label class="cam">
+                                                    <input type="checkbox" >
+                                                    <span class="checkmark"></span>
+                                                  </label> content
+
+                                            </td>
+                                            <td role="cell">model </td>
+                                            <td role="cell">Public</td>
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row">
+
+                                            <td role="cell">
+                                                <label class="cam">
+                                                    <input type="checkbox" >
+                                                    <span class="checkmark"></span>
+                                                  </label> readable
+
+                                            </td>
+                                            <td role="cell">passages </td>
+                                            <td role="cell">Public</td>
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
+                                            </td>
+
+                                        </tr>
+                                        <tr role="row">
+
+                                            <td role="cell">
+                                                <label class="cam">
+                                                    <input type="checkbox" >
+                                                    <span class="checkmark"></span>
+                                                  </label> content
+
+                                            </td>
+                                            <td role="cell">model </td>
+                                            <td role="cell">Public</td>
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
+                                            </td>
+
+                                        </tr>
+                                        <!-- <tr role="row">
+
+                                            <td role="cell">
+                                                <label class="cam">
+                                                    <input type="checkbox" >
+                                                    <span class="checkmark"></span>
+                                                  </label> content
+
+                                            </td>
+                                            <td role="cell">model </td>
+                                            <td role="cell">Public</td>
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
+                                            </td>
+
+                                        </tr> -->
+
+
+                                    </tbody>
+                                </table>
+
+                                <div class="container-fluid">
+                                    <p>Showing 0 to 0 of 0 entries
+                                    </p>
+                                    <div class="pagination-div">
+                                        <ul class="pagination-content">
+                                            <li class="active-page"><a style="color: #0254D7;" href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
 
                     </div>
 
@@ -326,8 +739,7 @@
 
     <script src="js/script.js"></script>
     <script src="js/setting.js"></script>
-    <script>
-    </script>
+
 </body>
 
 </html>

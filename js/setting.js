@@ -1,40 +1,102 @@
-function activeProfileHandler() {
+function myFunctionArrow() {
 
     if (window.innerWidth < 768) {
-        var activeElement = document.getElementById('live-chat-setting-menu');
-        if (getComputedStyle(activeElement).display === 'block') {
-            activeElement.style.display = 'none';
-            document.getElementById('live-chat-setting-content').style.display = 'block';
+        document.getElementById("live-chat-setting-content-p").style.display = "none";
+        document.getElementById("live-chat-setting-menu").style.display = "block";
+        document.getElementById("live-chat-setting-content-c").style.display = "none";
+        document.getElementById("live-chat-setting-content-cr").style.display = "none";
 
-        } else {
-            activeElement.style.display = 'block';
-            document.getElementById('live-chat-setting-content').style.display = 'none';
-
-
-        }
     }
+}
+
+function myFunctionProfile() {
+
+
+
+
+    if (window.innerWidth >= 768) {
+        document.getElementById("live-chat-setting-content-p").style.display = "block";
+        document.getElementById("live-chat-setting-content-c").style.display = "none";
+        document.getElementById("live-chat-setting-content-cr").style.display = "none";
+        document.getElementById("profile-blue-icon").style.display = "inline-block";
+        document.getElementById("profile-gray-icon").style.display = "none";
+        document.getElementById("response-blue-icon").style.display = "none";
+        document.getElementById("response-gray-icon").style.display = "inline-block";
+        document.getElementById("calendar-blue-icon").style.display = "none";
+        document.getElementById("calendar-gray-icon").style.display = "inline-block";
+        document.getElementById("profile-color-change").style.color = "#0254D7";
+        document.getElementById("response-color-change").style.color = "#4D4D4D";
+        document.getElementById("calendar-color-change").style.color = "#4D4D4D";
+
+
+    }
+    if (window.innerWidth < 768) {
+        document.getElementById("live-chat-setting-content-p").style.display = "block";
+        document.getElementById("live-chat-setting-menu").style.display = "none"
+        document.getElementById("live-chat-setting-content-c").style.display = "none";
+        document.getElementById("live-chat-setting-content-cr").style.display = "none";
+
+    }
+
+}
+
+function myFunctionCalendar() {
+
+
+    if (window.innerWidth >= 768) {
+        document.getElementById("live-chat-setting-content-p").style.display = "none";
+        document.getElementById("live-chat-setting-content-c").style.display = "block";
+        document.getElementById("live-chat-setting-content-cr").style.display = "none";
+        document.getElementById("calendar-blue-icon").style.display = "inline-block";
+        document.getElementById("calendar-gray-icon").style.display = "none";
+        document.getElementById("profile-blue-icon").style.display = "none";
+        document.getElementById("profile-gray-icon").style.display = "inline-block";
+        document.getElementById("response-blue-icon").style.display = "none";
+        document.getElementById("response-gray-icon").style.display = "inline-block";
+        document.getElementById("calendar-color-change").style.color = "#0254D7";
+        document.getElementById("profile-color-change").style.color = "#4D4D4D";
+        document.getElementById("response-color-change").style.color = "#4D4D4D";
+
+    }
+    if (window.innerWidth < 768) {
+        document.getElementById("live-chat-setting-content-p").style.display = "none";
+        document.getElementById("live-chat-setting-menu").style.display = "none"
+        document.getElementById("live-chat-setting-content-c").style.display = "block";
+        document.getElementById("live-chat-setting-content-cr").style.display = "none";
+
+
+    }
+
+}
+
+function myFunctionResponse() {
+    if (window.innerWidth >= 768) {
+        document.getElementById("live-chat-setting-content-p").style.display = "none";
+        document.getElementById("live-chat-setting-content-c").style.display = "none";
+        document.getElementById("live-chat-setting-content-cr").style.display = "block";
+        document.getElementById("response-blue-icon").style.display = "inline-block";
+        document.getElementById("response-gray-icon").style.display = "none";
+        document.getElementById("calendar-blue-icon").style.display = "none";
+        document.getElementById("calendar-gray-icon").style.display = "inline-block";
+        document.getElementById("profile-blue-icon").style.display = "none";
+        document.getElementById("profile-gray-icon").style.display = "inline-block";
+        document.getElementById("response-color-change").style.color = "#0254D7";
+        document.getElementById("calendar-color-change").style.color = "#4D4D4D";
+        document.getElementById("profile-color-change").style.color = "#4D4D4D";
+
+    }
+    if (window.innerWidth < 768) {
+        document.getElementById("live-chat-setting-content-p").style.display = "none";
+        document.getElementById("live-chat-setting-menu").style.display = "none"
+        document.getElementById("live-chat-setting-content-c").style.display = "none";
+        document.getElementById("live-chat-setting-content-cr").style.display = "block";
+
+    }
+
 }
 
 
 
-
-document.querySelectorAll('.live-chat-active-customer-setting').forEach(node => node.addEventListener('click', activeProfileHandler));
-document.getElementById('live-chat-active-customers-opener-setting').addEventListener('click', activeProfileHandler);
-
-
-window.addEventListener("resize", () => {
-    if (window.innerWidth >= 768) {
-
-        document.getElementById('live-chat-setting-menu').style.display = 'block';
-        document.getElementById('live-chat-setting-content').style.display = 'block';
-
-    } else {
-
-        document.getElementById('live-chat-setting-menu').style.display = 'block';
-        document.getElementById('live-chat-setting-content').style.display = 'none';
-
-    }
-});
 
 
 
