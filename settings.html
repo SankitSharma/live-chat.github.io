@@ -11,7 +11,7 @@
 
     <title>Live Chat - Settings</title>
 
-    <link rel="shortcut icon" href="./img/logo.png" type="image/png">
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/png">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -79,9 +79,11 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
-                    <img src="./img/logo.png" alt="logo">
+                    <img src="./img/logo.svg" alt="logo" width="36" height="36" id="oncollapse">
                 </div>
-                <div class="sidebar-brand-text mx-3" style="text-transform: none; color: black;">LiveChat</div>
+                <div class="sidebar-brand-text mx-3">
+                    <img src="./img/logo-collapse.svg" style="margin-left: -34px;" alt="logo" width="120" height="36" id="without-collapse">
+                </div>
             </a>
 
 
@@ -124,7 +126,7 @@
             <br>
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                <button class="rounded-circle border-0" id="sidebarToggle" onclick="myLogoCollapse()"></button>
             </div>
 
         </ul>
