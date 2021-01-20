@@ -9,18 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Live Chat - Archives</title>
-
+    <title>Live Chat - Inbox</title>
 
     <link rel="shortcut icon" href="./img/logo.svg" type="image/png">
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> -->
+
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet" />
 
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -29,6 +29,92 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
+
+        <!-- Transfer Chat Popup Model -->
+        <div class="transfer-chat-model" id="myModel">
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-popup">
+                <form action="#" class="form-container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 transfer-chat-popup-heading">
+                            <h6>Transfer Chat</h6>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Transfer chat to</label>
+                            <select>
+                              <option>Select from drop down</option>
+                              <option>Admin</option>
+                              <option>User</option>
+                            </select>
+
+                        </div>
+                        <div class="col-12">
+                            <label>Category</label>
+                            <select>
+                              <option>Select from drop down</option>
+                              <option>Admin</option>
+                              <option>User</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12" style="text-align: right; margin-top: 40px;">
+                            <button class="cancelBtn">Cancel</button>
+                            <button class="addBtn">Transfer</button>
+
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Resolve Chat Popup Model -->
+        <div class="resolve-chat-model" id="myResolveModel">
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-popup">
+                <form action="#" class="form-container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 resolve-chat-popup-heading">
+                            <h6>Resolve Chat</h6>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <p>Are you sure you want to resolve this chat?</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12" style="text-align: right; margin-top: 45px;">
+                            <button class="addBtn">Yes</button>
+                            <button class="cancelBtn">No</button>
+
+
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+
+
+
+
 
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar accordion border-right bg-white toggled" id="accordionSidebar" style="z-index: 2;">
@@ -39,20 +125,20 @@
                     <img src="./img/logo.svg" alt="logo" width="36" height="36" id="oncollapse">
                 </div>
                 <div class="sidebar-brand-text mx-3">
-                    <img src="./img/logo-collapse.svg" style="margin-left: -34px;" alt="logo" width="120" height="36" id="without-collapse">
+                    <img src="./img/logo-collapse.svg" alt="logo" width="120" height="36" id="without-collapse" style="margin-left: -34px;">
                 </div>
             </a>
 
 
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">
-                    <img src="./img/inbox.svg" alt="inbox" style="border-radius: 8px 8px 0px 0px;">
-                    <span style="color: #858796;" id="sidebarlink">Inbox</span></a>
-            </li>
             <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <img src="./img/inbox-active.svg" alt="inbox-active" style="border-radius: 8px 8px 0px 0px;">
+                    <span id="sidebarlink">Inbox</span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="archives.html">
-                    <img src="./img/archive-active.svg" alt="archive-active">
-                    <span id="sidebarlink">Archives</span></a>
+                    <img src="./img/archive.svg" alt="archive">
+                    <span style="color: #858796;" id="sidebarlink">Archives</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="meetings.html">
@@ -97,7 +183,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar static-top border-bottom">
-                    <h2>Archived Chats</h2>
+                    <h2>Inbox</h2>
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -137,137 +223,34 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid pl-1 pr-2 arange">
+                <div class="container-fluid">
                     <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 live-chat-active-customers" id="live-chat-active-customers-sidebar">
+                            <h4>
+                                Active Customers
+                            </h4>
+                            <div class="live-chat-contacts">
 
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 py-2" id="live-chat-archived-setting" style="height: calc(100vh - 4.375rem); background: #FAFAFA;">
-
-                            <div class="live-chat-setting-archived-heading ">
-
-                                <div class="row">
-                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-archived-date">
-
-                                        <select name="day" class="select-category">
-                                                <option>Chat Duration</option>
-                                                <option value="01">No Restriction</option>
-                                                <option value="02">Less than 15 Minutes</option>
-                                                <option value="03">Between 15 and 30 minutes</option>
-                                                <option value="03">Between 30 and 60 minutes</option>
-                                                <option value="03">More than 60 minutes</option>
-                                                
-                                           </select>
-
-
-                                        <input type="text" class="form-contro" id="datepicker" name="start" placeholder="Start Date">
-                                        <p style="display: inline-block; font-weight: bold;">-</p>
-                                        <input type="text" class="form-contro" id="datepickers" name="end" placeholder="End Date">
-
-                                        <button class="filter-apply-button">Apply</button>
-
-
-
-                                        <div class="search-container">
-                                            <form action="#">
-                                                <button type="submit"><img src="img/Vector-search.svg"></button>
-                                                <input type="text" placeholder="Search" name="search">
-
-                                            </form>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-archived-chats-area">
-                                <table role="table" id="example" class="display">
-                                    <thead role="rowgroup">
-                                        <tr role="row">
-                                            <th role="columnheader">Customer Name </th>
-                                            <th role="columnheader">NPS</th>
-                                            <th role="columnheader">Date</th>
-                                            <th role="columnheader">Duration</th>
-                                            <th role="columnheader"> </th>
-
-
-
-
-                                        </tr>
-                                    </thead>
-                                    <tbody role="rowgroup">
-                                        <tr role="row">
-                                            <td role="cell">Shubham.Sethia</td>
-                                            <td role="cell">N/A</td>
-                                            <td role="cell">16/12/20</td>
-                                            <td role="cell">01:10:40</td>
-
-                                            <td role="cell">
-                                                <button>
-                                                    <img style="margin-top: -2px; vertical-align: middle;" src="./img/chat-history-icon.svg">
-                                                    History</button>
-                                            </td>
-
-
-
-                                        </tr>
-                                        <tr role="row">
-                                            <td role="cell">Shubham.Sethia</td>
-                                            <td role="cell">N/A</td>
-                                            <td role="cell">16/12/20</td>
-                                            <td role="cell">01:10:40</td>
-
-                                            <td role="cell">
-                                                <button>
-                                                    <img style="margin-top: -2px; vertical-align: middle;" src="./img/chat-history-icon.svg">
-                                                    History</button>
-                                            </td>
-
-
-
-                                        </tr>
-                                        <tr role="row">
-                                            <td role="cell">Shubham.Sethia</td>
-                                            <td role="cell">N/A</td>
-                                            <td role="cell">16/12/20</td>
-                                            <td role="cell">01:10:40</td>
-
-                                            <td role="cell">
-                                                <button>
-                                                    <img style="margin-top: -2px; vertical-align: middle;" src="./img/chat-history-icon.svg">
-                                                    History</button>
-                                            </td>
-
-
-
-                                        </tr>
-
-
-                                    </tbody>
-                                </table>
-
-                                <div class="container-fluid">
-                                    <p>Showing 0 to 0 of 0 entries
-                                    </p>
-                                    <div class="pagination-div">
-                                        <ul class="pagination-content">
-                                            <li class="active-page"><a style="color: #0254D7;" href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-
-                                        </ul>
-
-                                    </div>
-
-
+                                <div class="message-customer-availablity">
+                                    Active customers appear here
 
                                 </div>
 
-
-
                             </div>
-
                         </div>
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12 py-2 px-0" style="height: calc(100vh - 3.375rem); text-align: center;">
 
+
+                            <div class="live-chat-empty-area">
+                                <img src="./img/empty-chat-image.svg">
+                                <p> Hello Shubham!<br> Time to ace those conversations</p>
+
+                            </div>
+                            <!-- <div class="live-chat-area">
+
+
+                            </div> -->
+                        </div>
 
                     </div>
 
@@ -326,19 +309,12 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <script src="js/script.js"></script>
-    <script src="js/setting.js"></script>
     <script>
-        $(function() {
-            $("#datepicker").datepicker();
-        });
-        $(function() {
-            $("#datepickers").datepicker();
-        });
     </script>
+
+
 </body>
 
 </html>

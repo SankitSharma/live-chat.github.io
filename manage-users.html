@@ -35,34 +35,32 @@
     <div id="wrapper">
 
         <!-- Export Chat Popup Model -->
-        <div class="export-chat-model" id="exportModel">
+        <div class="upload-excel-model" id="uploadexcelModel">
 
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-popup">
                 <form action="#" class="form-container">
                     <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 export-chat-popup-heading">
-                            <h6>Select Date Range</h6>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 upload-excel-popup-heading">
+                            <h6>Add Users Via Excel</h6>
 
 
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <label>Select range</label>
-                            <select>
-                      <option>Select</option>
-                      <option>Admin</option>
-                      <option>User</option>
-                    </select>
+                            <label class="file-upload-button" for="upload">Choose file</label>
+                            <input type="file" id="upload">
+
 
                         </div>
 
                     </div>
 
                     <div class="row">
-                        <div class="col-12" style="text-align: right; margin-top: 62px;">
+                        <div class="col-12" style="text-align: right; margin-top: 95px;">
+                            <a href="#">Download template</a>
                             <button class="cancelBtn">Cancel</button>
-                            <button class="exportBtn">Export</button>
+                            <button class="uploadBtn">Upload</button>
 
                         </div>
                     </div>
@@ -75,30 +73,89 @@
         </div>
 
 
-        <!-- Chat History filter Popup Model -->
-        <div class="filter-chat-model" id="filterModel">
+        <!-- Manage users create new user Popup Model -->
+        <div class="admin-create-new-user-model" id="createUserModel">
 
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-popup">
                 <form action="#" class="form-container">
                     <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 filter-chat-popup-heading">
-                            <h6>Filter</h6>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 create-new-user-popup-heading">
+                            <h6>Create New User</h6>
 
 
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
-                            <label>Filter by Agent’s username</label>
-                            <select>
-                      <option>All</option>
+                        <div class="col-12" style="display: flex;">
+                            <div class="col-6" style="margin-left: -12px;">
+                                <label>Full name</label><br>
+
+                                <input type="text" class="name-input" name="start" placeholder="Type here" required>
+                            </div>
+                            <div class="col-6" style="margin-left: 8px;">
+                                <label>Phone number</label>
+                                <input type="text" class="number-input" name="end" placeholder="Type here" required>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12" style="display: flex;">
+
+                            <div class="col-6" style="margin-left: -12px;">
+                                <label>Email</label><br>
+
+                                <input type="email" class="email-input" name="start" placeholder="Type here" required>
+                            </div>
+                            <div class="col-6" style="margin-left: 8px;">
+                                <label>Bot</label><br>
+                                <input type="text" class="bot-input" name="end" placeholder="Type here" required>
+
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12" style="display: flex;">
+
+                            <div class="col-6" style="margin-left: -12px;">
+                                <label>Status</label>
+                                <select class="select-status">
+                      <option>Select</option>
                       <option>Admin</option>
                       <option>User</option>
                     </select>
+                            </div>
+                            <div class="col-6" style="margin-left: 8px;">
+                                <label>Select Supervisor</label>
+                                <select class="select-supervisor">
+                              <option>Select</option>
+                              <option>Admin</option>
+                              <option>User</option>
+                            </select>
+
+                            </div>
+
+
+
+
 
                         </div>
+
+
+
+                    </div>
+                    <div class="row">
                         <div class="col-12">
-                            <label>Filter by chat duration</label>
+                            <label>Category</label>
                             <select>
                       <option>Select</option>
                       <option>Admin</option>
@@ -106,34 +163,16 @@
                     </select>
 
                         </div>
-                        <div class="col-12">
-                            <label>Filter by Customer status</label>
-                            <select>
-                      <option>Select</option>
-                      <option>Admin</option>
-                      <option>User</option>
-                    </select>
-
-                        </div>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <label>Filter by date range</label><br>
-                            <input type="text" class="form-contro" id="startDate" name="start" placeholder="Start Date">
-                            <input type="text" class="form-contro" id="endDate" name="end" placeholder="End Date">
-
-
-                        </div>
-
-
                     </div>
 
+
+
+
                     <div class="row">
-                        <div class="col-12" style="text-align: right; margin-top: 70px;">
+                        <div class="col-12" style="text-align: right; margin-top: 58px;">
                             <button class="cancelBtn">Cancel</button>
-                            <button class="resetBtn">Reset</button>
-                            <button class="applyfilterBtn">Apply Filters</button>
+
+                            <button class="create-user-Btn">Create User</button>
 
                         </div>
                     </div>
@@ -163,14 +202,14 @@
 
 
             <li class="nav-item">
-                <a class="nav-link active" href="chat-history.html">
-                    <img src="./img/nav-chat-history.svg" alt="chat-history-active">
-                    <span id="sidebarlink">Chat History</span></a>
+                <a class="nav-link " href="chat-history.html">
+                    <img src="./img/admin-chat-history.svg" alt="chat-history-active">
+                    <span style="color: #858796;" id="sidebarlink">Chat History</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="manage-users.html">
-                    <img src="./img/manage-users.svg" alt="manage-users">
-                    <span style="color: #858796;" id="sidebarlink">Managa Users</span></a>
+                <a class="nav-link active" href="manage-users.html">
+                    <img src="./img/manage-users-active.svg" alt="manage-users">
+                    <span id="sidebarlink">Managa Users</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="meetings.html">
@@ -178,13 +217,13 @@
                     <span style="color: #858796;" id="sidebarlink">Meetings</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="graph.html">
+                <a class="nav-link" href="meetings.html">
                     <img src="./img/bar-graph.svg" alt="graph">
                     <span style="color: #858796;" id="sidebarlink">Graph</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="settings.html">
-                    <img src="./img/settings.svg" alt="settings" style="border-radius: 20px;">
+                    <img src="./img/settings.svg" alt="settings">
                     <span style="color: #858796;" id="sidebarlink">Settings</span></a>
             </li>
 
@@ -220,7 +259,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar static-top border-bottom">
-                    <h2>Chat History</h2>
+                    <h2>Manage Users</h2>
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -263,17 +302,21 @@
                 <div class="container-fluid pl-1 pr-2 arange">
                     <div class="row">
 
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 py-2" id="live-chat-admin-chat-history" style="height: calc(100vh - 3.375rem); background: #FAFAFA;">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 py-2" id="live-chat-admin-manage-users" style="height: calc(100vh - 3.375rem); background: #FAFAFA;">
 
-                            <div class="live-chat-admin-filter-button ">
+                            <div class="live-chat-admin-user-status-field ">
+                                <div class="user-all-status-section">
+
+
+                                </div>
 
                                 <div class="row">
-                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-admin-history-heading">
-                                        <button class="filter-button" id="filterBtn">Filters
-                                            <img src="/img/filter-icon.svg">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-admin-manage-user-heading">
+                                        <button class="create-new-user-button" id="createuserBtn">Create New User
+                                           
                                         </button>
-                                        <button class="export-button" id="exportBtn">Export
-                                            <img src="/img/export-icon.svg">
+                                        <button class="upload-excel-button" id="uploadexcelBtn">Upload Excel
+                                          
                                         </button>
 
 
@@ -294,19 +337,19 @@
                                 </div>
 
                             </div>
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-admin-history-table-area">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-admin-manage-user-table-area">
                                 <table role="table" id="example" class="display">
                                     <thead role="rowgroup">
                                         <tr role="row">
-                                            <th role="columnheader">Customer name</th>
-                                            <th role="columnheader">Agent user name</th>
+                                            <th role="columnheader">User name</th>
+                                            <th role="columnheader">Name</th>
                                             <th role="columnheader">Bot name</th>
-                                            <th role="columnheader">Chat category</th>
-                                            <th role="columnheader">NPS</th>
-                                            <th role="columnheader">Start date</th>
-                                            <th role="columnheader">End date</th>
-                                            <th role="columnheader">Duration</th>
-                                            <th role="columnheader">Wait time</th>
+                                            <th role="columnheader">Category</th>
+                                            <th role="columnheader">Type</th>
+                                            <th role="columnheader">Mobile Number</th>
+                                            <th role="columnheader">Email ID</th>
+                                            <th role="columnheader">Mark as active</th>
+
                                             <th role="columnheader"> </th>
 
 
@@ -320,61 +363,20 @@
                                             <td role="cell">Lorem Ipsum</td>
                                             <td role="cell">BotUX</td>
                                             <td role="cell">Others</td>
-                                            <td role="cell">
-                                                <p class="succes">10</p>
-                                            </td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">5h 10min</td>
-                                            <td role="cell">5s</td>
+                                            <td role="cell">Agent </td>
+                                            <td role="cell">8585858585</td>
+                                            <td role="cell">shubham4@gmail.com</td>
 
                                             <td role="cell">
-                                                <button>
-                                                    
-                                                   Chat History</button>
+                                                <label class="switch">
+                                                    <input type="checkbox" >
+                                                    <span class="slider round"></span>
+                                                  </label>
                                             </td>
 
-
-
-                                        </tr>
-                                        <tr role="row">
-                                            <td role="cell">Shubham.Sethia</td>
-                                            <td role="cell">Lorem Ipsum</td>
-                                            <td role="cell">BotUX</td>
-                                            <td role="cell">Others</td>
-                                            <td role="cell">
-                                                <p class="succes">10</p>
-                                            </td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">5h 10min</td>
-                                            <td role="cell">2s</td>
-
-                                            <td role="cell">
-                                                <button>Chat History</button>
-                                            </td>
-
-
-
-                                        </tr>
-
-                                        <tr role="row">
-                                            <td role="cell">Shubham.Sethia</td>
-                                            <td role="cell">Lorem Ipsum</td>
-                                            <td role="cell">BotUX</td>
-                                            <td role="cell">Others</td>
-                                            <td role="cell">
-                                                <p class="warning">8</p>
-                                            </td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">5h 10min</td>
-                                            <td role="cell">4s</td>
-
-                                            <td role="cell">
-                                                <button>
-                                                    
-                                                   Chat History</button>
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
                                             </td>
 
 
@@ -385,20 +387,21 @@
                                             <td role="cell">Lorem Ipsum</td>
                                             <td role="cell">BotUX</td>
                                             <td role="cell">Others</td>
-                                            <td role="cell">
-                                                <p class="warning">8</p>
-                                            </td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">5h 10min</td>
-                                            <td role="cell">1s</td>
+                                            <td role="cell">Agent </td>
+                                            <td role="cell">8585858585</td>
+                                            <td role="cell">shubham4@gmail.com</td>
 
                                             <td role="cell">
-                                                <button>
-                                                    
-                                                   Chat History</button>
+                                                <label class="switch">
+                                                    <input type="checkbox" >
+                                                    <span class="slider round"></span>
+                                                  </label>
                                             </td>
 
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
+                                            </td>
 
 
 
@@ -408,18 +411,71 @@
                                             <td role="cell">Lorem Ipsum</td>
                                             <td role="cell">BotUX</td>
                                             <td role="cell">Others</td>
-                                            <td role="cell">
-                                                <p class="pending">8</p>
-                                            </td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">17/12/20</td>
-                                            <td role="cell">5h 10min</td>
-                                            <td role="cell">5s</td>
+                                            <td role="cell">Agent </td>
+                                            <td role="cell">8585858585</td>
+                                            <td role="cell">shubham4@gmail.com</td>
 
                                             <td role="cell">
-                                                <button>
-                                                    
-                                                   Chat History</button>
+                                                <label class="switch">
+                                                    <input type="checkbox" >
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                            </td>
+
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
+                                            </td>
+
+
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">Lorem Ipsum</td>
+                                            <td role="cell">BotUX</td>
+                                            <td role="cell">Others</td>
+                                            <td role="cell">Agent </td>
+                                            <td role="cell">8585858585</td>
+                                            <td role="cell">shubham4@gmail.com</td>
+
+                                            <td role="cell">
+                                                <label class="switch">
+                                                    <input type="checkbox" >
+                                                    <span class="slider round"></span>
+                                                  </label>
+                                            </td>
+
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
+                                            </td>
+
+
+
+                                        </tr>
+                                        <tr role="row">
+                                            <td role="cell">Shubham.Sethia</td>
+                                            <td role="cell">Lorem Ipsum</td>
+                                            <td role="cell">BotUX</td>
+                                            <td role="cell">Others</td>
+                                            <td role="cell">Agent </td>
+                                            <td role="cell">8585858585</td>
+                                            <td role="cell">shubham4@gmail.com</td>
+
+                                            <td role="cell">
+
+                                                <label class="switch">
+                                                    <input type="checkbox" >
+                                                    <span class="slider round"></span>
+                                                  </label>
+
+
+                                            </td>
+
+                                            <td class="show-on-hover" role="cell">
+                                                <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                                <img src="./img/table-delete.svg">
                                             </td>
 
 
@@ -429,6 +485,8 @@
 
                                     </tbody>
                                 </table>
+
+
 
                                 <div class="container-fluid">
                                     <p class="totalentry">Showing 0 to 0 of 0 entries
@@ -518,25 +576,25 @@
     <script src="js/script.js"></script>
     <script src="js/setting.js"></script>
     <script>
-        var exportModal = document.getElementById("exportModel");
-        var filterModal = document.getElementById("filterModel");
+        var excelModal = document.getElementById("uploadexcelModel");
+        var newUserModal = document.getElementById("createUserModel");
 
-        var exportBtn = document.getElementById("exportBtn");
-        var filterBtn = document.getElementById("filterBtn");
+        var exceltBtn = document.getElementById("uploadexcelBtn");
+        var newUserBtn = document.getElementById("createuserBtn");
 
-        exportBtn.onclick = function() {
-            exportModal.style.display = "block";
+        exceltBtn.onclick = function() {
+            excelModal.style.display = "block";
         }
-        filterBtn.onclick = function() {
-            filterModal.style.display = "block";
+        newUserBtn.onclick = function() {
+            newUserModal.style.display = "block";
         }
 
         window.onclick = function(event) {
-            if (event.target == exportModal) {
-                exportModal.style.display = "none";
+            if (event.target == excelModal) {
+                excelModal.style.display = "none";
             }
-            if (event.target == filterModal) {
-                filterModal.style.display = "none";
+            if (event.target == newUserModal) {
+                newUserModal.style.display = "none";
             }
 
 

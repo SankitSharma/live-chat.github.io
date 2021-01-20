@@ -47,6 +47,32 @@ p {
 }
 
 
+/* Inbox empty chats page css start*/
+
+.live-chat-contacts .message-customer-availablity {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: #909090;
+    padding: 15px 0px 0px 28px;
+}
+
+.live-chat-empty-area {
+    padding-top: 62px;
+}
+
+.live-chat-empty-area p {
+    padding-top: 55px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #4D4D4D;
+}
+
+
+/* Inbox empty chats page css end*/
+
+
 /* Active Customers */
 
 .sidebar .nav-item .nav-link {
@@ -130,6 +156,22 @@ div.nav-link {
     visibility: visible;
 }
 
+.navbar-nav .nav-item:hover {
+    background: #F4F4F4;
+}
+
+.nav-item {
+    cursor: pointer;
+}
+
+.navbar-nav .active:hover {
+    background: rgba(2, 84, 215, 0.08) !important;
+}
+
+.active {
+    background: rgba(2, 84, 215, 0.08);
+}
+
 .live-chat-active-customers {
     border-right: solid#F8F9FC 2px;
     background: #fff;
@@ -140,6 +182,7 @@ div.nav-link {
     color: #4D4D4D;
     font-size: 13px;
     padding: 18.5px 28px;
+    font-weight: 500;
     border-bottom: 1.5px solid var(--border-color-primary);
 }
 
@@ -427,7 +470,7 @@ div.nav-link {
     width: 93%;
     border: 1px solid var(--border-color-primary);
     border-radius: 5px;
-    height: 78px;
+    /* height: 78px; */
     display: grid;
     background-color: white;
     margin: 2px auto;
@@ -435,16 +478,18 @@ div.nav-link {
 
 .live-chat-text-box {
     grid-row: 1 / 2;
-    padding: 14px 10px 10px 10px;
+    padding: 15px 10px 10px 10px;
     width: 99%;
     height: 46px;
     margin-left: 2px;
+    margin-bottom: 5px;
 }
 
 .live-chat-text-area {
     resize: none;
     font-size: 12px;
     width: 100%;
+    height: 25px;
     border: none;
     color: var(--color-grey-4D);
     outline: none;
@@ -1261,7 +1306,7 @@ div.nav-link {
 .live-chat-setting-calender-heading .live-chat-calender-date select {
     width: 136px;
     height: 35px;
-    margin-right: 20px;
+    margin-right: 25px;
     color: #868686;
     padding: 0px 8px 2px 10px;
     border: 1px solid #E6E6E6;
@@ -1278,6 +1323,23 @@ div.nav-link {
     background-position-x: 90%;
     background-position-y: 13px;
     outline: none;
+}
+
+.live-chat-setting-calender-heading .live-chat-calender-date .filter-apply-button {
+    width: 115px;
+    height: 35px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
+    opacity: 0.5;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: -3px;
+    margin-left: 0px;
 }
 
 .live-chat-setting-calender-heading .live-chat-calender-date select:hover {
@@ -1972,9 +2034,9 @@ div.nav-link {
 #datepickers {
     width: 150px;
     height: 35px;
-    margin-right: 20px;
+    margin-right: 7px;
     color: #868686;
-    padding: 0px 8px 2px 10px;
+    padding: 0px 8px 0px 10px;
     border: 1px solid #E6E6E6;
     border-radius: 5px;
     font-style: normal;
@@ -1989,6 +2051,10 @@ div.nav-link {
     background-position-x: 90%;
     background-position-y: 13px;
     outline: none;
+}
+
+#datepickers {
+    margin-left: 7px;
 }
 
 #datepicker:hover,
@@ -2010,7 +2076,7 @@ div.nav-link {
 .live-chat-setting-archived-heading {
     width: 99%;
     margin: 3px 0px 12px 7px;
-    padding: 12px 30px 15px 30px;
+    padding: 12px 30px 12px 30px;
     background: #FFFFFF;
 }
 
@@ -2023,7 +2089,7 @@ div.nav-link {
 .live-chat-setting-archived-heading .live-chat-archived-date select {
     width: 150px;
     height: 35px;
-    margin-right: 20px;
+    margin-right: 25px;
     color: #868686;
     padding: 0px 28px 2px 10px;
     border: 1px solid #E6E6E6;
@@ -2053,6 +2119,23 @@ div.nav-link {
     color: #0254D7;
     border: 1px solid #0254D7;
     background-image: url(../img/select-down-arrow-color.svg);
+}
+
+.live-chat-setting-archived-heading .live-chat-archived-date .filter-apply-button {
+    width: 115px;
+    height: 35px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
+    opacity: 0.5;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: -3px;
+    margin-left: 18px;
 }
 
 .live-chat-setting-archived-heading span {
@@ -3287,11 +3370,11 @@ div.nav-link {
     }
     .live-chat-admin-history-table-area p {
         font-size: 12px;
-        margin-left: -15px;
+        margin-left: 0px;
         padding-left: 0px;
     }
     .live-chat-admin-history-table-area .pagination-div {
-        margin-right: -15px;
+        margin-right: 15px;
     }
     .navbar h2 {
         display: none;
@@ -3301,5 +3384,653 @@ div.nav-link {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .live-chat-admin-history-table-area table tr td button {
+        margin: -15px 5px -15px -10px;
+        width: 80px;
+    }
+    .filter-chat-model .form-popup {
+        position: absolute;
+        top: 4%;
+        left: 25%;
+    }
+    .export-chat-model .form-popup {
+        position: absolute;
+        top: 6%;
+        left: 35%;
+    }
+}
+
 
 /*****         Chat History CSS End  *****************/
+
+
+/*****         Manage Users Page CSS Start  *****************/
+
+.live-chat-setting-calender-heading .back-arrow-div {
+    margin-right: 20px;
+    display: none;
+}
+
+.live-chat-admin-user-status-field {
+    width: 99%;
+    margin: 3px 0px 12px 7px;
+    padding: 16px 30px 0px 30px;
+    background: #FFFFFF;
+    height: 148px;
+}
+
+.live-chat-admin-user-status-field .user-all-status-section {
+    width: 552px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: -4px 0px 12px 315px;
+}
+
+.live-chat-admin-user-status-field .live-chat-admin-manage-user-heading {
+    width: 100%;
+    padding-left: 0px;
+    padding-top: 19px;
+    padding-right: 0px;
+    border-top: 1px solid #E6E6E6;
+}
+
+.live-chat-admin-user-status-field .live-chat-admin-manage-user-heading .upload-excel-button {
+    font-style: normal;
+    font-weight: 500;
+    border: 1px solid #0254D7;
+    text-align: center;
+    outline: none;
+    font-size: 12px;
+    width: 106px;
+    height: 35px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #0254D7;
+}
+
+.live-chat-admin-user-status-field .live-chat-admin-manage-user-heading .create-new-user-button {
+    font-style: normal;
+    font-weight: 500;
+    width: 116px;
+    height: 35px;
+    font-size: 12px;
+    padding: 8px 0px 8px 0px;
+    border: none;
+    text-align: center;
+    outline: none;
+    background: #0254D7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 16px;
+    color: #FFFFFF;
+}
+
+.upload-excel-popup-heading {
+    width: 100%;
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 10px;
+}
+
+.upload-excel-popup-heading h6 {
+    font-weight: 500;
+    font-size: 12px;
+    color: #2D2D2D;
+}
+
+.upload-excel-model {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+}
+
+.upload-excel-model .form-popup {
+    position: absolute;
+    top: 15%;
+    left: 42%;
+    right: 27%;
+    max-width: 535px;
+    height: 252px;
+    padding: 12px 20px 20px 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.upload-excel-model .form-popup .form-container label {
+    font-size: 12px;
+    color: #4D4D4D;
+    font-weight: 500;
+}
+
+.upload-excel-model .form-popup .form-container select {
+    width: 100%;
+    height: 34px;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #868686;
+    padding: 0px 0px 2px 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    appearance: none;
+    background-image: url(../img/select-down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 13px;
+    outline: none;
+    margin-bottom: 18px;
+    margin-top: 2px;
+}
+
+.upload-excel-model .form-popup .form-container .cancelBtn {
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: none;
+    font-weight: 500;
+    font-size: 12px;
+    color: #4D4D4D;
+    outline: none;
+    width: 102px;
+    height: 37px;
+}
+
+.upload-excel-model .form-popup .form-container .uploadBtn {
+    background: linear-gradient(270deg, #156FFF 0%, #0254D7 100%);
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    border: 1px solid #0254D7;
+    outline: none;
+    width: 102px;
+    height: 37px;
+    margin-left: 18px;
+    color: #FFFFFF;
+}
+
+.upload-excel-model .form-popup .form-container a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    float: left;
+    color: #0254D7;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+
+/* .upload-excel-model .form-popup .form-container .upload-file-input[type="file"] {
+    width: 102px;
+    height: 37px;
+    border: 1px solid #0254D7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: #0254D7;
+} */
+
+.upload-excel-model .form-popup .form-container input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    top: 10px;
+    left: 8px;
+    font-size: 17px;
+    color: #b8b8b8;
+}
+
+.upload-excel-model .form-popup .form-container .file-upload-button {
+    display: inline-block;
+    cursor: pointer;
+    width: 102px;
+    height: 37px;
+    border: 1px solid #0254D7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-style: normal;
+    text-align: center;
+    padding-top: 7px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #0254D7;
+}
+
+.create-new-user-popup-heading {
+    width: 100%;
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 10px;
+}
+
+.create-new-user-popup-heading h6 {
+    font-weight: 500;
+    font-size: 12px;
+    color: #2D2D2D;
+}
+
+.admin-create-new-user-model {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+}
+
+.admin-create-new-user-model .form-popup {
+    position: absolute;
+    top: 15%;
+    left: 42%;
+    right: 27%;
+    max-width: 405px;
+    height: 475px;
+    padding: 11px 12px 20px 12px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.admin-create-new-user-model .form-popup .form-container label {
+    font-size: 12px;
+    color: #4D4D4D;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.admin-create-new-user-model .form-popup .form-container select {
+    width: 100%;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #868686;
+    padding: 0px 0px 2px 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    appearance: none;
+    background-image: url(../img/select-down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 13px;
+    outline: none;
+    margin-bottom: 11px;
+    margin-top: 0px;
+}
+
+.admin-create-new-user-model .form-popup .form-container .name-input,
+.admin-create-new-user-model .form-popup .form-container .number-input,
+.admin-create-new-user-model .form-popup .form-container .email-input,
+.admin-create-new-user-model .form-popup .form-container .bot-input {
+    width: 109%;
+    height: 36px;
+    color: #868686;
+    padding: 0px 8px 2px 10px;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.admin-create-new-user-model .form-popup .form-container .select-status,
+.admin-create-new-user-model .form-popup .form-container .select-supervisor {
+    width: 109% !important;
+    height: 36px;
+    color: #868686;
+    padding: 0px 8px 2px 10px;
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    appearance: none;
+    background-image: url(../img/select-down-arrow.svg);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 13px;
+}
+
+.admin-create-new-user-model .form-popup .form-container .cancelBtn {
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: none;
+    font-weight: 500;
+    font-size: 12px;
+    color: #4D4D4D;
+    outline: none;
+    width: 92px;
+    height: 37px;
+}
+
+.admin-create-new-user-model .form-popup .form-container .create-user-Btn {
+    background: linear-gradient(270deg, #156FFF 0%, #0254D7 100%);
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    border: none;
+    outline: none;
+    width: 128px;
+    height: 37px;
+    margin-left: 18px;
+    color: #FFFFFF;
+}
+
+.live-chat-admin-user-status-field .live-chat-admin-manage-user-heading .search-container {
+    float: right;
+    height: 34px;
+    padding: 0px 0px 0px 15px;
+    width: 219px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+}
+
+.live-chat-admin-user-status-field .live-chat-admin-manage-user-heading .search-container input[type=text] {
+    padding: 7px 0px 0px 6px;
+    margin-top: 0px;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #757575;
+}
+
+.live-chat-admin-user-status-field .live-chat-admin-manage-user-heading .search-container input[type=text]:focus {
+    outline: none;
+}
+
+.live-chat-admin-user-status-field .live-chat-admin-manage-user-heading .search-container button {
+    float: right;
+    padding: 0px 16px 0px 0px;
+    margin-top: 3px;
+    margin-right: 0px;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.live-chat-admin-manage-user-table-area {
+    z-index: 0;
+    width: 99%;
+    background: #ffffff;
+    margin: 1px 5px 5px 7px;
+    overflow: hidden;
+    height: 100%;
+    padding: 0px;
+}
+
+.live-chat-admin-manage-user-table-area table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+.live-chat-admin-manage-user-table-area table tr {
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.live-chat-admin-manage-user-table-area table .show-on-hover {
+    text-align: right;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.live-chat-admin-manage-user-table-area table .show-on-hover img {
+    visibility: hidden;
+}
+
+.live-chat-admin-manage-user-table-area table tr:hover .show-on-hover img {
+    visibility: visible;
+}
+
+.live-chat-admin-manage-user-table-area table tbody tr:hover {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+}
+
+.live-chat-admin-manage-user-table-area table tr th {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #757575;
+}
+
+.live-chat-admin-manage-user-table-area table tr td {
+    font-weight: 500;
+    font-size: 12px;
+    color: #4D4D4D;
+}
+
+.live-chat-admin-manage-user-table-area table tr td .switch {
+    position: relative;
+    display: inline-block;
+    width: 37px;
+    height: 21px;
+    margin-bottom: 0px;
+}
+
+.live-chat-admin-manage-user-table-area table tr td .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.live-chat-admin-manage-user-table-area table tr td .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFFFFF;
+    border: 1px solid #D3D3D3;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.live-chat-admin-manage-user-table-area table tr td .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #D3D3D3;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.live-chat-admin-manage-user-table-area table tr td input:checked+.slider {
+    background: #0254D7;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.live-chat-admin-manage-user-table-area table tr td input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+.live-chat-admin-manage-user-table-area table tr td input:checked+.slider:before {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+    background: #FFFFFF;
+}
+
+.live-chat-admin-manage-user-table-area table tr td .slider.round {
+    border-radius: 30px;
+}
+
+.live-chat-admin-manage-user-table-area table tr td .slider.round:before {
+    border-radius: 50%;
+}
+
+.live-chat-admin-manage-user-table-area table td,
+.live-chat-admin-manage-user-table-area table th {
+    padding: 20px 2px 20px 20px;
+    text-align: left;
+}
+
+.live-chat-admin-manage-user-table-area .totalentry {
+    font-size: 13px;
+    margin-top: 56px;
+    color: #4D4D4D;
+    width: 50%;
+    font-weight: 500;
+    padding-left: 18px;
+    display: inline-block;
+}
+
+.live-chat-admin-manage-user-table-area .pagination-div {
+    float: right;
+    margin-top: 52px;
+    margin-right: 10px;
+}
+
+.live-chat-admin-manage-user-table-area .pagination-div .pagination-content {
+    list-style-type: none;
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.live-chat-admin-manage-user-table-area .pagination-content li {
+    border-right: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    padding: 4px 10px 0px 10px;
+    font-size: 13px;
+}
+
+.live-chat-admin-manage-user-table-area .pagination-content li a {
+    color: #717171;
+}
+
+.live-chat-admin-manage-user-table-area .pagination-div .active-page {
+    background: #EAF0FE;
+    opacity: 0.5;
+    border: 1px solid #0254D7;
+    border-radius: 6px 0px 0px 6px;
+}
+
+@media only screen and (max-width: 760px) {
+    .live-chat-admin-manage-user-table-area table,
+    .live-chat-admin-manage-user-table-area thead,
+    .live-chat-admin-manage-user-table-area tbody,
+    .live-chat-admin-manage-user-table-area th,
+    .live-chat-admin-manage-user-table-area td,
+    .live-chat-admin-manage-user-table-area tr {
+        display: block;
+    }
+    .live-chat-admin-manage-user-table-area table tr:nth-of-type(odd) {
+        background: #eee;
+    }
+    .live-chat-admin-manage-user-table-area thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .live-chat-admin-manage-user-table-area tr {
+        border: 1px solid #ccc;
+    }
+    .live-chat-admin-manage-user-table-area td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding: 5px 0px 5px 50% !important;
+    }
+    .live-chat-admin-manage-user-table-area td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    .live-chat-admin-manage-user-table-area td:nth-of-type(1):before {
+        content: "Customer Name";
+    }
+    .live-chat-admin-manage-user-table-area td:nth-of-type(2):before {
+        content: "NPS";
+    }
+    .live-chat-admin-manage-user-table-area td:nth-of-type(3):before {
+        content: "Date";
+    }
+    .live-chat-admin-manage-user-table-area td:nth-of-type(4):before {
+        content: "Duration";
+    }
+    .live-chat-admin-manage-user-table-area td:nth-of-type(5):before {
+        content: "";
+    }
+    .live-chat-admin-manage-user-table-area table tr td button {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .live-chat-admin-manage-user-table-area p {
+        font-size: 12px;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .live-chat-admin-manage-user-table-area .pagination-div {
+        margin-right: 15px;
+    }
+    .navbar h2 {
+        display: none;
+    }
+    #live-chat-admin-manage-users {
+        height: calc(100vh - 8.375rem) !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .live-chat-admin-manage-user-table-area table tr td button {
+        margin: -15px 5px -15px -10px;
+        width: 80px;
+    }
+    .admin-create-new-user-model .form-popup {
+        position: absolute;
+        top: 4%;
+        left: 25%;
+    }
+    .export-chat-model .form-popup {
+        position: absolute;
+        top: 6%;
+        left: 35%;
+    }
+}
+
+
+/*****         Manage users CSS End  *****************/
