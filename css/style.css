@@ -393,7 +393,7 @@ div.nav-link {
 }
 
 .live-chat-client-message-wrapper {
-    width: 45%;
+    width: 46%;
     height: 70px;
     display: grid;
     grid-template-columns: minmax(min-content, 40px) 3fr;
@@ -404,7 +404,7 @@ div.nav-link {
 }
 
 .live-chat-agent-message-wrapper {
-    width: 45%;
+    width: 46%;
     height: 70px;
     display: grid;
     grid-template-columns: 3fr minmax(min-content, 40px);
