@@ -150,3 +150,64 @@ function myLogoCollapse() {
     }
 
 }
+
+function agentOfflineFunction() {
+    var checkBox = document.getElementById("customSwitch2");
+    var offlineModal = document.getElementById("offlineReasonModal");
+    var agentOfflineText = document.getElementById("agentOfflineText");
+    var agentOnlineText = document.getElementById("agentOnlineText");
+    if (checkBox.checked == false) {
+        offlineModal.style.display = "block";
+        agentOnlineText.style.display = "none";
+        agentOfflineText.style.display = "inline-block";
+    } else {
+        offlineModal.style.display = "none";
+        agentOfflineText.style.display = "none";
+        agentOnlineText.style.display = "inline-block";
+    }
+    window.onclick = function(event) {
+        if (event.target == offlineModal) {
+            offlineModal.style.display = "none";
+        }
+
+
+
+    }
+}
+
+function agentRedirectAdminFunction() {
+    var admincheckBox = document.getElementById("customSwitch1");
+    var agentstatusText = document.getElementById("agentText");
+    var adminstatusText = document.getElementById("adminText");
+    if (admincheckBox.checked == false) {
+        window.location = 'chat-history.html';
+        agentstatusText.style.display = "none";
+        adminstatusText.style.display = "inline-block";
+
+    } else {
+        agentstatusText.style.display = "inline-block";
+        adminstatusText.style.display = "none";
+    }
+
+}
+
+
+
+
+
+
+function adminRedirectAgentFunction() {
+    var admincheckBox = document.getElementById("customSwitch1");
+    var agentstatusText = document.getElementById("agentText");
+    var adminstatusText = document.getElementById("adminText");
+    if (admincheckBox.checked == true) {
+        window.location = 'index.html';
+        agentstatusText.style.display = "inline-block";
+        adminstatusText.style.display = "none";
+
+    } else {
+        agentstatusText.style.display = "none";
+        adminstatusText.style.display = "inline-block";
+    }
+
+}

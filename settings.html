@@ -73,6 +73,52 @@
             </div>
         </div>
 
+        <!-- Agent Offline Reason Popup Model -->
+        <div class="agent-offline-status-model" id="offlineReasonModal">
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 form-popup">
+                <form action="#" class="form-container">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 agent-offline-status-popup-heading">
+                            <h6>Set Offline</h6>
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Please provide a suitable reason</label>
+                            <select>
+                              <option>Select </option>
+                              <option>lorem ipsum</option>
+                              <option>lorem ipsum</option>
+                              <option>lorem ipsum</option>
+                              <option>lorem ipsum</option>
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12" style="text-align: right; margin-top: 64px;">
+                            <button class="cancelBtn">Cancel</button>
+                            <button class="submitBtn">Submit</button>
+
+
+                        </div>
+                    </div>
+
+
+
+
+                </form>
+            </div>
+        </div>
+
+
+
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar accordion border-right bg-white toggled" id="accordionSidebar" style="z-index: 2;">
 
@@ -110,16 +156,18 @@
 
             <li id="navitemtoggle" class="nav-item">
                 <div class="custom-control custom-switch nav-link">
-                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked onclick="agentRedirectAdminFunction()">
                     <label class="custom-control-label" for="customSwitch1" style="margin-left: 44px;"></label>
-                    <span class="space-right">Agent</span>
+                    <span class="space-right" id="agentText">Agent</span>
+                    <span class="space-right" id="adminText" style="display: none;">Admin</span>
                 </div>
             </li>
             <li id="navitemtoggle" class="nav-item">
                 <div class="custom-control custom-switch nav-link">
-                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch2" onclick="agentOfflineFunction()" checked>
                     <label class="custom-control-label" for="customSwitch2" style="margin-left: 44px;"></label>
-                    <span class="space-right">Online</span>
+                    <span class="space-right" id="agentOnlineText">Online</span>
+                    <span class="space-right" id="agentOfflineText" style="display: none;">Offline</span>
                 </div>
             </li>
 
@@ -298,9 +346,11 @@
                                                 </div>
                                                 <div class="col-xl content-left profile-width">
 
+
                                                 </div>
 
                                             </div>
+                                            <button class="saveChangesBtn">Save Changes</button>
 
                                         </div>
 
@@ -325,13 +375,9 @@
 
                                         <select name="day">
                                                 <option>Days</option>
-                                                <option value="01">Monday</option>
-                                                <option value="02">Tuesday</option>
-                                                <option value="03">Wednesday</option>
-                                                <option value="04">Thursday</option>
-                                                <option value="05">Friday</option>
-                                                <option value="06">Saturday</option>
-                                                <option value="07">Sunday</option>
+                                                <option value="01">Weakdays</option>
+                                                <option value="02">Weekend</option>
+                                               
                                                 
                                            </select>
 
