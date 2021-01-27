@@ -442,9 +442,10 @@
 
             <li id="navitemtoggle" class="nav-item">
                 <div class="custom-control custom-switch nav-link">
-                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="adminRedirectAgentFunction()">
                     <label class="custom-control-label" for="customSwitch1" style="margin-left: 44px;"></label>
-                    <span class="space-right">Admin</span>
+                    <span class="space-right" id="adminText">Admin</span>
+                    <span class="space-right" id="agentText" style="display: none;">Agent</span>
                 </div>
             </li>
             <!-- <li id="navitemtoggle" class="nav-item">
