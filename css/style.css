@@ -1172,7 +1172,7 @@ div.nav-link {
 
 .live-chat-profile-area .first-ele {
     max-width: 240px;
-    padding-top: 50px;
+    padding-top: 42px;
     text-align: center;
     padding-left: 30px;
     margin-top: 50px;
@@ -1195,7 +1195,6 @@ div.nav-link {
 .live-chat-profile-area .second-ele .profile-width {
     max-width: 100%;
     margin-left: 30px;
-    margin-bottom: 25px;
 }
 
 .live-chat-profile-area .second-ele .saveChangesBtn {
@@ -1313,6 +1312,9 @@ div.nav-link {
     }
     .live-chat-setting-profile-heading {
         padding: 25px 0px 25px 25px;
+    }
+    .live-chat-profile-area .first-ele .user-image-section {
+        margin-left: 122px;
     }
 }
 
@@ -2263,6 +2265,9 @@ div.nav-link {
     }
     #live-chat-setting-content-gs {
         display: none;
+    }
+    .live-chat-profile-area .first-ele .user-image-section {
+        margin-left: 98px;
     }
 }
 
