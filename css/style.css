@@ -807,12 +807,12 @@ div.nav-link {
 
 .transfer-chat-model .form-popup {
     position: absolute;
-    top: 15%;
-    left: 42%;
-    right: 27%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
     max-width: 335px;
     height: 310px;
-    padding: 12px 20px 20px 20px;
+    padding: 12px 12px 20px 12px;
     border-radius: 8px;
     background-color: white;
 }
@@ -904,12 +904,12 @@ div.nav-link {
 
 .resolve-chat-model .form-popup {
     position: absolute;
-    top: 15%;
-    left: 42%;
-    right: 27%;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
     max-width: 335px;
     height: 170px;
-    padding: 12px 20px 20px 20px;
+    padding: 12px 12px 20px 12px;
     border-radius: 8px;
     background-color: white;
 }
@@ -978,12 +978,12 @@ div.nav-link {
 
 .agent-offline-status-model .form-popup {
     position: absolute;
-    top: 15%;
-    left: 42%;
-    right: 27%;
+    left: 50%;
+    top: 26%;
+    transform: translate(-50%, -50%);
     max-width: 535px;
     height: 252px;
-    padding: 12px 20px 20px 20px;
+    padding: 12px 12px 20px 12px;
     border-radius: 8px;
     background-color: white;
 }
@@ -1799,12 +1799,12 @@ div.nav-link {
 
 .canned-response-model .form-popup {
     position: absolute;
-    top: 65px;
-    left: 27%;
-    right: 27%;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
     max-width: 623px;
     height: 270px;
-    padding: 12px 20px 20px 20px;
+    padding: 12px 12px 20px 12px;
     border-radius: 8px;
     background-color: white;
 }
@@ -3164,11 +3164,12 @@ div.nav-link {
 
 .export-chat-model .form-popup {
     position: absolute;
-    top: 11%;
-    left: 28%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
     max-width: 535px;
     height: 252px;
-    padding: 12px 20px 20px 20px;
+    padding: 12px 12px 20px 12px;
     border-radius: 8px;
     background-color: white;
 }
@@ -3255,8 +3256,9 @@ div.nav-link {
 
 .filter-chat-model .form-popup {
     position: absolute;
-    top: 5%;
-    left: 28%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
     max-width: 405px;
     height: 475px;
     padding: 11px 12px 20px 12px;
@@ -3384,8 +3386,9 @@ div.nav-link {
 
 .admin-chat-history-model .form-popup {
     position: absolute;
-    top: 11%;
-    left: 28%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
     max-width: 535px;
     height: 432px;
     padding: 12px 0px 20px 0px;
@@ -3948,12 +3951,12 @@ div.nav-link {
 
 .upload-excel-model .form-popup {
     position: absolute;
-    top: 15%;
-    left: 42%;
-    right: 27%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
     max-width: 535px;
     height: 252px;
-    padding: 12px 20px 20px 20px;
+    padding: 12px 12px 20px 12px;
     border-radius: 8px;
     background-color: white;
 }
@@ -4096,7 +4099,6 @@ div.nav-link {
     width: 100%;
     border-bottom: 1px solid #E6E6E6;
     margin-bottom: 10px;
-    max-width: 405px;
 }
 
 .create-new-user-popup-heading h6 {
@@ -4117,10 +4119,10 @@ div.nav-link {
 
 .admin-create-new-user-model .form-popup {
     position: absolute;
-    top: 15%;
-    left: 42%;
-    right: 27%;
-    max-width: 405px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    max-width: 480px;
     height: 475px;
     padding: 11px 12px 20px 12px;
     border-radius: 8px;
@@ -4221,6 +4223,7 @@ div.nav-link {
     color: #0254D7;
     padding-top: 8px;
     margin-right: 10px;
+    padding-left: 25px;
 }
 
 .admin-create-new-user-model .form-popup .form-container .modal-chip img {
@@ -4267,10 +4270,10 @@ div.nav-link {
 
 .admin-edit-user-model .form-popup {
     position: absolute;
-    top: 15%;
-    left: 42%;
-    right: 27%;
-    max-width: 405px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    max-width: 480px;
     height: 475px;
     padding: 11px 12px 20px 12px;
     border-radius: 8px;
@@ -4294,6 +4297,7 @@ div.nav-link {
     color: #0254D7;
     padding-top: 8px;
     margin-right: 10px;
+    padding-left: 25px;
 }
 
 .admin-edit-user-model .form-popup .form-container .modal-chip img {
@@ -4417,12 +4421,12 @@ div.nav-link {
 
 .admin-delete-user-model .form-popup {
     position: absolute;
-    top: 15%;
-    left: 42%;
-    right: 27%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
     max-width: 535px;
     height: 196px;
-    padding: 12px 20px 20px 20px;
+    padding: 12px 12px 20px 12px;
     border-radius: 8px;
     background-color: white;
 }
@@ -5021,8 +5025,9 @@ div.nav-link {
 
 .filter-report-d-interaction-model .form-popup {
     position: absolute;
-    top: 5%;
-    left: 28%;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
     max-width: 398px;
     height: 293px;
     padding: 11px 12px 20px 12px;
