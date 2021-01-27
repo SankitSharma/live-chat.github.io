@@ -211,3 +211,6 @@ function adminRedirectAgentFunction() {
     }
 
 }
+
+
+//admin chat history page modals

@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Live Chat - Meetings</title>
+
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/png">
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet"> -->
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* body {
+        height: 100vh;
+        overflow: auto;
+    } */
+        
+        .easyassist-option-switch {
+            position: relative;
+            display: inline-block;
+            width: 34px;
+            height: 18px;
+            margin-top: 0.5em;
+        }
+        
+        .easyassist-option-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .easyassist-option-switch-slider {
+            position: absolute;
+            cursor: pointer;
+            top: -1px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border: 2px solid #BECAD6;
+        }
+        
+        .easyassist-option-switch-slider:before {
+            position: absolute;
+            content: "";
+            height: 13px;
+            width: 13px;
+            left: 2px;
+            bottom: 0.6px;
+            background-color: #BECAD6;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked+.easyassist-option-switch-slider {
+            background-color: #1C43C5;
+            border: 2px solid #1C43C5;
+        }
+        
+        input:checked+.easyassist-option-switch-slider:before {
+            background: white;
+        }
+        
+        input:focus+.easyassist-option-switch-slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked+.easyassist-option-switch-slider:before {
+            -webkit-transform: translateX(14px);
+            -ms-transform: translateX(14px);
+            transform: translateX(14px);
+        }
+        /* Rounded easyassist-option-switch-sliders */
+        
+        .easyassist-option-switch-slider.round {
+            border-radius: 34px;
+        }
+        
+        .easyassist-option-switch-slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar accordion border-right bg-white toggled" id="accordionSidebar" style="z-index: 2;">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <img src="./img/logo.svg" alt="logo" width="36" height="36" id="oncollapse">
+                </div>
+                <div class="sidebar-brand-text mx-3">
+                    <img src="./img/logo-collapse.svg" style="margin-left: -34px;" alt="logo" width="120" height="36" id="without-collapse">
+                </div>
+            </a>
+
+
+            <li class="nav-item ">
+                <a class="nav-link " href="chat-history.html">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.00026 3.38957e-06C10.8152 5.39339e-05 12.5877 0.548816 14.0851 1.57427C15.5826 2.59972 16.735 4.05395 17.3912 5.7461C18.0474 7.43824 18.1766 9.28924 17.762 11.0562C17.3473 12.8231 16.4082 14.4234 15.0678 15.647C13.7274 16.8706 12.0483 17.6604 10.251 17.9126C8.45374 18.1649 6.62216 17.8679 4.99668 17.0606C3.3712 16.2533 2.02777 14.9734 1.1427 13.3889C0.257642 11.8045 -0.127699 9.98941 0.0372572 8.182C0.0461214 8.08391 0.0742206 7.98851 0.11995 7.90128C0.16568 7.81404 0.228145 7.73666 0.303778 7.67356C0.379412 7.61047 0.466732 7.56289 0.560755 7.53353C0.654777 7.50418 0.75366 7.49364 0.851757 7.5025C0.949855 7.51137 1.04525 7.53947 1.13248 7.5852C1.21972 7.63093 1.2971 7.69339 1.3602 7.76902C1.42329 7.84466 1.47088 7.93198 1.50023 8.026C1.52958 8.12002 1.54012 8.21891 1.53126 8.317C1.42838 9.41277 1.56923 10.5177 1.94371 11.5526C2.31818 12.5876 2.91701 13.5268 3.69726 14.303C4.39232 15.0012 5.2188 15.5549 6.12899 15.932C7.03918 16.3091 8.01505 16.5021 9.00026 16.5C10.2787 16.4997 11.5359 16.1727 12.6524 15.5499C13.7689 14.9271 14.7077 14.0292 15.3796 12.9415C16.0514 11.8538 16.4341 10.6124 16.4913 9.33524C16.5484 8.05805 16.2781 6.78746 15.7061 5.64411C15.134 4.50077 14.2792 3.52264 13.2228 2.8026C12.1663 2.08257 10.9434 1.64454 9.67006 1.53011C8.39672 1.41568 7.11527 1.62864 5.9474 2.14878C4.77952 2.66893 3.764 3.47897 2.99726 4.502H5.75326C5.94328 4.50206 6.1262 4.57425 6.26505 4.70398C6.4039 4.8337 6.48833 5.0113 6.50128 5.20088C6.51424 5.39046 6.45474 5.5779 6.33482 5.7253C6.21491 5.87271 6.04351 5.9691 5.85526 5.995L5.75326 6.002H1.25026C1.06902 6.002 0.893915 5.93636 0.757327 5.81724C0.620738 5.69811 0.531906 5.53356 0.507257 5.354L0.500257 5.252V0.752003C0.500315 0.56198 0.572502 0.379063 0.70223 0.240212C0.831958 0.101361 1.00956 0.0169293 1.19914 0.00397735C1.38872 -0.00897464 1.57615 0.0505187 1.72356 0.170436C1.87096 0.290353 1.96736 0.461754 1.99326 0.650003L2.00026 0.752003L1.99926 3.343C2.84236 2.29817 3.90886 1.45554 5.12039 0.877032C6.33193 0.298522 7.65769 -0.00116263 9.00026 3.38957e-06ZM8.25026 4C8.43149 4.00001 8.6066 4.06565 8.74319 4.18477C8.87978 4.30389 8.96861 4.46845 8.99326 4.648L9.00026 4.75V9H11.2503C11.4403 9.00006 11.6232 9.07225 11.762 9.20198C11.9009 9.33171 11.9853 9.5093 11.9983 9.69888C12.0112 9.88847 11.9517 10.0759 11.8318 10.2233C11.7119 10.3707 11.5405 10.4671 11.3523 10.493L11.2503 10.5H8.25026C8.06902 10.5 7.89392 10.4344 7.75733 10.3152C7.62074 10.1961 7.53191 10.0316 7.50726 9.852L7.50026 9.75V4.75C7.50026 4.55109 7.57928 4.36033 7.71993 4.21967C7.86058 4.07902 8.05134 4 8.25026 4Z" fill="#4D4D4D"/>
+                        </svg>
+                    <span id="sidebarlink" style="color: #858796;">Chat History</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link " href="manage-users.html">
+                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.875 13.75C16.875 13.75 18 13.75 18 12.625C18 11.5 16.875 8.125 12.375 8.125C7.875 8.125 6.75 11.5 6.75 12.625C6.75 13.75 7.875 13.75 7.875 13.75H16.875ZM7.89975 12.625C7.89144 12.6239 7.88318 12.6224 7.875 12.6205C7.87612 12.3235 8.06287 11.4618 8.73 10.6855C9.351 9.95763 10.4423 9.25 12.375 9.25C14.3066 9.25 15.3979 9.95875 16.02 10.6855C16.6871 11.4618 16.8727 12.3246 16.875 12.6205L16.866 12.6228C16.8608 12.6236 16.8555 12.6244 16.8503 12.625H7.89975ZM12.375 5.875C12.9717 5.875 13.544 5.63795 13.966 5.21599C14.3879 4.79403 14.625 4.22174 14.625 3.625C14.625 3.02826 14.3879 2.45597 13.966 2.03401C13.544 1.61205 12.9717 1.375 12.375 1.375C11.7783 1.375 11.206 1.61205 10.784 2.03401C10.3621 2.45597 10.125 3.02826 10.125 3.625C10.125 4.22174 10.3621 4.79403 10.784 5.21599C11.206 5.63795 11.7783 5.875 12.375 5.875ZM15.75 3.625C15.75 4.06821 15.6627 4.50708 15.4931 4.91656C15.3235 5.32603 15.0749 5.69809 14.7615 6.01149C14.4481 6.32488 14.076 6.57348 13.6666 6.74309C13.2571 6.9127 12.8182 7 12.375 7C11.9318 7 11.4929 6.9127 11.0834 6.74309C10.674 6.57348 10.3019 6.32488 9.98851 6.01149C9.67512 5.69809 9.42652 5.32603 9.25691 4.91656C9.0873 4.50708 9 4.06821 9 3.625C9 2.72989 9.35558 1.87145 9.98851 1.23851C10.6214 0.605579 11.4799 0.25 12.375 0.25C13.2701 0.25 14.1286 0.605579 14.7615 1.23851C15.3944 1.87145 15.75 2.72989 15.75 3.625ZM7.803 8.44C7.35298 8.29829 6.88909 8.20514 6.41925 8.16213C6.15525 8.13702 5.89019 8.12463 5.625 8.125C1.125 8.125 0 11.5 0 12.625C0 13.3754 0.374625 13.75 1.125 13.75H5.868C5.70122 13.3988 5.61805 13.0137 5.625 12.625C5.625 11.4888 6.04913 10.3277 6.85125 9.358C7.12463 9.02725 7.443 8.71787 7.803 8.44ZM5.535 9.25C4.86917 10.2504 4.5095 11.4233 4.5 12.625H1.125C1.125 12.3325 1.3095 11.4663 1.98 10.6855C2.59313 9.97 3.6585 9.2725 5.535 9.25113V9.25ZM1.6875 4.1875C1.6875 3.29239 2.04308 2.43395 2.67601 1.80101C3.30895 1.16808 4.16739 0.8125 5.0625 0.8125C5.95761 0.8125 6.81605 1.16808 7.44899 1.80101C8.08192 2.43395 8.4375 3.29239 8.4375 4.1875C8.4375 5.08261 8.08192 5.94105 7.44899 6.57399C6.81605 7.20692 5.95761 7.5625 5.0625 7.5625C4.16739 7.5625 3.30895 7.20692 2.67601 6.57399C2.04308 5.94105 1.6875 5.08261 1.6875 4.1875ZM5.0625 1.9375C4.46576 1.9375 3.89347 2.17455 3.47151 2.59651C3.04955 3.01847 2.8125 3.59076 2.8125 4.1875C2.8125 4.78424 3.04955 5.35653 3.47151 5.77849C3.89347 6.20045 4.46576 6.4375 5.0625 6.4375C5.65924 6.4375 6.23153 6.20045 6.65349 5.77849C7.07545 5.35653 7.3125 4.78424 7.3125 4.1875C7.3125 3.59076 7.07545 3.01847 6.65349 2.59651C6.23153 2.17455 5.65924 1.9375 5.0625 1.9375Z" fill="#4D4D4D"/>
+                        </svg>
+                    <span id="sidebarlink" style="color: #858796;">Managa Users</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="meetings.html">
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.4C0 1.76348 0.237053 1.15303 0.65901 0.702944C1.08097 0.252856 1.65326 1.66215e-08 2.25 1.66215e-08H10.6875C11.2332 -6.84576e-05 11.7604 0.211431 12.1708 0.595113C12.5812 0.978795 12.8469 1.50851 12.9184 2.0856L16.4171 0.4272C16.5884 0.345806 16.776 0.311356 16.9629 0.326983C17.1498 0.342609 17.3301 0.407815 17.4874 0.516675C17.6447 0.625535 17.7739 0.774596 17.8635 0.950309C17.953 1.12602 17.9999 1.32281 18 1.5228V10.4772C17.9998 10.677 17.9529 10.8737 17.8634 11.0492C17.774 11.2248 17.6448 11.3738 17.4877 11.4826C17.3306 11.5914 17.1505 11.6567 16.9637 11.6724C16.7769 11.6882 16.5895 11.6539 16.4182 11.5728L12.9184 9.9144C12.8469 10.4915 12.5812 11.0212 12.1708 11.4049C11.7604 11.7886 11.2332 12.0001 10.6875 12H2.25C1.65326 12 1.08097 11.7471 0.65901 11.2971C0.237053 10.847 0 10.2365 0 9.6V2.4ZM12.9375 8.61L16.875 10.4772V1.5228L12.9375 3.39V8.61ZM2.25 1.2C1.95163 1.2 1.66548 1.32643 1.4545 1.55147C1.24353 1.77652 1.125 2.08174 1.125 2.4V9.6C1.125 9.91826 1.24353 10.2235 1.4545 10.4485C1.66548 10.6736 1.95163 10.8 2.25 10.8H10.6875C10.9859 10.8 11.272 10.6736 11.483 10.4485C11.694 10.2235 11.8125 9.91826 11.8125 9.6V2.4C11.8125 2.08174 11.694 1.77652 11.483 1.55147C11.272 1.32643 10.9859 1.2 10.6875 1.2H2.25Z" fill="#4D4D4D"/>
+                        </svg>
+                    <span style="color: #858796;" id="sidebarlink">Meetings</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="reports.html">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.25 15.1875C11.25 15.3367 11.3093 15.4798 11.4148 15.5852C11.5202 15.6907 11.6633 15.75 11.8125 15.75H12.9375C13.0867 15.75 13.2298 15.6907 13.3352 15.5852C13.4407 15.4798 13.5 15.3367 13.5 15.1875V8.4375C13.5 8.28832 13.4407 8.14524 13.3352 8.03975C13.2298 7.93426 13.0867 7.875 12.9375 7.875H11.8125C11.6633 7.875 11.5202 7.93426 11.4148 8.03975C11.3093 8.14524 11.25 8.28832 11.25 8.4375V15.1875ZM8.4375 15.75C8.28832 15.75 8.14524 15.6907 8.03975 15.5852C7.93426 15.4798 7.875 15.3367 7.875 15.1875V10.6875C7.875 10.5383 7.93426 10.3952 8.03975 10.2898C8.14524 10.1843 8.28832 10.125 8.4375 10.125H9.5625C9.71168 10.125 9.85476 10.1843 9.96025 10.2898C10.0657 10.3952 10.125 10.5383 10.125 10.6875V15.1875C10.125 15.3367 10.0657 15.4798 9.96025 15.5852C9.85476 15.6907 9.71168 15.75 9.5625 15.75H8.4375ZM5.0625 15.75C4.91332 15.75 4.77024 15.6907 4.66475 15.5852C4.55926 15.4798 4.5 15.3367 4.5 15.1875V12.9375C4.5 12.7883 4.55926 12.6452 4.66475 12.5398C4.77024 12.4343 4.91332 12.375 5.0625 12.375H6.1875C6.33668 12.375 6.47976 12.4343 6.58525 12.5398C6.69074 12.6452 6.75 12.7883 6.75 12.9375V15.1875C6.75 15.3367 6.69074 15.4798 6.58525 15.5852C6.47976 15.6907 6.33668 15.75 6.1875 15.75H5.0625Z" fill="#4D4D4D"/>
+                        <path d="M15.75 15.75V5.0625L10.6875 0H4.5C3.90326 0 3.33097 0.237053 2.90901 0.65901C2.48705 1.08097 2.25 1.65326 2.25 2.25V15.75C2.25 16.3467 2.48705 16.919 2.90901 17.341C3.33097 17.7629 3.90326 18 4.5 18H13.5C14.0967 18 14.669 17.7629 15.091 17.341C15.5129 16.919 15.75 16.3467 15.75 15.75ZM10.6875 3.375C10.6875 3.82255 10.8653 4.25178 11.1818 4.56824C11.4982 4.88471 11.9274 5.0625 12.375 5.0625H14.625V15.75C14.625 16.0484 14.5065 16.3345 14.2955 16.5455C14.0845 16.7565 13.7984 16.875 13.5 16.875H4.5C4.20163 16.875 3.91548 16.7565 3.7045 16.5455C3.49353 16.3345 3.375 16.0484 3.375 15.75V2.25C3.375 1.95163 3.49353 1.66548 3.7045 1.4545C3.91548 1.24353 4.20163 1.125 4.5 1.125H10.6875V3.375Z" fill="#4D4D4D"/>
+                        </svg>
+                    <span id="sidebarlink" style="color: #858796;">Reports</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="admin_settings.html">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5806 1.18125C10.116 -0.39375 7.884 -0.39375 7.41937 1.18125L7.30687 1.56375C7.23745 1.79954 7.11613 2.01681 6.95182 2.19961C6.7875 2.38242 6.58434 2.52613 6.35726 2.6202C6.13017 2.71427 5.88491 2.75632 5.63945 2.74326C5.394 2.73021 5.15458 2.66238 4.93875 2.54475L4.59 2.3535C3.14663 1.56825 1.56825 3.14663 2.35462 4.58887L2.54475 4.93875C3.0465 5.86125 2.57063 7.00987 1.56375 7.30687L1.18125 7.41937C-0.39375 7.884 -0.39375 10.116 1.18125 10.5806L1.56375 10.6931C1.79954 10.7625 2.01681 10.8839 2.19961 11.0482C2.38242 11.2125 2.52613 11.4157 2.6202 11.6427C2.71427 11.8698 2.75632 12.1151 2.74326 12.3605C2.73021 12.606 2.66238 12.8454 2.54475 13.0612L2.3535 13.41C1.56825 14.8534 3.14663 16.4317 4.58887 15.6454L4.93875 15.4552C5.15458 15.3376 5.394 15.2698 5.63945 15.2567C5.88491 15.2437 6.13017 15.2857 6.35726 15.3798C6.58434 15.4739 6.7875 15.6176 6.95182 15.8004C7.11613 15.9832 7.23745 16.2005 7.30687 16.4362L7.41937 16.8188C7.884 18.3937 10.116 18.3937 10.5806 16.8188L10.6931 16.4362C10.7625 16.2005 10.8839 15.9832 11.0482 15.8004C11.2125 15.6176 11.4157 15.4739 11.6427 15.3798C11.8698 15.2857 12.1151 15.2437 12.3605 15.2567C12.606 15.2698 12.8454 15.3376 13.0612 15.4552L13.41 15.6465C14.8534 16.4317 16.4317 14.8534 15.6454 13.4111L15.4552 13.0612C15.3376 12.8454 15.2698 12.606 15.2567 12.3605C15.2437 12.1151 15.2857 11.8698 15.3798 11.6427C15.4739 11.4157 15.6176 11.2125 15.8004 11.0482C15.9832 10.8839 16.2005 10.7625 16.4362 10.6931L16.8188 10.5806C18.3937 10.116 18.3937 7.884 16.8188 7.41937L16.4362 7.30687C16.2005 7.23745 15.9832 7.11613 15.8004 6.95182C15.6176 6.7875 15.4739 6.58434 15.3798 6.35726C15.2857 6.13017 15.2437 5.88491 15.2567 5.63945C15.2698 5.394 15.3376 5.15458 15.4552 4.93875L15.6465 4.59C16.4317 3.14663 14.8534 1.56825 13.4111 2.35462L13.0612 2.54475C12.8454 2.66238 12.606 2.73021 12.3605 2.74326C12.1151 2.75632 11.8698 2.71427 11.6427 2.6202C11.4157 2.52613 11.2125 2.38242 11.0482 2.19961C10.8839 2.01681 10.7625 1.79954 10.6931 1.56375L10.5806 1.18125ZM9 12.2963C8.12578 12.2963 7.28737 11.949 6.6692 11.3308C6.05103 10.7126 5.70375 9.87422 5.70375 9C5.70375 8.12578 6.05103 7.28737 6.6692 6.6692C7.28737 6.05103 8.12578 5.70375 9 5.70375C9.87392 5.70375 10.712 6.05091 11.33 6.66887C11.948 7.28683 12.2951 8.12495 12.2951 8.99887C12.2951 9.8728 11.948 10.7109 11.33 11.3289C10.712 11.9468 9.87392 12.294 9 12.294V12.2963Z" fill="#0254D7"/>
+                        </svg>
+
+                    <span id="sidebarlink">Settings</span></a>
+            </li>
+
+            <li id="navitemtoggle" class="nav-item">
+                <div class="custom-control custom-switch nav-link">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="adminRedirectAgentFunction()">
+                    <label class="custom-control-label" for="customSwitch1" style="margin-left: 44px;"></label>
+                    <span class="space-right" id="adminText">Admin</span>
+                    <span class="space-right" id="agentText" style="display: none;">Agent</span>
+                </div>
+            </li>
+
+            <br>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle" onclick="myLogoCollapse()"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column" style="height: 100vh;">
+
+            <!-- Main Content -->
+            <div id="content" class="bg-white">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar static-top border-bottom">
+                    <h2>Reports</h2>
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+            </div>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid pl-1 pr-2 arange">
+                <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12 live-chat-setting" id="live-chat-admin-setting-menu" style="height: 143vh;">
+
+                        <div class="live-chat-setting-functionalities">
+
+                            <ul class="live-chat-setting-section">
+                                <li class="setting-item live-chat-active-customer-setting" onclick="myFunctionAdminGeneralSetting()">
+
+                                    <a class="setting-link">
+                                        <img id="admin-gsetting-blue-icon" src="./img/g-setting-icon-active.svg" type="image">
+                                        <img id="admin-gsetting-grey-icon" src="./img/g-settingicon.svg" type="image">
+                                        <span id="admin-g-setting-color-change">General Settings</span>
+                                    </a>
+                                </li>
+                                <li class="setting-item" onclick="myFunctionAdminCategory()">
+
+                                    <a class="setting-link" id="live-chat-profile-div">
+                                        <img id="admin-category-blue-icon" src="./img/category-icon-active.svg" type="image">
+                                        <img id="admin-category-gray-icon" src="./img/category-icon.svg" type="image">
+
+                                        <span id="admin-category-color-change">Category</span>
+                                    </a>
+                                </li>
+                                <li class="setting-item " onclick="myFunctionAdminResponse()">
+
+                                    <a class="setting-link" id="live-chat-canned-response-div">
+                                        <img id="admin-response-blue-icon" src="./img/canned-response.svg" type="image">
+                                        <img id="admin-response-gray-icon" src="./img/response.svg" type="image">
+                                        <span id="admin-response-color-change">Canned Response</span>
+                                    </a>
+                                </li>
+                                <li class="setting-item" onclick="myFunctionAdminBlacklistKeyword()">
+
+                                    <a class="setting-link">
+                                        <img id="admin-blacklist-blue-icon" src="./img/blacklist-keyword-active-icon.svg" type="image">
+                                        <img id="admin-blacklist-gray-icon" src="./img/blacklist-keyword-icon.svg" type="image">
+                                        <span id="admin-blacklist-color-change">Blacklisted Keywords</span>
+                                    </a>
+                                </li>
+                                <li class="setting-item" onclick="myFunctionAdminCalendar()">
+
+                                    <a class="setting-link">
+                                        <img id="admin-calendar-gray-icon" src="./img/calendericon.svg" type="image">
+                                        <img id="admin-calendar-blue-icon" src="./img/calender-icon.svg" type="image">
+                                        <span id="admin-calendar-color-change">Calendar</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- /.container-fluid -->
+                    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-admin-setting-content-gs" style="height: calc(100vh - 8.375rem); background: #FAFAFA;">
+
+                        <div class="live-chat-admin-general-setting-heading ">
+                            <div class="row">
+                                <img src="./img/general-setting-icon.svg" type="image">
+                                <span style="margin-left: 14px;">General Settings</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-admin-general-setting-dropdown">
+                                    <select name="day">
+                                    <option>IRIS</option>
+                                    <option value="01">Option 1</option>
+                                    <option value="02">Option 2</option>
+                                
+                                    
+                                </select>
+                                    <button class="saveChangesBtn">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="live-chat-admin-general-setting-area">
+                            <div class="container-fluid">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-admin-settings-area">
+                                    <div class="table-responsive">
+                                        <table role="table" id="example" class="display">
+                                            <tbody role="rowgroup">
+                                                <tr role="row">
+                                                    <th scope="row">
+                                                        Assign Chat to agents based on their category
+                                                    </th>
+                                                    <td>
+                                                        <label class="easyassist-option-switch">
+                                                    <input type="checkbox" id="enable_category_assignment" checked>
+                                                    <span class="easyassist-option-switch-slider round"></span>
+                                                </label>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <th scope="row">
+                                                        Enable Video Meeting
+                                                    </th>
+                                                    <td>
+                                                        <label class="easyassist-option-switch">
+                                                    <input type="checkbox" id="enable_video_meeting" checked>
+                                                    <span class="easyassist-option-switch-slider round" ></span>
+                                                </label>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <th scope="row">
+                                                        Enable Footer
+                                                    </th>
+                                                    <td>
+                                                        <label class="easyassist-option-switch">
+                                                    <input type="checkbox" id="enable_footer" checked>
+                                                    <span class="easyassist-option-switch-slider round"></span>
+                                                </label>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <th scope="row">
+                                                        Maximum number of customers with whom an agent can chat at a time
+                                                    </th>
+                                                    <td>
+                                                        <input type="number" id="max_concurrent_customer">
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <th scope="row">
+                                                        Queue time (in seconds)
+                                                    </th>
+                                                    <td>
+                                                        <input type="number" id="max_concurrent_customer">
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <th scope="row">
+                                                        Agent not avaible bot response
+                                                    </th>
+                                                    <td>
+                                                        <textarea class="form-control" id="agent-not-avail-bot-response"></textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <th scope="row">
+                                                        Meeting URL
+                                                    </th>
+                                                    <td>
+                                                        <textarea class="form-control" id="agent-not-avail-bot-response"></textarea>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <th scope="row">
+                                                        Livechat console colour
+                                                    </th>
+                                                    <td>
+                                                        <input type="text" class="form-control jscolor" id="livechat-console-theme-color" placeholder="HEX" value="" style="height: 61px;">
+                                                    </td>
+                                                </tr>
+                                                <tr role="row" style="border: none;">
+                                                    <th scope="row">
+                                                        Flow termination bot response
+                                                    </th>
+                                                    <td>
+                                                        <textarea class="form-control" id="flow-termination-bot-response"></textarea>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-admin-setting-content-c" style="height: calc(100vh - 4.375rem); background: #FAFAFA;display: none;">
+
+                        <div class="live-chat-setting-canned-response-heading ">
+                            <div class="row">
+                                <img src="./img/category-icon.svg" type="image" width="15px" height="15px">
+                                <span>Category</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-canned-response-popup">
+                                    <button class="open-button" id="myBtnCategoryadmin" data-toggle="modal" data-target="#addCategoryModal">Create New Category</button>
+                                    <button class="delete-button" id="deleteBtnCategoryadmin">Delete Category</button>
+
+
+                                    <div class="search-container">
+                                        <form action="#">
+                                            <button type="submit"><img src="img/Vector-search.svg"></button>
+                                            <input type="text" placeholder="Search" name="search">
+
+                                        </form>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-canned-response-area">
+                            <table role="table" id="example" class="display">
+                                <thead role="rowgroup">
+                                    <tr role="row">
+                                        <th id="left-space" role="columnheader">Category name </th>
+                                        <th role="columnheader">Priority</th>
+                                        <th role="columnheader">Bot </th>
+                                        <th role="columnheader"> </th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody role="rowgroup">
+                                    <tr role="row">
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCategoryFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> printing
+
+                                        </td>
+                                        <td role="cell">distracted </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg" data-toggle="modal" data-target="#editCategoryModal">
+                                            <img src="./img/table-delete.svg" data-toggle="modal" data-target="#deleteCategoryModal">
+                                        </td>
+
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCategoryFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> fact
+
+                                        </td>
+                                        <td role="cell">opposed </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCategoryFunction(this)">
+                                            <span class="checkmark" ></span>
+                                          </label> content
+
+                                        </td>
+                                        <td role="cell">model </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCategoryFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> readable
+
+                                        </td>
+                                        <td role="cell">passages </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCategoryFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> content
+
+                                        </td>
+                                        <td role="cell">model </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+
+                            <div class="container-fluid">
+                                <p>Showing 0 to 0 of 0 entries
+                                </p>
+                                <div class="pagination-div">
+                                    <ul class="pagination-content">
+                                        <li class="active-page"><a style="color: #0254D7;" href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+
+                                    </ul>
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-admin-setting-content-cr" style="height: calc(100vh - 4.375rem); background: #FAFAFA;display: none;">
+
+                        <div class="live-chat-setting-canned-response-heading ">
+                            <div class="row">
+                                <img src="./img/response.svg" type="image" width="15px" height="15px">
+                                <span>Canned Response</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-canned-response-popup">
+                                    <button class="open-button" id="myBtnCannedadmin" data-toggle="modal" data-target="#admin-add-canned-response-Modal">Add Canned Response</button>
+                                    <button class="delete-button" id="deleteBtnCannedadmin">Delete</button>
+
+
+                                    <div class="search-container">
+                                        <form action="#">
+                                            <button type="submit"><img src="img/Vector-search.svg"></button>
+                                            <input type="text" placeholder="Search" name="search">
+
+                                        </form>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-canned-response-area">
+                            <table role="table" id="example" class="display">
+                                <thead role="rowgroup">
+                                    <tr role="row">
+                                        <th id="left-space" role="columnheader">Keyword </th>
+                                        <th role="columnheader">Canned Response</th>
+                                        <th role="columnheader">Visibility</th>
+                                        <th role="columnheader"> </th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody role="rowgroup">
+                                    <tr role="row">
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCannedResponseFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> printing
+
+                                        </td>
+                                        <td role="cell">distracted </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg" data-toggle="modal" data-target="#admin-edit-canned-response-Modal">
+                                            <img src="./img/table-delete.svg" data-toggle="modal" data-target="#admin-delete-canned-response-Modal">
+                                        </td>
+
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCannedResponseFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> fact
+
+                                        </td>
+                                        <td role="cell">opposed </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCannedResponseFunction(this)">
+                                            <span class="checkmark" ></span>
+                                          </label> content
+
+                                        </td>
+                                        <td role="cell">model </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCannedResponseFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> readable
+
+                                        </td>
+                                        <td role="cell">passages </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminCannedResponseFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> content
+
+                                        </td>
+                                        <td role="cell">model </td>
+                                        <td role="cell">Public</td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+
+                            <div class="container-fluid">
+                                <p>Showing 0 to 0 of 0 entries
+                                </p>
+                                <div class="pagination-div">
+                                    <ul class="pagination-content">
+                                        <li class="active-page"><a style="color: #0254D7;" href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+
+                                    </ul>
+
+                                </div>
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-admin-setting-content-bk" style="height: calc(100vh - 4.375rem); background: #FAFAFA;display: none;">
+
+                        <div class="live-chat-setting-canned-response-heading ">
+                            <div class="row">
+                                <img src="./img/blacklist-keyword-icon.svg" type="image" width="15px" height="15px">
+                                <span>Blacklist Keyword</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-canned-response-popup">
+                                    <button class="open-button" id="myBtnKeywordadmin" data-toggle="modal" data-target="#admin-blacklist-addkeyword-Modal">Add Keyword</button>
+                                    <button class="delete-button" id="deleteBtnKeyword">Delete Keyword</button>
+
+
+                                    <div class="search-container">
+                                        <form action="#">
+                                            <button type="submit"><img src="img/Vector-search.svg"></button>
+                                            <input type="text" placeholder="Search" name="search">
+
+                                        </form>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-canned-response-area">
+                            <table role="table" id="example" class="display">
+                                <thead role="rowgroup">
+                                    <tr role="row">
+                                        <th id="left-space" role="columnheader">Category </th>
+                                        <th role="columnheader"></th>
+                                        <th role="columnheader"></th>
+                                        <th role="columnheader"> </th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody role="rowgroup">
+                                    <tr role="row">
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminKeywordFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> printing
+
+                                        </td>
+                                        <td role="cell"> </td>
+                                        <td role="cell"></td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg" data-toggle="modal" data-target="#admin-edit-blacklist-addkeyword-Modal">
+                                            <img src="./img/table-delete.svg" data-toggle="modal" data-target="#admin-delete-blacklist-addkeyword-Modal">
+                                        </td>
+
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminKeywordFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> fact
+
+                                        </td>
+                                        <td role="cell"> </td>
+                                        <td role="cell"></td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg" data-toggle="modal" data-target="#admin-edit-blacklist-addkeyword-Modal">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminKeywordFunction(this)">
+                                            <span class="checkmark" ></span>
+                                          </label> content
+
+                                        </td>
+                                        <td role="cell"> </td>
+                                        <td role="cell"></td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminKeywordFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> readable
+
+                                        </td>
+                                        <td role="cell"> </td>
+                                        <td role="cell"></td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+                                    <tr role="row">
+
+                                        <td role="cell">
+                                            <label class="cam">
+                                            <input type="checkbox" class="response-checkbox"  onclick="deleteAdminKeywordFunction(this)">
+                                            <span class="checkmark"></span>
+                                          </label> content
+
+                                        </td>
+                                        <td role="cell"> </td>
+                                        <td role="cell"></td>
+                                        <td class="show-on-hover" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+
+                                    </tr>
+
+
+
+                                </tbody>
+                            </table>
+
+                            <div class="container-fluid">
+                                <p>Showing 0 to 0 of 0 entries
+                                </p>
+                                <div class="pagination-div">
+                                    <ul class="pagination-content">
+                                        <li class="active-page"><a style="color: #0254D7;" href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-admin-setting-content-calendar" style="height: calc(100vh - 4.375rem); background: #FAFAFA;display: none;">
+
+                        <div class="live-chat-setting-calender-heading ">
+                            <div class="row">
+                                <img src="./img/mobile-back.svg" class="back-arrow-div" id="live-chat-active-customers-opener-setting" onclick="myFunctionArrow()">
+                                <img src="./img/calendericon.svg" type="image" width="15px" height="15px">
+                                <span>Calendar</span>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-calender-date">
+                                    <button class="filter-btn" id="live-chat-calendar-filter-btn" data-toggle="modal" data-target="#calendar-filter-modal">
+                                    <span>Filter</span>
+                                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.33333 8.35714C5.33333 8.18665 5.40357 8.02313 5.5286 7.90257C5.65362 7.78201 5.82319 7.71429 6 7.71429H10C10.1768 7.71429 10.3464 7.78201 10.4714 7.90257C10.5964 8.02313 10.6667 8.18665 10.6667 8.35714C10.6667 8.52764 10.5964 8.69115 10.4714 8.81171C10.3464 8.93227 10.1768 9 10 9H6C5.82319 9 5.65362 8.93227 5.5286 8.81171C5.40357 8.69115 5.33333 8.52764 5.33333 8.35714ZM2.66667 4.5C2.66667 4.3295 2.7369 4.16599 2.86193 4.04543C2.98695 3.92487 3.15652 3.85714 3.33333 3.85714H12.6667C12.8435 3.85714 13.013 3.92487 13.1381 4.04543C13.2631 4.16599 13.3333 4.3295 13.3333 4.5C13.3333 4.6705 13.2631 4.83401 13.1381 4.95457C13.013 5.07513 12.8435 5.14286 12.6667 5.14286H3.33333C3.15652 5.14286 2.98695 5.07513 2.86193 4.95457C2.7369 4.83401 2.66667 4.6705 2.66667 4.5ZM0 0.642857C0 0.472361 0.070238 0.308848 0.195262 0.188289C0.320287 0.0677295 0.489856 0 0.666667 0H15.3333C15.5101 0 15.6797 0.0677295 15.8047 0.188289C15.9298 0.308848 16 0.472361 16 0.642857C16 0.813353 15.9298 0.976867 15.8047 1.09743C15.6797 1.21798 15.5101 1.28571 15.3333 1.28571H0.666667C0.489856 1.28571 0.320287 1.21798 0.195262 1.09743C0.070238 0.976867 0 0.813353 0 0.642857Z" fill="#868686"/>
+                                    </svg>
+                                </button>
+                                    <button class="add-holiday-btn" id="live-chat-calendar-add-holiday-btn" data-toggle="modal" data-target="#calendar-add-holiday-modal">Add Holidays</button>
+                                    <button class="work-timing-btn" id="live-chat-calendar-work-timing-btn" data-toggle="modal" data-target="#calendar-work-timing-modal">Work Timing</button>
+                                    <div class="search-container">
+                                        <form action="#">
+                                            <button type="submit"><img src="img/Vector-search.svg"></button>
+                                            <input type="text" placeholder="Search" name="search">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-calender-area">
+                            <table role="table" id="example" class="display">
+                                <thead role="rowgroup">
+                                    <tr role="row">
+                                        <th role="columnheader">Date </th>
+                                        <th role="columnheader">Day</th>
+                                        <th role="columnheader">Start Time</th>
+                                        <th role="columnheader">End Time</th>
+                                        <th role="columnheader">Created By</th>
+                                        <th role="columnheader">Created Date</th>
+                                        <th role="columnheader">Modified By</th>
+                                        <th role="columnheader">Modified Date</th>
+                                        <th role="columnheader"> </th>
+                                    </tr>
+                                </thead>
+                                <tbody role="rowgroup">
+                                    <tr role="row">
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Wednesday</td>
+                                        <td role="cell">11:00 AM</td>
+                                        <td role="cell">3:00 PM</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">17/12/20</td>
+                                        <td class="show-on-hover-admin" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg" data-toggle="modal" data-target="#admin-edit-calender-event-Modal">
+                                            <img src="./img/table-delete.svg" data-toggle="modal" data-target="#admin-delete-calender-event-Modal">
+                                        </td>
+                                    </tr>
+                                    <tr role="row">
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Wednesday</td>
+                                        <td role="cell">11:00 AM</td>
+                                        <td role="cell">3:00 PM</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">17/12/20</td>
+                                        <td class="show-on-hover-admin" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+                                    </tr>
+                                    <tr role="row">
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Wednesday</td>
+                                        <td role="cell">11:00 AM</td>
+                                        <td role="cell">3:00 PM</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">17/12/20</td>
+                                        <td class="show-on-hover-admin" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+                                    </tr>
+                                    <tr role="row">
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Wednesday</td>
+                                        <td role="cell">11:00 AM</td>
+                                        <td role="cell">3:00 PM</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">17/12/20</td>
+                                        <td class="show-on-hover-admin" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+                                    </tr>
+                                    <tr role="row">
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Wednesday</td>
+                                        <td role="cell">11:00 AM</td>
+                                        <td role="cell">3:00 PM</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">16/12/20</td>
+                                        <td role="cell">Shubham.Sethia</td>
+                                        <td role="cell">17/12/20</td>
+                                        <td class="show-on-hover-admin" role="cell">
+                                            <img style="padding-right: 15px;" src="./img/table-edit.svg">
+                                            <img src="./img/table-delete.svg">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="container-fluid">
+                                <p>Showing 0 to 0 of 0 entries
+                                </p>
+                                <div class="pagination-div">
+                                    <ul class="pagination-content">
+                                        <li class="active-page"><a style="color: #0254D7;" href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog" aria-labelledby="Add_category_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Create New Category</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <label>Category name</label>
+                                        <input class="form-control" type="text" placeholder="Type here">
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label>Priority</label>
+                                        <select name="day" class="form-control select-dropdown-icon">
+                                        <option>Select</option>
+                                        <option value="01">Weakdays</option>
+                                        <option value="02">Weekend</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label>Bot</label>
+                                        <select name="day" class="form-control select-dropdown-icon">
+                                        <option>Select</option>
+                                        <option value="01">Weakdays</option>
+                                        <option value="02">Weekend</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn-primary" type="button">Create</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="editCategoryModal" tabindex="-1" role="dialog" aria-labelledby="edit_category_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Edit Category</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <label>Category name</label>
+                                        <input class="form-control" type="text" placeholder="Type here">
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label>Priority</label>
+                                        <select name="day" class="form-control select-dropdown-icon">
+                                        <option>Select</option>
+                                        <option value="01">Weakdays</option>
+                                        <option value="02">Weekend</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label>Bot</label>
+                                        <select name="day" class="form-control select-dropdown-icon">
+                                        <option>Select</option>
+                                        <option value="01">Weakdays</option>
+                                        <option value="02">Weekend</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn-primary" type="button">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="deleteCategoryModal" tabindex="-1" role="dialog" aria-labelledby="Delete_category_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Delete Category</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <p style="font-weight: 500; font-size: 13px; color: #4D4D4D;"> Are you sure you want to delete this category?</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">No</button>
+                                    <button class="btn-primary" type="button">Yes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="admin-add-canned-response-Modal" tabindex="-1" role="dialog" aria-labelledby="admin_canned_response_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Add Canned Response</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+
+                                    <div class="col-6 mb-4">
+                                        <label>Keyword</label>
+                                        <input class="form-control" type="text" placeholder="Enter Keyword">
+                                    </div>
+                                    <div class="col-6 mb-4">
+                                        <label>Canned response</label>
+                                        <input class="form-control" type="text" placeholder="Enter canned response">
+                                    </div>
+                                    <div class="col-12">
+                                        <p style="font-size: 12px;">Visibilty: Public</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn-primary" type="button">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="admin-edit-canned-response-Modal" tabindex="-1" role="dialog" aria-labelledby="admin_edit_canned_response_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Edit Canned Response</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+
+                                    <div class="col-6 mb-4">
+                                        <label>Keyword</label>
+                                        <input class="form-control" type="text" placeholder="Enter Keyword">
+                                    </div>
+                                    <div class="col-6 mb-4">
+                                        <label>Canned response</label>
+                                        <input class="form-control" type="text" placeholder="Enter canned response">
+                                    </div>
+                                    <div class="col-12">
+                                        <p style="font-size: 12px;">Visibilty: Public</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn-primary" type="button">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="admin-delete-canned-response-Modal" tabindex="-1" role="dialog" aria-labelledby="admin_delete_canned_response_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Delete Canned Response</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <p style="font-weight: 500; font-size: 13px; color: #4D4D4D;"> Are you sure you want to delete this canned response?</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">No</button>
+                                    <button class="btn-primary" type="button">Yes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="admin-blacklist-addkeyword-Modal" tabindex="-1" role="dialog" aria-labelledby="admin_blacklist-addkeyword_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Add Keyword</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+
+                                    <div class="col-12 mb-4">
+                                        <label>Keyword</label>
+                                        <input class="form-control" type="text" placeholder="Enter Keyword">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn-primary" type="button">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="admin-edit-blacklist-addkeyword-Modal" tabindex="-1" role="dialog" aria-labelledby="admin_edit_blacklist_addkeyword_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Edit Keyword</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+
+                                    <div class="col-12 mb-4">
+                                        <label>Keyword</label>
+                                        <input class="form-control" type="text" placeholder="Enter Keyword">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn-primary" type="button">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="admin-delete-blacklist-addkeyword-Modal" tabindex="-1" role="dialog" aria-labelledby="admin_delete_blacklist_addkeyword_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Delete Blacklisted Keyword</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <p style="font-weight: 500; font-size: 13px; color: #4D4D4D;"> Are you sure you want to delete this Blacklisted Keyword?</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">No</button>
+                                    <button class="btn-primary" type="button">Yes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="calendar-work-timing-modal" tabindex="-1" role="dialog" aria-labelledby="calendar_work_timing_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Add Work Timing</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <label>Days</label>
+                                        <select name="day" class="form-control select-dropdown-icon">
+                                            <option>Select</option>
+                                            <option value="01">Weakdays</option>
+                                            <option value="02">Weekend</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-6 mb-4">
+                                        <label>Start Time</label>
+                                        <input class="form-control " type="time" placeholder="Type Here">
+                                    </div>
+                                    <div class="col-6 mb-4">
+                                        <label>End Time</label>
+                                        <input class="form-control" type="time" placeholder="Type Here">
+                                    </div>
+                                    <div class="col-12">
+                                        <label>Select Working Days</label>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label class="cam">
+                                                    <input id="indeterminate-checkbox-0" type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    <span>Sunday</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="cam">
+                                                    <input id="indeterminate-checkbox-1" type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    <span>Monday</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="cam">
+                                                    <input id="indeterminate-checkbox-2" type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    <span>Tuesday</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="cam">
+                                                    <input id="indeterminate-checkbox-3" type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    <span>Wednesday</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-3">
+                                                <label class="cam">
+                                                    <input id="indeterminate-checkbox-4" type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    <span>Thursday</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="cam">
+                                                    <input id="indeterminate-checkbox-5" type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    <span>Friday</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="cam">
+                                                    <input id="indeterminate-checkbox-6" type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    <span>Saturday</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="cam">
+                                                    <input id="indeterminate-checkbox-all" type="checkbox" />
+                                                    <span class="checkmark"></span>
+                                                    <span>All</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn-primary" type="button">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="calendar-add-holiday-modal" tabindex="-1" role="dialog" aria-labelledby="calendar_work_timing_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Add Holiday</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <label>Holiday</label>
+                                        <input class="form-control" type="text" placeholder="Select Date">
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label>Description</label>
+                                        <input class="form-control" type="text" placeholder="Type Here">
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label>Auto Response</label>
+                                        <input class="form-control" type="text" placeholder="Type Here">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn-primary" type="button">Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="calendar-filter-modal" tabindex="-1" role="dialog" aria-labelledby="calendar_work_timing_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Filter</h6>
+                                <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.33333 8.35714C5.33333 8.18665 5.40357 8.02313 5.5286 7.90257C5.65362 7.78201 5.82319 7.71429 6 7.71429H10C10.1768 7.71429 10.3464 7.78201 10.4714 7.90257C10.5964 8.02313 10.6667 8.18665 10.6667 8.35714C10.6667 8.52764 10.5964 8.69115 10.4714 8.81171C10.3464 8.93227 10.1768 9 10 9H6C5.82319 9 5.65362 8.93227 5.5286 8.81171C5.40357 8.69115 5.33333 8.52764 5.33333 8.35714ZM2.66667 4.5C2.66667 4.3295 2.7369 4.16599 2.86193 4.04543C2.98695 3.92487 3.15652 3.85714 3.33333 3.85714H12.6667C12.8435 3.85714 13.013 3.92487 13.1381 4.04543C13.2631 4.16599 13.3333 4.3295 13.3333 4.5C13.3333 4.6705 13.2631 4.83401 13.1381 4.95457C13.013 5.07513 12.8435 5.14286 12.6667 5.14286H3.33333C3.15652 5.14286 2.98695 5.07513 2.86193 4.95457C2.7369 4.83401 2.66667 4.6705 2.66667 4.5ZM0 0.642857C0 0.472361 0.070238 0.308848 0.195262 0.188289C0.320287 0.0677295 0.489856 0 0.666667 0H15.3333C15.5101 0 15.6797 0.0677295 15.8047 0.188289C15.9298 0.308848 16 0.472361 16 0.642857C16 0.813353 15.9298 0.976867 15.8047 1.09743C15.6797 1.21798 15.5101 1.28571 15.3333 1.28571H0.666667C0.489856 1.28571 0.320287 1.21798 0.195262 1.09743C0.070238 0.976867 0 0.813353 0 0.642857Z" fill="#2D2D2D"/>
+                                </svg>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <label>Days</label>
+                                        <select name="day" class="form-control select-dropdown-icon">
+                                            <option>Select</option>
+                                            <option value="01">Weakdays</option>
+                                            <option value="02">Weekend</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label>Month</label>
+                                        <select name="month" class="form-control select-dropdown-icon">
+                                            <option>Select</option>
+                                            <option value="01">January</option>
+                                            <option value="02">February</option>
+                                            <option value="03">March</option>
+                                            <option value="04">April</option>
+                                            <option value="05">May</option>
+                                            <option value="06">June</option>
+                                            <option value="07">July</option>
+                                            <option value="08">August</option>
+                                            <option value="09">September</option>
+                                            <option value="10">October</option>
+                                            <option value="11">November</option>
+                                            <option value="12">December</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 mb-4">
+                                        <label>Year</label>
+                                        <select name="year" class="form-control select-dropdown-icon">
+                                            <option>Select</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2020">2020</option>
+                                            <option value="2019">2019</option>
+                                            <option value="2018">2018</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                            <option value="2013">2013</option>
+                                            <option value="2012">2012</option>
+                                            <option value="2011">2011</option>
+                                            <option value="2010">2010</option>
+                                            <option value="2009">2009</option>
+                                            <option value="2008">2008</option>
+                                            <option value="2007">2007</option>
+                                            <option value="2006">2006</option>
+                                            <option value="2005">2005</option>
+                                            <option value="2004">2004</option>
+                                            <option value="2003">2003</option>
+                                            <option value="2002">2002</option>
+                                            <option value="2001">2001</option>
+                                            <option value="2000">2000</option>
+                                            <option value="1999">1999</option>
+                                            <option value="1998">1998</option>
+                                            <option value="1997">1997</option>
+                                            <option value="1996">1996</option>
+                                            <option value="1995">1995</option>
+                                       </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                    <button class="btn-primary" type="button">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="admin-delete-calender-event-Modal" tabindex="-1" role="dialog" aria-labelledby="calendar_delete_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6> Delete Calendar Event</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <p style="font-weight: 500; font-size: 13px; color: #4D4D4D;"> Are you sure you want to delete this calendar event?</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div style="float: right;">
+                                    <button class="btn-close" type="button" data-dismiss="modal">No</button>
+                                    <button class="btn-primary" type="button">Yes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="admin-edit-calender-event-Modal" tabindex="-1" role="dialog" aria-labelledby="calendar_edit_modal_label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h6>Edit</h6>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12 mb-4">
+                                        <label>Days</label>
+                                        <select name="day" class="form-control select-dropdown-icon">
+                                            
+                                            <option value="01" id="workingdays " >Workingdays</option>
+                                            <option value="02 " id="holidays " >Holidays </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-6 mb-4">
+                                        <label>Start Time</label>
+                                        <input class="form-control " type="time" placeholder="Type Here">
+                                    </div>
+                                    <div class="col-6 mb-4">
+                                        <label>End Time</label>
+                                        <input class="form-control" type="time" placeholder="Type Here">
+                                    </div>
+                                    <div class="col-12 mb-4 holidays-content ">
+                                        <label>Description</label>
+                                        <input class="form-control" type="text " placeholder="Type Here ">
+                                    </div>
+                                    <div class="col-12 mb-4 holidays-content ">
+                                        <label>Auto Response</label>
+                                        <input class="form-control " type="text " placeholder="Type Here ">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer ">
+                                <div style="float: right; ">
+                                    <button class="btn-close " type="button " data-dismiss="modal ">Cancel</button>
+                                    <button class="btn-primary " type="button ">Save Changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <!-- <footer class="sticky-footer bg-white ">
+                <div class="container my-auto ">
+                    <div class="copyright text-center my-auto ">
+                        <span>.</span>
+                    </div>
+                </div>
+            </footer> -->
+            <!-- End of Footer -->
+
+
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded " href="#page-top ">
+            <i class="fas fa-angle-up "></i>
+        </a>
+
+
+
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js "></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js "></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js "></script>
+
+        <script src="js/script.js "></script>
+        <script src="js/admin_setting.js "></script>
+        <script src="js/jscolor.min.js "></script>
+
+        <script>
+        </script>
+</body>
+
+</html>
