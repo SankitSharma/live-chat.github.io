@@ -197,32 +197,9 @@ function myFunctionAdminGeneralSetting() {
 
 
 
-var canned_modal = document.getElementById("myModelCanned");
-var canned_btn = document.getElementById("myBtnCanned");
-canned_btn.onclick = function() {
-    canned_modal.style.display = "block";
-}
-window.onclick = function(event) {
-    if (event.target == canned_modal) {
-        canned_modal.style.display = "none";
-    } else if (event.target == category_modal) {
-        category_modal.style.display = "none";
-    } else if (event.target == keyword_modal) {
-        keyword_modal.style.display = "none";
-    }
-}
 
-var category_modal = document.getElementById("myModelCategory");
-var category_btn = document.getElementById("myBtnCategory");
-category_btn.onclick = function() {
-    category_modal.style.display = "block";
-}
 
-var keyword_modal = document.getElementById("myModelKeyword");
-var keyword_btn = document.getElementById("myBtnKeyword");
-keyword_btn.onclick = function() {
-    keyword_modal.style.display = "block";
-}
+
 
 function deleteAdminCannedResponseFunction(element) {
     // var responsecheckBox = document.querySelector(".response-checkbox");

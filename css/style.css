@@ -5,12 +5,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
-/* @font-face {
-    font-family: "Silka";
-    src: url("../fonts/silka-regular-webfont.ttf");
-} */
-
-
 /* Live Chat Styling Variables */
 
 :root {
@@ -44,6 +38,34 @@ p {
 
 #without-collapse {
     display: none;
+}
+
+#custom-button-attach {
+    cursor: pointer;
+}
+
+#custom-text-attach {
+    font-weight: normal;
+    font-size: 13px;
+    color: #4D4D4D;
+    position: relative;
+    top: 12px;
+}
+
+#click-to-view-text-attachment {
+    position: relative;
+    top: 12px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #909090;
+    cursor: pointer;
+}
+
+.file-attachement-download {
+    background-color: #ffffff !important;
+    border: 1px solid #E6E6E6;
+    box-sizing: border-box;
+    padding: 0px 8px 8px 6px !important;
 }
 
 
@@ -569,12 +591,6 @@ div.nav-link {
     border-radius: 3px;
 }
 
-
-/* .live-chat-text-format-icon-wrapper:focus,
-.live-chat-text-format-icon-wrapper:active {
-  background-color: #D6E5FD;
-} */
-
 .live-chat-text-format-icon-wrapper.private-note,
 .live-chat-text-format-icon-wrapper.text-format,
 .live-chat-text-format-icon-wrapper.close-text-format {
@@ -781,274 +797,6 @@ div.nav-link {
 }
 
 
-/*************** Transfer Chat Model CSS Start *********/
-
-.transfer-chat-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 10px;
-}
-
-.transfer-chat-popup-heading h6 {
-    font-weight: 500;
-    font-size: 15px;
-    color: #2D2D2D;
-}
-
-.transfer-chat-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.transfer-chat-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    max-width: 335px;
-    height: 310px;
-    padding: 12px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.transfer-chat-model .form-popup .form-container label {
-    font-size: 12px;
-    color: #4D4D4D;
-    font-weight: 500;
-}
-
-.transfer-chat-model .form-popup .form-container select {
-    width: 100%;
-    height: 34px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #868686;
-    padding: 0px 0px 2px 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
-    outline: none;
-    margin-bottom: 18px;
-}
-
-.transfer-chat-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    outline: none;
-    height: 35px;
-    padding: 0px 25px 0px 25px;
-}
-
-.transfer-chat-model .form-popup .form-container .addBtn {
-    background: linear-gradient(270deg, #156FFF 0%, #0254D7 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    border: 1px solid #0254D7;
-    outline: none;
-    height: 35px;
-    margin-left: 5px;
-    padding: 0px 25px 0px 25px;
-    color: #FFFFFF;
-}
-
-
-/*************** Transfer Chat Model CSS End *********/
-
-
-/*************** Resolve Chat Model CSS Start *********/
-
-.resolve-chat-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 12px;
-}
-
-.resolve-chat-popup-heading h6 {
-    font-weight: 500;
-    font-size: 15px;
-    color: #2D2D2D;
-}
-
-.resolve-chat-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.resolve-chat-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    max-width: 335px;
-    height: 170px;
-    padding: 12px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.resolve-chat-model .form-popup .form-container p {
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    padding-left: 13px;
-}
-
-.resolve-chat-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    outline: none;
-    height: 35px;
-    padding: 0px 35px 0px 35px;
-}
-
-.resolve-chat-model .form-popup .form-container .addBtn {
-    background: linear-gradient(270deg, #156FFF 0%, #0254D7 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    border: 1px solid #0254D7;
-    outline: none;
-    height: 35px;
-    margin-right: 5px;
-    padding: 0px 35px 0px 35px;
-    color: #FFFFFF;
-}
-
-
-/*************** Resolve Chat Model CSS End *********/
-
-
-/*************** Agent Offline  Model CSS Start *********/
-
-.agent-offline-status-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 12px;
-}
-
-.agent-offline-status-popup-heading h6 {
-    font-weight: 500;
-    font-size: 15px;
-    color: #2D2D2D;
-}
-
-.agent-offline-status-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.agent-offline-status-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 26%;
-    transform: translate(-50%, -50%);
-    max-width: 535px;
-    height: 252px;
-    padding: 12px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.agent-offline-status-model .form-popup .form-container label {
-    font-size: 12px;
-    color: #4D4D4D;
-    font-weight: 500;
-}
-
-.agent-offline-status-model .form-popup .form-container select {
-    width: 100%;
-    height: 36px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #868686;
-    padding: 0px 0px 2px 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
-    outline: none;
-    margin-top: 5px;
-}
-
-.agent-offline-status-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    outline: none;
-    height: 37px;
-    width: 102px;
-}
-
-.agent-offline-status-model .form-popup .form-container .submitBtn {
-    background: linear-gradient(270deg, #156FFF 0%, #0254D7 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    border: none;
-    outline: none;
-    height: 37px;
-    width: 102px;
-    margin-left: 18px;
-    color: #FFFFFF;
-}
-
-
-/*************** Agent Offline Model CSS End *********/
-
-
 /*     Setting Page css start*/
 
 #live-chat-setting-content-c {
@@ -1218,11 +966,6 @@ div.nav-link {
     margin-top: 50px;
     position: relative;
 }
-
-
-/* .live-chat-profile-area .second-ele .content-left {
-    padding-left: 25px;
-} */
 
 .live-chat-profile-area .second-ele p {
     display: contents;
@@ -1773,103 +1516,6 @@ div.nav-link {
     color: #FFFFFF;
     outline: none;
     display: none;
-}
-
-.canned-response-popup-content {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 15px;
-}
-
-.canned-response-popup-content h6 {
-    font-weight: 500;
-    font-size: 12px;
-    color: #2D2D2D;
-}
-
-.canned-response-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.canned-response-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    max-width: 623px;
-    height: 270px;
-    padding: 12px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.canned-response-model .form-popup .form-container label {
-    font-size: 12px;
-    color: #4D4D4D;
-    font-weight: 500;
-}
-
-.canned-response-model .form-popup .form-container input {
-    width: 100%;
-    height: 36px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-.canned-response-model .form-popup .form-container input::placeholder {
-    font-weight: normal;
-    font-size: 12px;
-    color: #909090;
-    padding-left: 20px;
-}
-
-.canned-response-model .form-popup .form-container p {
-    font-weight: normal;
-    font-size: 12px;
-    margin-left: 14px;
-    color: #909090;
-    margin-top: 23px;
-}
-
-.canned-response-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    outline: none;
-    height: 37px;
-    padding: 10px 35px 10px 35px;
-}
-
-.canned-response-model .form-popup .form-container .addBtn {
-    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    border: 1px solid #0254D7;
-    outline: none;
-    height: 37px;
-    margin-left: 10px;
-    padding: 10px 35px 10px 35px;
-    color: #FFFFFF;
-}
-
-.canned-response-model .form-container input[type=text]:focus,
-.canned-response-model .form-container input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
 }
 
 .live-chat-setting-canned-response-heading .live-chat-canned-response-popup .search-container {
@@ -3140,167 +2786,8 @@ div.nav-link {
     margin-top: -1px;
 }
 
-.export-chat-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 10px;
-}
-
-.export-chat-popup-heading h6 {
-    font-weight: 500;
-    font-size: 12px;
-    color: #2D2D2D;
-}
-
-.export-chat-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.export-chat-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    max-width: 535px;
-    height: 252px;
-    padding: 12px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.export-chat-model .form-popup .form-container label {
-    font-size: 12px;
-    color: #4D4D4D;
-    font-weight: 500;
-}
-
-.export-chat-model .form-popup .form-container select {
-    width: 100%;
-    height: 34px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #868686;
-    padding: 0px 0px 2px 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
-    outline: none;
-    margin-bottom: 18px;
-    margin-top: 2px;
-}
-
-.export-chat-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    outline: none;
-    width: 102px;
-    height: 37px;
-}
-
-.export-chat-model .form-popup .form-container .exportBtn {
-    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    border: none;
-    outline: none;
-    width: 102px;
-    height: 37px;
-    margin-left: 18px;
-    color: #FFFFFF;
-}
-
-.filter-chat-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 10px;
-}
-
-.filter-chat-popup-heading h6 {
-    font-weight: 500;
-    font-size: 12px;
-    color: #2D2D2D;
-}
-
-.filter-chat-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.filter-chat-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    max-width: 405px;
-    height: 475px;
-    padding: 11px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.filter-chat-model .form-popup .form-container label {
-    font-size: 12px;
-    color: #4D4D4D;
-    font-weight: 500;
-}
-
-.filter-chat-model .form-popup .form-container select {
-    width: 100%;
-    height: 36px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #868686;
-    padding: 0px 0px 2px 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
-    outline: none;
-    margin-bottom: 15px;
-    margin-top: -2px;
-}
-
 #startDate,
 #endDate {
-    width: 173px;
-    height: 36px;
     color: #868686;
     padding: 0px 8px 2px 10px;
     border: 1px solid #E6E6E6;
@@ -3319,10 +2806,6 @@ div.nav-link {
     outline: none;
 }
 
-#startDate {
-    margin-right: 30px;
-}
-
 #startDate:hover,
 #endDate:hover {
     border: 1px solid #0254D7;
@@ -3334,21 +2817,7 @@ div.nav-link {
     color: #0254D7;
 }
 
-.filter-chat-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    outline: none;
-    font-weight: bold;
-    font-size: 12px;
-    color: #4D4D4D;
-    width: 92px;
-    height: 37px;
-    margin-left: 15px;
-}
-
-.filter-chat-model .form-popup .form-container .resetBtn {
+#admin-chat-history-filter-Modal .resetBtn {
     border: none;
     box-sizing: border-box;
     background: none;
@@ -3356,44 +2825,17 @@ div.nav-link {
     font-size: 12px;
     color: #4D4D4D;
     outline: none;
-    float: left;
-    margin-top: 11px;
-}
-
-.filter-chat-model .form-popup .form-container .applyfilterBtn {
-    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    border: 1px solid #0254D7;
-    outline: none;
-    width: 128px;
-    height: 37px;
-    margin-left: 15px;
-    color: #FFFFFF;
-}
-
-.admin-chat-history-model {
-    display: none;
+    margin-top: -8px;
     position: absolute;
+    left: 20px;
+}
+
+.live-chat-area-admin {
+    z-index: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.admin-chat-history-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    max-width: 535px;
-    height: 432px;
-    padding: 12px 0px 20px 0px;
-    border-radius: 8px;
-    background-color: white;
+    height: 50%;
+    margin: 0;
+    overflow: hidden;
 }
 
 .live-chat-button-wrapper-admin {
@@ -3413,11 +2855,11 @@ div.nav-link {
 .live-chat-text-box-wrapper-admin {
     width: 100%;
     border-top: 1px solid var(--border-color-primary);
-    height: 78px;
+    height: 125px;
     text-align: right;
     background-color: white;
-    padding-top: 19px;
-    padding-right: 18px;
+    padding-top: 13px;
+    padding-right: 15px;
 }
 
 .live-chat-text-box-wrapper-admin .downloadBtn {
@@ -3444,6 +2886,7 @@ div.nav-link {
     font-weight: 500;
     font-size: 12px;
     color: #4D4D4D;
+    background: #ffffff;
     outline: none;
     cursor: pointer;
 }
@@ -3927,120 +3370,18 @@ div.nav-link {
     color: #FFFFFF;
 }
 
-.upload-excel-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 10px;
-}
-
-.upload-excel-popup-heading h6 {
-    font-weight: 500;
-    font-size: 12px;
-    color: #2D2D2D;
-}
-
-.upload-excel-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.upload-excel-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    max-width: 535px;
-    height: 252px;
-    padding: 12px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.upload-excel-model .form-popup .form-container label {
-    font-size: 12px;
-    color: #4D4D4D;
-    font-weight: 500;
-}
-
-.upload-excel-model .form-popup .form-container select {
-    width: 100%;
-    height: 34px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #868686;
-    padding: 0px 0px 2px 10px;
+#admin-manage-user-upload-excel-Modal .download-template-Btn {
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
+    font-size: 13px;
+    color: #0254D7;
+    padding-top: 3px;
+    border: none;
     outline: none;
-    margin-bottom: 18px;
-    margin-top: 2px;
-}
-
-.upload-excel-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
+    position: absolute;
+    left: 15px;
     background: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    outline: none;
-    width: 102px;
-    height: 37px;
 }
-
-.upload-excel-model .form-popup .form-container .uploadBtn {
-    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    border: 1px solid #0254D7;
-    outline: none;
-    width: 102px;
-    height: 37px;
-    margin-left: 18px;
-    color: #FFFFFF;
-}
-
-.upload-excel-model .form-popup .form-container a {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    float: left;
-    color: #0254D7;
-    padding-top: 10px;
-    text-decoration: none;
-}
-
-
-/* .upload-excel-model .form-popup .form-container .upload-file-input[type="file"] {
-    width: 102px;
-    height: 37px;
-    border: 1px solid #0254D7;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    color: #0254D7;
-} */
 
 #custom-button {
     color: white;
@@ -4064,157 +3405,13 @@ div.nav-link {
     font-weight: normal;
     font-size: 13px;
     color: rgba(117, 117, 117, 0.5);
-    padding-right: 290px;
+    padding-right: 220px;
     padding-bottom: 10px;
     border-bottom: 1px solid #E6E6E6;
-    width: 137px !important;
 }
 
-.upload-excel-model .form-popup .form-container input[type="file"] {
-    position: absolute;
-    z-index: -1;
-    top: 10px;
-    left: 8px;
-    font-size: 17px;
-    color: #b8b8b8;
-}
-
-.upload-excel-model .form-popup .form-container .file-upload-button {
-    display: inline-block;
-    cursor: pointer;
-    width: 102px;
-    height: 37px;
-    border: 1px solid #0254D7;
-    box-sizing: border-box;
-    border-radius: 5px;
-    font-style: normal;
-    text-align: center;
-    padding-top: 7px;
-    font-weight: bold;
-    font-size: 13px;
-    color: #0254D7;
-}
-
-.create-new-user-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 10px;
-}
-
-.create-new-user-popup-heading h6 {
-    font-weight: 500;
-    font-size: 12px;
-    color: #2D2D2D;
-}
-
-.admin-create-new-user-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.admin-create-new-user-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    max-width: 480px;
-    height: 475px;
-    padding: 11px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.admin-create-new-user-model .form-popup .form-container label {
-    font-size: 12px;
-    color: #4D4D4D;
-    font-weight: 500;
-    margin-top: 6px;
-}
-
-.admin-create-new-user-model .form-popup .form-container select {
-    width: 100%;
-    height: 36px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #868686;
-    padding: 0px 0px 2px 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
-    outline: none;
-    margin-bottom: 11px;
-    margin-top: 0px;
-}
-
-.admin-create-new-user-model .form-popup .form-container .name-input,
-.admin-create-new-user-model .form-popup .form-container .number-input,
-.admin-create-new-user-model .form-popup .form-container .email-input,
-.admin-create-new-user-model .form-popup .form-container .bot-input {
-    width: 109%;
-    height: 36px;
-    color: #868686;
-    padding: 0px 8px 2px 10px;
-    border: 1px solid #E6E6E6;
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    outline: none;
-    margin-bottom: 10px;
-}
-
-.admin-create-new-user-model .form-popup .form-container .select-status,
-.admin-create-new-user-model .form-popup .form-container .select-supervisor {
-    width: 109% !important;
-    height: 36px;
-    color: #868686;
-    padding: 0px 8px 2px 10px;
-    border: 1px solid #E6E6E6;
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
-}
-
-.admin-create-new-user-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    outline: none;
-    width: 92px;
-    height: 37px;
-}
-
-.admin-create-new-user-model .form-popup .form-container .modal-chip {
-    width: 120px !important;
+.modal-chip {
+    width: 150px !important;
     height: 34px;
     background: rgba(0, 92, 239, 0.05);
     border-radius: 5px;
@@ -4222,247 +3419,13 @@ div.nav-link {
     font-size: 12px;
     color: #0254D7;
     padding-top: 8px;
-    margin-right: 10px;
     padding-left: 25px;
 }
 
-.admin-create-new-user-model .form-popup .form-container .modal-chip img {
+.modal-chip img {
     margin-left: 76px;
     display: inline-block;
     margin-top: -38px;
-}
-
-.admin-create-new-user-model .form-popup .form-container .create-user-Btn {
-    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    border: none;
-    outline: none;
-    width: 128px;
-    height: 37px;
-    margin-left: 18px;
-    color: #FFFFFF;
-}
-
-.admin-edit-user-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 10px;
-}
-
-.admin-edit-user-popup-heading h6 {
-    font-weight: 500;
-    font-size: 12px;
-    color: #2D2D2D;
-}
-
-.admin-edit-user-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.admin-edit-user-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    max-width: 480px;
-    height: 475px;
-    padding: 11px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.admin-edit-user-model .form-popup .form-container label {
-    font-size: 12px;
-    color: #4D4D4D;
-    font-weight: 500;
-    margin-top: 6px;
-}
-
-.admin-edit-user-model .form-popup .form-container .modal-chip {
-    width: 120px !important;
-    height: 34px;
-    background: rgba(0, 92, 239, 0.05);
-    border-radius: 5px;
-    font-weight: normal;
-    font-size: 12px;
-    color: #0254D7;
-    padding-top: 8px;
-    margin-right: 10px;
-    padding-left: 25px;
-}
-
-.admin-edit-user-model .form-popup .form-container .modal-chip img {
-    margin-left: 76px;
-    display: inline-block;
-    margin-top: -38px;
-}
-
-.admin-edit-user-model .form-popup .form-container select {
-    width: 100%;
-    height: 36px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #868686;
-    padding: 0px 0px 2px 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
-    outline: none;
-    margin-bottom: 11px;
-    margin-top: 0px;
-}
-
-.admin-edit-user-model .form-popup .form-container .name-input,
-.admin-edit-user-model .form-popup .form-container .number-input,
-.admin-edit-user-model .form-popup .form-container .email-input,
-.admin-edit-user-model .form-popup .form-container .bot-input {
-    width: 109%;
-    height: 36px;
-    color: #868686;
-    padding: 0px 8px 2px 10px;
-    border: 1px solid #E6E6E6;
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    outline: none;
-    margin-bottom: 10px;
-}
-
-.admin-edit-user-model .form-popup .form-container .select-status,
-.admin-edit-user-model .form-popup .form-container .select-supervisor {
-    width: 109% !important;
-    height: 36px;
-    color: #868686;
-    padding: 0px 8px 2px 10px;
-    border: 1px solid #E6E6E6;
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
-}
-
-.admin-edit-user-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    outline: none;
-    width: 92px;
-    height: 37px;
-}
-
-.admin-edit-user-model .form-popup .form-container .create-user-Btn {
-    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    border: none;
-    outline: none;
-    width: 128px;
-    height: 37px;
-    margin-left: 18px;
-    color: #FFFFFF;
-}
-
-.admin-delete-user-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 12px;
-}
-
-.admin-delete-user-popup-heading h6 {
-    font-weight: 500;
-    font-size: 15px;
-    color: #2D2D2D;
-}
-
-.admin-delete-user-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.admin-delete-user-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    max-width: 535px;
-    height: 196px;
-    padding: 12px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.admin-delete-user-model .form-popup .form-container p {
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    padding-left: 13px;
-}
-
-.admin-delete-user-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    font-weight: 500;
-    font-size: 12px;
-    color: #4D4D4D;
-    outline: none;
-    height: 35px;
-    padding: 0px 35px 0px 35px;
-}
-
-.admin-delete-user-model .form-popup .form-container .addBtn {
-    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    border: 1px solid #0254D7;
-    outline: none;
-    height: 35px;
-    margin-right: 5px;
-    padding: 0px 35px 0px 35px;
-    color: #FFFFFF;
 }
 
 .live-chat-admin-user-status-field .live-chat-admin-manage-user-heading .search-container {
@@ -4760,14 +3723,6 @@ div.nav-link {
 
 /********Admin Reports css starts ******************/
 
-#live-chat-setting-content-c {
-    display: none;
-}
-
-#live-chat-setting-content-cr {
-    display: none;
-}
-
 .live-chat-admin-reports {
     border-right: solid#E6E6E6 1px;
     background: #fff;
@@ -4857,7 +3812,7 @@ div.nav-link {
 
 .live-chat-report-d-interaction-heading .live-chat-report-button-section .export-button img {
     padding-left: 12px;
-    margin-top: -3px;
+    margin-top: 0px;
 }
 
 .live-chat-report-d-interaction-heading .live-chat-report-button-section .filter-button {
@@ -4880,7 +3835,7 @@ div.nav-link {
 
 .live-chat-report-d-interaction-heading .live-chat-report-button-section .filter-button img {
     padding-left: 20px;
-    margin-top: -1px;
+    margin-top: 0px;
 }
 
 .live-chat-report-d-interaction-heading .live-chat-report-button-section .search-container {
@@ -4999,73 +3954,6 @@ div.nav-link {
     border-radius: 6px 0px 0px 6px;
 }
 
-.filter-report-d-interaction-popup-heading {
-    width: 100%;
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 10px;
-}
-
-.filter-report-d-interaction-popup-heading h6 {
-    font-weight: 500;
-    font-size: 12px;
-    color: #2D2D2D;
-    display: inline-block;
-    padding-right: 5px;
-}
-
-.filter-report-d-interaction-model {
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 100;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
-}
-
-.filter-report-d-interaction-model .form-popup {
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    max-width: 398px;
-    height: 293px;
-    padding: 11px 12px 20px 12px;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.filter-report-d-interaction-model .form-popup .form-container label {
-    font-size: 12px;
-    color: #4D4D4D;
-    font-weight: 500;
-}
-
-.filter-report-d-interaction-model .form-popup .form-container select {
-    width: 100%;
-    height: 36px;
-    background: #FFFFFF;
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #868686;
-    padding: 0px 0px 2px 10px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    appearance: none;
-    background-image: url(../img/select-down-arrow.svg);
-    background-repeat: no-repeat;
-    background-position-x: 95%;
-    background-position-y: 13px;
-    outline: none;
-    margin-bottom: 15px;
-    margin-top: -2px;
-}
-
 #startDate-interaction,
 #endDate-interaction {
     width: 180px;
@@ -5090,34 +3978,6 @@ div.nav-link {
 
 #startDate-interaction {
     margin-right: 30px;
-}
-
-.filter-report-d-interaction-model .form-popup .form-container .cancelBtn {
-    border: 1px solid #E6E6E6;
-    box-sizing: border-box;
-    border-radius: 5px;
-    background: none;
-    outline: none;
-    font-weight: bold;
-    font-size: 12px;
-    color: #4D4D4D;
-    width: 92px;
-    height: 37px;
-    margin-left: 15px;
-}
-
-.filter-report-d-interaction-model .form-popup .form-container .applyfilterBtn {
-    background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
-    border-radius: 5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    border: none;
-    outline: none;
-    width: 128px;
-    height: 37px;
-    margin-left: 15px;
-    color: #FFFFFF;
 }
 
 .filter-button-disabled {
@@ -5150,11 +4010,6 @@ div.nav-link {
     display: none;
 }
 
-
-/* #live-chat-reports-content-analytics{
-    display: none;
-} */
-
 #live-chat-reports-content-hourly-interaction {
     display: none;
 }
@@ -5178,11 +4033,6 @@ div.nav-link {
 #d-interaction-blue-icon {
     display: none;
 }
-
-
-/* #login-logout-grey-icon {
-    display: none;
-} */
 
 #login-logout-blue-icon {
     display: none;
@@ -5602,12 +4452,6 @@ div.nav-link {
     visibility: visible;
 }
 
-
-/* .live-chat-admin-settings-area table tbody tr:hover {
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    background: #FFFFFF;
-} */
-
 .live-chat-admin-settings-area table td,
 .live-chat-admin-settings-area table th {
     padding: 18px 2px 18px 20px;
@@ -5774,7 +4618,7 @@ div.nav-link {
     margin: 0;
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 13px;
     color: #2D2D2D;
     margin-right: 8px;
 }
@@ -5796,7 +4640,7 @@ div.nav-link {
 }
 
 .modal-footer .btn-primary {
-    width: 102px;
+    width: 110px;
     height: 37px;
     background: linear-gradient(90deg, #0254D7 0%, #0062FF 100%);
     border-radius: 5px;

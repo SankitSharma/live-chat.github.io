@@ -106,34 +106,7 @@ function close_text_format_icons() {
     }
 }
 
-var modal = document.getElementById("myModel");
-var resolvemodal = document.getElementById("myResolveModel");
-var btn = document.getElementById("myBtn");
-var mybtn = document.getElementById("myModelBtn");
-var btnmobile = document.getElementById("myBtnMobile");
-var mybtnmobile = document.getElementById("myModelBtnMobile");
-mybtn.onclick = function() {
-    resolvemodal.style.display = "block";
-}
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-mybtnmobile.onclick = function() {
-    resolvemodal.style.display = "block";
-}
-btnmobile.onclick = function() {
-    modal.style.display = "block";
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-    if (event.target == resolvemodal) {
-        resolvemodal.style.display = "none";
 
-    }
-
-}
 
 
 function myLogoCollapse() {
@@ -151,29 +124,7 @@ function myLogoCollapse() {
 
 }
 
-function agentOfflineFunction() {
-    var checkBox = document.getElementById("customSwitch2");
-    var offlineModal = document.getElementById("offlineReasonModal");
-    var agentOfflineText = document.getElementById("agentOfflineText");
-    var agentOnlineText = document.getElementById("agentOnlineText");
-    if (checkBox.checked == false) {
-        offlineModal.style.display = "block";
-        agentOnlineText.style.display = "none";
-        agentOfflineText.style.display = "inline-block";
-    } else {
-        offlineModal.style.display = "none";
-        agentOfflineText.style.display = "none";
-        agentOnlineText.style.display = "inline-block";
-    }
-    window.onclick = function(event) {
-        if (event.target == offlineModal) {
-            offlineModal.style.display = "none";
-        }
 
-
-
-    }
-}
 
 function agentRedirectAdminFunction() {
     var admincheckBox = document.getElementById("customSwitch1");
