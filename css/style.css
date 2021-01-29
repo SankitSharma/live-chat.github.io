@@ -49,7 +49,13 @@ p {
     font-size: 13px;
     color: #4D4D4D;
     position: relative;
-    top: 12px;
+    top: 8px;
+}
+
+#custom-text-attach-img {
+    font-weight: normal;
+    font-size: 13px;
+    color: #4D4D4D;
 }
 
 #click-to-view-text-attachment {
@@ -59,6 +65,20 @@ p {
     font-size: 12px;
     color: #909090;
     cursor: pointer;
+}
+
+.file-attach-name-area {
+    display: block;
+    height: 25px;
+    width: 100%;
+    background: #FBFCFF;
+    position: relative;
+    padding: 2px 15px;
+    bottom: 0px;
+    margin-top: 10px;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+    border-top: 1px solid #E6E6E6;
 }
 
 .file-attachement-download {
@@ -440,10 +460,10 @@ div.nav-link {
 
 .live-chat-client-message-wrapper {
     width: 46%;
-    height: 70px;
+    /* height: 70px; */
     display: grid;
     grid-template-columns: minmax(min-content, 40px) 3fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0fr 0fr;
     justify-items: start;
     margin-left: 2%;
     margin-top: 5%;
@@ -451,10 +471,10 @@ div.nav-link {
 
 .live-chat-agent-message-wrapper {
     width: 46%;
-    height: 70px;
+    /* height: 70px; */
     display: grid;
     grid-template-columns: 3fr minmax(min-content, 40px);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0fr 0fr;
     justify-items: end;
     margin-left: 52.5%;
     font-size: 12px;
@@ -480,6 +500,7 @@ div.nav-link {
     border-radius: 0 16px 16px 16px;
     padding: 10px;
     color: #717171;
+    word-break: break-all;
 }
 
 .live-chat-agent-message-bubble {
@@ -1337,7 +1358,6 @@ div.nav-link {
     list-style-type: none;
     display: flex;
     background: #FFFFFF;
-    border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 6px;
 }
@@ -1345,12 +1365,16 @@ div.nav-link {
 .live-chat-calender-area .pagination-content li {
     border-right: 1px solid #E6E6E6;
     box-sizing: border-box;
-    padding: 4px 10px 1px 10px;
+    padding: 3px 10px 1px 10px;
     font-size: 13px;
+    height: 26px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .live-chat-calender-area .pagination-content li a {
     color: #717171;
+    text-decoration: none;
 }
 
 .live-chat-calender-area .pagination-div .active-page {
@@ -1692,7 +1716,6 @@ div.nav-link {
     list-style-type: none;
     display: flex;
     background: #FFFFFF;
-    border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 6px;
 }
@@ -1700,12 +1723,16 @@ div.nav-link {
 .live-chat-canned-response-area .pagination-content li {
     border-right: 1px solid #E6E6E6;
     box-sizing: border-box;
-    padding: 4px 10px 0px 10px;
+    padding: 3px 10px 1px 10px;
     font-size: 13px;
+    height: 26px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .live-chat-canned-response-area .pagination-content li a {
     color: #717171;
+    text-decoration: none;
 }
 
 .live-chat-canned-response-area .pagination-div .active-page {
@@ -2164,7 +2191,6 @@ div.nav-link {
     list-style-type: none;
     display: flex;
     background: #FFFFFF;
-    border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 6px;
 }
@@ -2172,12 +2198,16 @@ div.nav-link {
 .live-chat-archived-chats-area .pagination-content li {
     border-right: 1px solid #E6E6E6;
     box-sizing: border-box;
-    padding: 4px 10px 0px 10px;
+    padding: 3px 10px 1px 10px;
     font-size: 13px;
+    height: 26px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .live-chat-archived-chats-area .pagination-content li a {
     color: #717171;
+    text-decoration: none;
 }
 
 .live-chat-archived-chats-area .pagination-div .active-page {
@@ -3050,7 +3080,6 @@ div.nav-link {
     list-style-type: none;
     display: flex;
     background: #FFFFFF;
-    border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 6px;
 }
@@ -3058,12 +3087,16 @@ div.nav-link {
 .live-chat-admin-history-table-area .pagination-content li {
     border-right: 1px solid #E6E6E6;
     box-sizing: border-box;
-    padding: 4px 10px 0px 10px;
+    padding: 3px 10px 1px 10px;
     font-size: 13px;
+    height: 26px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .live-chat-admin-history-table-area .pagination-content li a {
     color: #717171;
+    text-decoration: none;
 }
 
 .live-chat-admin-history-table-area .pagination-div .active-page {
@@ -3604,7 +3637,6 @@ div.nav-link {
     list-style-type: none;
     display: flex;
     background: #FFFFFF;
-    border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 6px;
 }
@@ -3612,12 +3644,16 @@ div.nav-link {
 .live-chat-admin-manage-user-table-area .pagination-content li {
     border-right: 1px solid #E6E6E6;
     box-sizing: border-box;
-    padding: 4px 10px 0px 10px;
+    padding: 3px 10px 1px 10px;
     font-size: 13px;
+    height: 26px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .live-chat-admin-manage-user-table-area .pagination-content li a {
     color: #717171;
+    text-decoration: none;
 }
 
 .live-chat-admin-manage-user-table-area .pagination-div .active-page {
@@ -3931,7 +3967,6 @@ div.nav-link {
     list-style-type: none;
     display: flex;
     background: #FFFFFF;
-    border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 6px;
 }
@@ -3939,12 +3974,16 @@ div.nav-link {
 .live-chat-report-d-interaction-table-area .pagination-content li {
     border-right: 1px solid #E6E6E6;
     box-sizing: border-box;
-    padding: 4px 10px 1px 10px;
+    padding: 3px 10px 1px 10px;
     font-size: 13px;
+    height: 26px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .live-chat-report-d-interaction-table-area .pagination-content li a {
     color: #717171;
+    text-decoration: none;
 }
 
 .live-chat-report-d-interaction-table-area .pagination-div .active-page {
@@ -4478,7 +4517,6 @@ div.nav-link {
     list-style-type: none;
     display: flex;
     background: #FFFFFF;
-    border: 1px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 6px;
 }
@@ -4486,12 +4524,16 @@ div.nav-link {
 .live-chat-admin-settings-area .pagination-content li {
     border-right: 1px solid #E6E6E6;
     box-sizing: border-box;
-    padding: 4px 10px 0px 10px;
+    padding: 3px 10px 1px 10px;
     font-size: 13px;
+    height: 26px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
 }
 
 .live-chat-admin-settings-area .pagination-content li a {
     color: #717171;
+    text-decoration: none;
 }
 
 .live-chat-admin-settings-area .pagination-div .active-page {
