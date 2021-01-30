@@ -2902,10 +2902,9 @@ div.nav-link {
 .live-chat-text-box-wrapper-admin {
     width: 100%;
     border-top: 1px solid var(--border-color-primary);
-    height: 125px;
     text-align: right;
     background-color: white;
-    padding-top: 13px;
+    padding-top: 17px;
     padding-right: 15px;
 }
 
