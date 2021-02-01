@@ -81,6 +81,11 @@ p {
     border-top: 1px solid #E6E6E6;
 }
 
+.file-attachment-path {
+    width: 120px;
+    display: inline-block;
+}
+
 .file-attachement-download {
     background-color: #ffffff !important;
     border: 1px solid #E6E6E6;
@@ -558,6 +563,8 @@ div.nav-link {
     display: inline-flex;
     background-color: white;
     margin-left: 20px;
+    /* position: absolute;
+    bottom: 3rem; */
 }
 
 .live-chat-text-box {
@@ -960,11 +967,11 @@ div.nav-link {
     max-width: 240px;
     padding-top: 42px;
     text-align: center;
-    padding-left: 30px;
     margin-top: 50px;
     margin-bottom: 20px;
     border-right: 1px solid #E6E6E6;
     box-sizing: border-box;
+    position: relative;
 }
 
 .live-chat-profile-area .first-ele .user-image-section {
@@ -972,9 +979,12 @@ div.nav-link {
     height: 103px;
     text-align: center;
     background: #FFFFFF;
-    margin-left: 50px;
     padding-top: 20px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, 0%);
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 15%);
     border-radius: 50%;
 }
 
@@ -1049,7 +1059,7 @@ div.nav-link {
 }
 
 .live-chat-profile-area .first-ele h6 {
-    margin-top: 16px;
+    margin-top: 7.5rem;
     margin-bottom: 1px;
     font-weight: 500;
     font-size: 15px;
@@ -1093,9 +1103,6 @@ div.nav-link {
     }
     .live-chat-setting-profile-heading {
         padding: 25px 0px 25px 25px;
-    }
-    .live-chat-profile-area .first-ele .user-image-section {
-        margin-left: 122px;
     }
 }
 
@@ -1151,6 +1158,9 @@ div.nav-link {
     }
     .live-chat-profile-area .first-ele p {
         display: block;
+    }
+    .live-chat-profile-area .first-ele .user-image-section {
+        transform: translate(-55%, 0%);
     }
     .live-chat-profile-area .second-ele input {
         width: 100%;
@@ -1420,6 +1430,7 @@ div.nav-link {
     }
     .live-chat-calender-area tr {
         border: 1px solid #ccc;
+        margin: 0px 15px;
     }
     .live-chat-calender-area td {
         border: none;
@@ -1460,15 +1471,12 @@ div.nav-link {
         content: "Modified Date";
     }
     .live-chat-setting-calender-heading .live-chat-calender-date select {
-        width: 75px;
-        height: 35px;
-        margin-right: 7px;
-        margin-left: 7px;
+        width: 100%;
+        display: block;
+        margin-bottom: 15px;
     }
     .live-chat-setting-calender-heading .live-chat-calender-date .search-container {
-        float: none;
-        margin: 15px 0px 10px 10px;
-        width: 255px;
+        width: 100%;
     }
     .live-chat-calender-area p {
         font-size: 10px;
@@ -1483,10 +1491,21 @@ div.nav-link {
     .live-chat-setting-calender-heading .back-arrow-div {
         display: inline-block !important;
         margin-left: 10px;
+        margin-top: 1px;
     }
     .live-chat-setting-calender-heading .live-chat-calender-date .filter-apply-button {
-        margin-top: 13px;
-        margin-left: 9px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .live-chat-setting-calender-heading .live-chat-calender-date .search-container {
+        float: left;
+        height: 34px;
+        padding: 0px 0px 0px 15px;
+        box-shadow: 0px 0px 8px rgb(0 0 0 / 8%);
+        border-radius: 5px;
+        margin-top: 15px;
     }
 }
 
@@ -1761,7 +1780,8 @@ div.nav-link {
 
 @media screen and (max-width: 767px) {
     .live-chat-setting-canned-response-heading .live-chat-canned-response-popup .search-container {
-        width: 150px;
+        width: 100%;
+        float: none;
     }
     .live-chat-setting-canned-response-heading .live-chat-canned-response-popup .search-container input[type=text] {
         width: 110px;
@@ -1769,6 +1789,7 @@ div.nav-link {
     .live-chat-setting-canned-response-heading .back-arrow-div {
         display: inline-block;
         margin-left: 10px;
+        margin-top: 1px;
     }
     .live-chat-canned-response-area p {
         font-size: 10px;
@@ -1797,6 +1818,7 @@ div.nav-link {
     }
     .live-chat-canned-response-area tr {
         border: 1px solid #ccc;
+        margin: 0px 15px;
     }
     .live-chat-canned-response-area td {
         border: none;
@@ -1848,6 +1870,15 @@ div.nav-link {
     }
     #live-chat-setting-content-cr {
         height: calc(100vh - 9.375rem) !important;
+    }
+    .live-chat-setting-canned-response-heading .live-chat-canned-response-popup .open-button {
+        width: 100%;
+        margin-bottom: 15px;
+        display: block;
+    }
+    .live-chat-setting-canned-response-heading .live-chat-canned-response-popup .delete-button {
+        width: 100%;
+        margin-bottom: 15px;
     }
 }
 
@@ -1957,7 +1988,11 @@ div.nav-link {
         display: none;
     }
     .live-chat-profile-area .first-ele .user-image-section {
-        margin-left: 98px;
+        /* margin-left: 105px; */
+    }
+    .live-chat-general-setting-area {
+        height: 100%;
+        padding-bottom: 15px;
     }
 }
 
@@ -2253,6 +2288,8 @@ div.nav-link {
     }
     .live-chat-archived-chats-area tr {
         border: 1px solid #ccc;
+        padding: 0px 11px;
+        margin-right: 15px;
     }
     .live-chat-archived-chats-area td {
         border: none;
@@ -2296,16 +2333,22 @@ div.nav-link {
         height: 35px;
         margin-bottom: 15px;
     }
+    .live-chat-setting-archived-heading p {
+        display: none;
+    }
+    #datepickers {
+        margin-left: 0px;
+    }
     .live-chat-setting-archived-heading .live-chat-archived-date .search-container {
         width: 100%;
     }
     .live-chat-archived-chats-area p {
-        font-size: 12px;
-        margin-left: -15px;
+        font-size: 10px;
+        margin-left: 0px;
         padding-left: 0px;
     }
     .live-chat-archived-chats-area .pagination-div {
-        margin-right: -15px;
+        margin-right: 0px;
     }
     .navbar h2 {
         display: none;
@@ -2317,6 +2360,10 @@ div.nav-link {
     }
     #live-chat-archived-setting {
         height: calc(100vh - 8.375rem) !important;
+    }
+    .live-chat-setting-archived-heading .live-chat-archived-date .filter-apply-button {
+        width: 100%;
+        margin: 0px 0px 15px 0px;
     }
 }
 
@@ -2761,6 +2808,34 @@ div.nav-link {
     .live-chat-initiation-date-label,
     .live-chat-category-label {
         margin: 10% 0 5% 0;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .live-chat-agent-message-bubble-image-attachment {
+        width: 200px;
+    }
+    .file-attachment-path {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .live-chat-agent-message-bubble-image-attachment {
+        width: 150px;
+    }
+    .file-attachment-path {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .live-chat-agent-message-bubble-image-attachment {
+        width: 120px;
+        height: 100px;
+    }
+    .file-attachment-path {
+        width: 80px;
     }
 }
 
