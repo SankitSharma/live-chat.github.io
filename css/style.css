@@ -2334,7 +2334,7 @@ div.nav-link {
         margin-bottom: 15px;
     }
     .live-chat-setting-archived-heading p {
-        display: none;
+        display: none !important;
     }
     #datepickers {
         margin-left: 0px;
@@ -2422,12 +2422,12 @@ div.nav-link {
     }
     .live-chat-client-message-wrapper {
         width: 95%;
-        height: 50px;
+        /* height: 50px; */
         margin: 10% 0 10% 1%;
     }
     .live-chat-agent-message-wrapper {
         width: 95%;
-        height: 50px;
+        /* height: 50px; */
         margin: 10% 0 10% 4%;
     }
     .live-chat-client-message-time,
@@ -2486,7 +2486,7 @@ div.nav-link {
         grid-template-columns: 60px 70px 1fr;
     }
     .live-chat-text-format-icons {
-        min-width: 90%;
+        /* min-width: 90%; */
     }
     .live-chat-text-format-icon {
         width: 18px;
@@ -2607,17 +2607,19 @@ div.nav-link {
         display: none;
     }
     .live-chat-text-box-wrapper {
-        width: 100%;
+        width: 99%;
         border: none;
-        height: 8%;
-        bottom: 50px;
+        /* height: 8%; */
+        bottom: 15px;
         position: fixed;
         margin-left: -10px;
+        border: 1px solid var(--border-color-primary);
+        border-radius: 50px;
     }
     .live-chat-text-box {
-        border: none;
+        /* border: none;
         padding: 15px 10px 10px 10px;
-        height: 55px;
+        height: 55px; */
     }
     .live-chat-text-area {
         font-size: 18px;
@@ -2634,14 +2636,14 @@ div.nav-link {
         display: none;
     }
     .live-chat-text-format-icons {
-        display: grid;
+        /* display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: repeat(11, minmax(min-content, 1fr));
         align-items: center;
         justify-items: center;
         width: 100%;
         max-width: 100%;
-        min-width: 100%;
+        min-width: 100%; */
     }
     .live-chat-text-format-icon-wrapper.private-note {
         width: 30px;
@@ -2836,6 +2838,17 @@ div.nav-link {
     }
     .file-attachment-path {
         width: 80px;
+    }
+    .live-chat-active-customer {
+        padding-right: 8px;
+    }
+    .live-chat-active-customer-name {
+        font-size: 12px;
+        margin-left: 0px;
+    }
+    .live-chat-active-customer-text {
+        font-size: 10px;
+        margin-left: 0px;
     }
 }
 
