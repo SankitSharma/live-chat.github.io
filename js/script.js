@@ -1,5 +1,5 @@
 function activeCustomersHandler() {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth <= 768) {
         var currElement = document.getElementById('live-chat-active-customers-sidebar');
         if (getComputedStyle(currElement).display === 'block')
             currElement.style.display = 'none';

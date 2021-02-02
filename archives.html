@@ -148,7 +148,7 @@
                 <div class="container-fluid pl-1 pr-2 arange">
                     <div class="row">
 
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 py-2" id="live-chat-archived-setting" style="height: calc(100vh - 4.375rem); background: #FAFAFA;">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 py-2" id="live-chat-archived-setting" style=" background: #FAFAFA;">
 
                             <div class="live-chat-setting-archived-heading ">
 
@@ -187,7 +187,15 @@
                                 </div>
 
                             </div>
+
+
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 live-chat-archived-chats-area">
+                                <div class="live-chat-setting-archived-filter-btnMobile ">
+                                    <button class="filter-button-archive-mobile" data-toggle="modal" data-target="#agent-archive-mobileRes-filter-Modal">Filters
+                                        <img src="./img/filter-icon.svg">
+                                    </button>
+                                </div>
+
                                 <table role="table" id="example" class="display">
                                     <thead role="rowgroup">
                                         <tr role="row">
@@ -401,6 +409,46 @@
                             </div>
                         </div>
                     </div>
+                    <div class="modal fade" id="agent-archive-mobileRes-filter-Modal" tabindex="-1" role="dialog" aria-labelledby="Agent_archive_mobileRes_filter_modal_label" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h6>Filter</h6>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-12 mb-2">
+                                            <label>Chat duration</label>
+                                            <select name="day" class="form-control select-dropdown-icon">
+                                                <option>Select chat duration</option>
+                                                <option value="01">Weakdays</option>
+                                                <option value="02">Weekend</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <label>Start date</label>
+                                            <input class="form-control" id="startDate" type="text" placeholder="Select Start date">
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <label>End date </label>
+
+                                            <input class="form-control" id="endDate" type="text" placeholder="Select End date">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+
+
+                                    <div style="float: right;">
+                                        <button class="btn-close" type="button" data-dismiss="modal">Cancel</button>
+                                        <button class="btn-primary" type="button">Apply </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -409,13 +457,13 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <!-- <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>.</span>
                     </div>
                 </div>
-            </footer>
+            </footer> -->
             <!-- End of Footer -->
 
         </div>

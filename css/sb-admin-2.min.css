@@ -1091,7 +1091,7 @@ pre code {
     }
 }
 
-@media (min-width:768px) {
+@media (min-width:769px) {
     .col-md {
         flex-basis: 0;
         flex-grow: 1;
@@ -6995,9 +6995,9 @@ button.bg-dark:hover {
 }
 
 @media (min-width:768px) {
-    .d-md-none {
+    /* .d-md-none {
         display: none!important
-    }
+    } */
     .d-md-inline {
         display: inline!important
     }
@@ -10824,7 +10824,10 @@ a:focus {
     color: rgba(255, 255, 255, .5)
 }
 
-@media (min-width:768px) {
+@media (min-width:769px) {
+    .d-md-none {
+        display: none!important;
+    }
     .sidebar {
         width: 14rem!important
     }
