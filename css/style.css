@@ -3169,7 +3169,7 @@ div.nav-link {
         padding-right: 8px;
     }
     .tooltip-textarea .tooltiptext {
-        width: 65px;
+        display: none;
     }
     .mobile-display-no-chats-appear {
         font-weight: normal;
