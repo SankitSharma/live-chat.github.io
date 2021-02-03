@@ -1562,7 +1562,7 @@ div.nav-link {
         display: block;
     }
     .live-chat-calender-area table tr:nth-of-type(even) {
-        background: #F7F7F7;
+        background: #F7F7F7 !important;
     }
     .live-chat-calender-area table {
         width: 100%;
@@ -2042,7 +2042,7 @@ div.nav-link {
         display: block;
     }
     .live-chat-canned-response-area table tr:nth-of-type(even) {
-        background: #F7F7F7;
+        background: #F7F7F7 !important;
     }
     .live-chat-canned-response-area table {
         width: 100%;
@@ -2577,7 +2577,7 @@ div.nav-link {
         display: block;
     }
     .live-chat-archived-chats-area table tr:nth-of-type(even) {
-        background: #F7F7F7;
+        background: #F7F7F7 !important;
     }
     .live-chat-setting-archived-filter-btnMobile {
         display: block;
