@@ -10489,8 +10489,8 @@ a:focus {
 }
 
 .topbar #sidebarToggleTop {
-    height: 2.5rem;
-    width: 2.5rem
+    /* height: 2.5rem;
+    width: 2.5rem */
 }
 
 .topbar #sidebarToggleTop:hover {

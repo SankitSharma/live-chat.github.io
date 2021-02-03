@@ -156,7 +156,7 @@
 
                                     <a class="setting-link" id="live-chat-profile-div">
                                         <img id="profile-blue-icon" src="./img/profile-icon.svg" type="image">
-                                        <img id="profile-gray-icon" src="./img/profileicon.svg" type="image">
+                                        <img id="profile-gray-icon" src="./img/profileicon.svg" type="image" style="width: 16px; height: 16px;">
 
                                         <span id="profile-color-change">Profile</span>
                                     </a>
@@ -177,10 +177,10 @@
                                         <span id="response-color-change">Canned Response</span>
                                     </a>
                                 </li>
-                                <li class="setting-item" onclick="myFunctionGeneralSetting()">
+                                <li class="setting-item" onclick="myFunctionGeneralSetting()" style="border: none;">
 
                                     <a class="setting-link">
-                                        <img id="gsetting-grey-icon" src="./img/g-settingicon.svg" type="image">
+                                        <img id="gsetting-grey-icon" src="./img/g-settingicon.svg" type="image" style="width: 14px; height: 14px;">
                                         <img id="gsetting-blue-icon" src="./img/g-setting-icon-active.svg" type="image">
                                         <span id="g-setting-color-change">General Settings</span>
                                     </a>
@@ -358,7 +358,7 @@
 
                                     <div class="search-container">
                                         <form action="#">
-                                            <button type="submit"><img src="img/Vector-search.svg"></button>
+                                            <button type="submit"><img src="img/search-icon-mobile.svg"></button>
                                             <input type="text" placeholder="Search" name="search">
 
                                         </form>
@@ -493,7 +493,7 @@
 
                                     <div class="search-container">
                                         <form action="#">
-                                            <button type="submit"><img src="img/Vector-search.svg"></button>
+                                            <button type="submit"><img src="img/search-icon-mobile.svg"></button>
                                             <input type="text" placeholder="Search" name="search">
 
                                         </form>
@@ -633,7 +633,7 @@
                         </div>
 
                     </div>
-                    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-setting-content-gs" style="height: calc(100vh - 4.375rem); background: #FAFAFA;">
+                    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 py-2 " id="live-chat-setting-content-gs" style=" background: #FAFAFA;">
 
                         <div class="live-chat-general-setting-heading ">
                             <img src="./img/mobile-back.svg" class="back-arrow-div" id="live-chat-active-customers-opener-setting" onclick="myFunctionArrow()">
@@ -647,16 +647,16 @@
 
 
 
-                            <div class="container-fluid">
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-6 text-content">
-                                    Enable desktop notifications
-                                </div>
 
-                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-6 checkbox-content">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8 text-content">
+                                Enable desktop notifications
+                            </div>
 
-                                    <input type="checkbox" checked>
-                                    <button class="saveChangesBtn">Save Changes</button>
-                                </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 checkbox-content">
+
+                                <input type="checkbox" checked>
+
+
 
 
                             </div>
@@ -669,7 +669,16 @@
 
 
 
+
+
+
+
+
+
+
+
                         </div>
+                        <button class="saveChangesBtn-general-setting">Save Changes</button>
 
                     </div>
 
