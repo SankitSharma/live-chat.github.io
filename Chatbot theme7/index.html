@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Cogno AI</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap_datepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery_datepicker.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery_timepicker.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap_datepicker.js"></script>
+    <script type="text/javascript" src="js/bootstrap_timepicker.js"></script>
+    <script type="text/javascript" src="js/jquery_timepicker_min.js"></script>
+    <script type="text/javascript" src="js/theme7.js"></script>
+
+    <script type="text/javascript" src="js/select2.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+
+
+    <input type="checkbox" id="click" style="visibility: hidden;">
+    <label class="bot-opener" for="click" onclick="callfunc();">
+    <span class="minimized-view-icon" >
+        <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.612 18.0136C19.612 16.8787 18.6919 15.9588 17.5572 15.9588H7.05488C5.92 15.9588 5 16.8787 5 18.0136V18.8422C5 19.8402 5.43533 20.7887 6.19207 21.4391C7.61942 22.6663 9.66407 23.2661 12.303 23.2661C14.9423 23.2661 16.9883 22.6661 18.418 21.4387C19.1759 20.788 19.612 19.8391 19.612 18.8402V18.0136ZM12.3033 5L12.2103 5.00624C11.876 5.05159 11.6183 5.33819 11.6183 5.68495L11.6176 6.369L8.42157 6.36945C7.28668 6.36945 6.36669 7.28945 6.36669 8.42431V12.5383C6.36669 13.6731 7.28668 14.5931 8.42157 14.5931H16.1843C17.3193 14.5931 18.2392 13.6731 18.2392 12.5383V8.42431C18.2392 7.28945 17.3193 6.36945 16.1843 6.36945L12.9875 6.369L12.9882 5.68495L12.982 5.59199C12.9366 5.25766 12.65 5 12.3033 5ZM9.10651 10.2502C9.10651 9.62009 9.61732 9.10928 10.2475 9.10928C10.8776 9.10928 11.3884 9.62009 11.3884 10.2502C11.3884 10.8804 10.8776 11.3912 10.2475 11.3912C9.61732 11.3912 9.10651 10.8804 9.10651 10.2502ZM13.2096 10.2502C13.2096 9.62009 13.7204 9.10928 14.3506 9.10928C14.9807 9.10928 15.4916 9.62009 15.4916 10.2502C15.4916 10.8804 14.9807 11.3912 14.3506 11.3912C13.7204 11.3912 13.2096 10.8804 13.2096 10.2502ZM13.4566 12.4018C13.4566 13.039 12.9401 13.5554 12.303 13.5554C11.6659 13.5554 11.1494 13.039 11.1494 12.4018H13.4566Z" fill="white"/>
+            </g>
+            <defs>
+            <filter id="filter0_d" x="0" y="0" width="24.612" height="28.2661" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset/>
+            <feGaussianBlur stdDeviation="2.5"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+    <span class="minimized-view-text"> Let’s Chat!!</span>
+           
+    </span>
+    <span class="minimized-view-cross-icon ">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.7305 14L7.0045 8.26864L1.27846 14L0 12.7224L5.73505 7L0 1.27763L1.27846 0L7.0045 5.73136L12.7305 0.00899763L14 1.27763L8.27396 7L14 12.7224L12.7305 14Z" fill="white"/>
+            </svg>
+
+</label>
+    <div class="wrapper" id="main-container">
+        <div class="head-text" id="easychat-navbar">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="#0085FF"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.9547 20.0967C23.9547 18.8444 22.9393 17.8293 21.6872 17.8293H10.0985C8.84622 17.8293 7.83105 18.8444 7.83105 20.0967V21.011C7.83105 22.1123 8.31142 23.1589 9.14645 23.8766C10.7214 25.2307 12.9776 25.8926 15.8895 25.8926C18.8019 25.8926 21.0595 25.2305 22.6371 23.8761C23.4735 23.1582 23.9547 22.1111 23.9547 21.0089V20.0967ZM15.8898 5.73688L15.7873 5.74376C15.4184 5.7938 15.134 6.11005 15.134 6.49268L15.1332 7.24749L11.6066 7.248C10.3543 7.248 9.33912 8.26317 9.33912 9.51543V14.055C9.33912 15.3072 10.3543 16.3224 11.6066 16.3224H20.1724C21.4247 16.3224 22.4398 15.3072 22.4398 14.055V9.51543C22.4398 8.26317 21.4247 7.248 20.1724 7.248L16.6449 7.24749L16.6457 6.49268L16.6388 6.39011C16.5887 6.0212 16.2725 5.73688 15.8898 5.73688ZM12.3624 11.5302C12.3624 10.8349 12.926 10.2713 13.6213 10.2713C14.3167 10.2713 14.8803 10.8349 14.8803 11.5302C14.8803 12.2255 14.3167 12.7892 13.6213 12.7892C12.926 12.7892 12.3624 12.2255 12.3624 11.5302ZM16.8899 11.5302C16.8899 10.8349 17.4536 10.2713 18.1489 10.2713C18.8442 10.2713 19.408 10.8349 19.408 11.5302C19.408 12.2255 18.8442 12.7892 18.1489 12.7892C17.4536 12.7892 16.8899 12.2255 16.8899 11.5302ZM17.1624 13.9044C17.1624 14.6075 16.5924 15.1774 15.8894 15.1774C15.1864 15.1774 14.6165 14.6075 14.6165 13.9044H17.1624Z" fill="white"/>
+                </svg>
+            <span class="heading-text-content">IRIS</span>
+
+            <div class="header-v2-top-right" onclick="hideBotFunc()">
+                <div class="header-v2-top-right-cross" data-testid="headerCross">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class=""><path fill-rule="evenodd" clip-rule="evenodd" d="M19 6.4L17.6 5L12 10.6L6.4 5L5 6.4L10.6 12L5 17.6L6.4 19L12 13.4L17.6 19L19 17.6L13.4 12L19 6.4Z" fill="#606060"></path></svg></div>
+            </div>
+        </div>
+        <div class="message-section-area" id="easychat-chat-container">
+            <div class="message-section-messages">
+                <div class="timeline-message">
+                    <div class="timeline-message-text">a few seconds ago</div>
+                </div>
+                <div class="message-section-message-from-admin">
+                    <div class="message-section-message-from-admin-text-content">
+                        Hey! I am Chatbot, your virtual asssistant. How may I help you? Hey! I am Chatbot, your virtual asssistant. How may I help you?
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="message-section-message-from-user">
+                    <div class="message-section-message-from-user-text-content">
+                        Hey!
+
+                    </div>
+
+                </div>
+                <div class="timeline-message">
+                    <div class="timeline-message-text">a few seconds ago</div>
+                </div>
+                <div class="message-section-message-from-admin">
+                    <div class="message-section-message-from-admin-text-content">
+                        Hey! I am Chatbot, your virtual asssistant. How may I help you?
+
+                    </div>
+
+                </div>
+                <div class="message-section-message-from-user">
+                    <div class="message-section-message-from-user-text-content">
+                        Hey!
+
+                    </div>
+
+                </div>
+                <div class="message-section-message-from-admin">
+                    <div class="message-section-message-from-admin-text-content">
+                        Hey! I am Chatbot, your virtual asssistant. How may I help you?
+
+                    </div>
+
+                </div>
+                <div class="message-section-message-from-user">
+                    <div class="message-section-message-from-user-text-content">
+                        Hey! lorem ipsum lorem ipsum lorem ipsum
+
+                    </div>
+
+                </div>
+                <div class="message-section-message-from-user">
+                    <div class="message-section-message-from-user-text-content">
+                        Hey!
+
+                    </div>
+
+                </div>
+                <div class="typing-indicator ">
+                    <div class="typing-indicator-loader">
+                        Typing...
+                    </div>
+                </div>
+
+
+                <div class="easychat-drop-down-container" onclick="click_dropdown(this)">
+                    <button class="dropbtn ">Select <svg class="without-flip"  width="24" height="9" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="dropdown-arrow" d="M12.2384 15.4351C11.4053 16.6642 9.59467 16.6642 8.76165 15.4351L1.03047 4.02818C0.0853811 2.63374 1.0843 0.75 2.76883 0.75L18.2312 0.749999C19.9157 0.749998 20.9146 2.63375 19.9695 4.02818L12.2384 15.4351Z" fill="#C4C4C4"></path></svg></button>
+                    <div class="easychat-widget-dropdown-content">
+                        <input type="text" id="dropdown-search-input" class="dropdown-search" onclick="click_dropdown(this)" autocomplete="off" placeholder="Search..">
+                        <div id="dropdown_choices">
+
+                            <a href="#" onclick="click_dropdown(this)"> <input type="checkbox"> incididunt
+                            </a>
+                            <a href="#" onclick="click_dropdown(this)"><input type="checkbox"> voluptate </a>
+                            <a href="#" onclick="click_dropdown(this)"> <input type="checkbox"> incididunt
+                            </a>
+                            <a href="#" onclick="click_dropdown(this)"><input type="checkbox"> others </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="easychat-datepicker-container" align="center" id="easychat-datepicker-container">
+                    <div class="easychat-datepicker-div"> Start Date
+                        <p id="datepicker_error_0" style="color:red;display:none;">Please enter a valid date(dd/mm/yyyy)</p>
+                        <input type="text" style="width:83%" name="datepicker" class="easychat-datepicker" id="easychat-datepicker-startDate"> </div>
+                    <div class="easychat-datepicker-div"> End Date
+                        <p id="datepicker_error_1" style="color:red;display:none;">Please enter a valid date(dd/mm/yyyy)</p>
+                        <input type="text" style="width:83%" name="datepicker" class="easychat-datepicker" id="easychat-datepicker-endDate"> </div>
+                </div>
+                <div class="radio-btn-container">
+
+                    <div class="radio-btn-container-item">
+                        <input type="radio" id="test2" class="hello" name="radio-group">
+                        <label for="test2">Yes</label>
+                    </div>
+                    <div class="radio-btn-container-item">
+                        <input type="radio" id="test3" class="hello" name="radio-group">
+                        <label for="test3">No</label>
+                    </div>
+
+
+                </div>
+                <div class="checkbox-btn-container">
+
+                    <div class="checkbox-btn-container-item">
+                        <input type="checkbox" id="test2" name="radio-group">
+                        <label for="test2">1</label>
+                    </div>
+                    <div class="checkbox-btn-container-item">
+                        <input type="checkbox" id="test3" name="radio-group">
+                        <label for="test3">2</label>
+                    </div>
+                    <div class="checkbox-btn-container-item">
+                        <input type="checkbox" id="test3" name="radio-group">
+                        <label for="test3">3</label>
+                    </div>
+                    <div class="checkbox-btn-container-item">
+                        <input type="checkbox" id="test3" name="radio-group">
+                        <label for="test3">4</label>
+                    </div>
+
+
+                </div>
+
+                <div class="easychat-timepicker-container" align="center" id="easychat-timepicker-container">
+                    <div class="easychat-timepicker-div"> Start Time
+                        <p id="timepicker_error_0" style="color:red;display:none;">Please enter a valid time</p>
+                        <input type="text" style="width:83%" name="datepicker" class="easychat-timepicker" id="easychat-timepicker-startTime"> </div>
+                    <div class="easychat-timepicker-div"> End Time
+                        <p id="datepicker_error_1" style="color:red;display:none;">Please enter a valid time</p>
+                        <input type="text" style="width:83%" name="datepicker" class="easychat-timepicker" id="easychat-timepicker-endTime"> </div>
+                </div>
+
+                <div class="range-slider-div">
+                    <label>Range</label>
+                    <input type="range" min="0" max="10" value="4" placeholder="Select Range">
+                </div>
+                <div class="message-section-message-from-admin">
+                    <div class="message-section-message-from-admin-text-content ">
+                        Hey! I am Chatbot, your virtual asssistant. How may I help you? Hey! I am Chatbot, your virtual asssistant. How may I help you? Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia necessitatibus quasi iste dolor a. Debitis totam cum modi
+                        iusto cupiditate, quidem temporibus. Quos, ullam temporibus tempore officiis obcaecati error ducimus?
+
+
+                    </div>
+
+                </div>
+                <div class="easychat-feedback-wrapper">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="19.5" cy="19.5" r="18.5" fill="white" stroke="#0085FF" stroke-width="2"/>
+                        <g clip-path="url(#clip0)">
+                        <path d="M13.9383 18.825C13.1345 18.825 12.48 19.4795 12.48 20.2833V24.9499C12.48 25.7538 13.1345 26.4083 13.9383 26.4083H15.6883C16.0167 26.4083 16.3189 26.2974 16.5633 26.1131V18.825H13.9383Z" fill="#0085FF"/>
+                        <path d="M26.48 21.0125C26.48 20.6619 26.3412 20.3352 26.1002 20.0943C26.3727 19.7962 26.5115 19.3966 26.4736 18.9807C26.4053 18.2393 25.7374 17.6583 24.9522 17.6583H21.349C21.5275 17.1164 21.8133 16.123 21.8133 15.325C21.8133 14.0597 20.7382 12.9916 20.0633 12.9916C19.4572 12.9916 19.0244 13.3329 19.0057 13.3469C18.9369 13.4023 18.8967 13.4863 18.8967 13.575V15.553L17.2167 19.1925L17.1467 19.228V25.4802C17.6215 25.7042 18.2223 25.825 18.605 25.825H23.9594C24.5947 25.825 25.1506 25.3968 25.2812 24.8059C25.3483 24.502 25.3092 24.1957 25.1757 23.9297C25.6067 23.7127 25.8967 23.2688 25.8967 22.7625C25.8967 22.556 25.8494 22.3582 25.7596 22.1791C26.1907 21.9621 26.48 21.5182 26.48 21.0125Z" fill="#0085FF"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0">
+                        <rect width="14" height="14" fill="white" transform="translate(12.48 12.7)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+
+
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="19.5" cy="19.5" r="18.5" fill="white" stroke="#CFCFCF" stroke-width="2"/>
+                            <g clip-path="url(#clip0)">
+                            <path d="M24.5347 20.8767C25.3386 20.8757 25.9923 20.2205 25.9914 19.4167L25.9861 14.75C25.9852 13.9462 25.33 13.2924 24.5262 13.2933L22.7762 13.2953C22.4477 13.2957 22.1457 13.4069 21.9015 13.5915L21.9097 20.8796L24.5347 20.8767Z" fill="#CFCFCF"/>
+                            <path d="M11.9906 18.7033C11.991 19.0539 12.1302 19.3804 12.3714 19.6211C12.0993 19.9195 11.9609 20.3192 11.9993 20.7351C12.0684 21.4764 12.737 22.0567 13.5221 22.0558L17.1254 22.0517C16.9475 22.5938 16.6628 23.5876 16.6637 24.3856C16.6651 25.6508 17.7414 26.7177 18.4164 26.7169C19.0224 26.7162 19.4549 26.3745 19.4735 26.3604C19.5423 26.3049 19.5824 26.2209 19.5823 26.1323L19.5801 24.1542L21.256 20.5129L21.3259 20.4772L21.3189 14.225C20.8438 14.0016 20.2428 13.8815 19.8601 13.8819L14.5057 13.888C13.8705 13.8887 13.315 14.3175 13.1851 14.9086C13.1183 15.2126 13.1577 15.5188 13.2916 15.7846C12.8608 16.0021 12.5714 16.4464 12.5719 16.9527C12.5722 17.1592 12.6196 17.3569 12.7097 17.5359C12.2788 17.7533 11.99 18.1976 11.9906 18.7033Z" fill="#CFCFCF"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="14" height="14" fill="white" transform="translate(26 27) rotate(179.935)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="message-section-message-from-admin admin-side-queries">
+                    <div class="message-section-message-from-admin-text-content define-text">
+                        Hey! I am Chatbot, your virtual asssistant. How may I help you? Hey!
+
+
+                    </div>
+                    <div class="message-section-message-from-admin-text-content query-item">
+                        <a href="">Login Query</a>
+                    </div>
+                    <div class="message-section-message-from-admin-text-content query-item">
+                        <a href="">Change in personal details</a>
+                    </div>
+                    <div class="message-section-message-from-admin-text-content query-item">
+                        <a href="">Statement and bills</a>
+                    </div>
+                    <div class="message-section-message-from-admin-text-content query-item">
+                        <a href="">Brokrage and taxes</a>
+                    </div>
+
+
+                </div>
+
+
+                <div class="easychat-slides-wrapper">
+                    <div class="slideshow-container" value="1">
+                        <div class="mySlides fade easychat-slider-card">
+                            <img src="./img/upload-img.svg">
+                            <div>
+                                <h5 style="overflow-wrap: break-word; ">More about deposits</h5>
+                                <p style="overflow-wrap: break-word;">More about depositsgfghdcdcdhcccddcdcdcdvdvd dcddvdvvvvvvvvvvvvvvvdvdvdvdvdvdvdvdvfgvv
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="galleryContainer">
+                    <div class="slideShowContainer">
+                        <div onclick="move_gallary_slides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+                        <div onclick="move_gallary_slides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+                        <div style="cursor: pointer; opacity: 0; display: block;" class="GallarySlidesimageHolder moveLeftCurrentSlide"><img vlink="https://easychat-dev.allincall.in/files/Screenshot(10).png" onclick="open_link_banner(this)" src="https://easychat-dev.allincall.in/files/Screenshot(10).png"></div>
+                        <div style="cursor: pointer; display: block; transform: translate(67%, 0px) scale(0.6, 0.7); opacity: 0;" class="GallarySlidesimageHolder moveLeftNextSlide"><img vlink="https://easychat-dev.allincall.in/files/Screenshot(10)_h26dybi.png" onclick="open_link_banner(this)" src="https://easychat-dev.allincall.in/files/Screenshot(10)_h26dybi.png"></div>
+                        <div style="cursor: pointer; display: block; transform: translate(-67%, 0px) scale(0.6, 0.7); opacity: 0;" class="GallarySlidesimageHolder moveLeftNextNextSlide"><img vlink="https://easychat-dev.allincall.in/files/Screenshot(10)_h26dybi.png" onclick="open_link_banner(this)" src="https://easychat-dev.allincall.in/files/Screenshot(9).png"></div>
+                    </div>
+                    <div id="GallarydotsContainer"><span class="gallary_dots active" onclick="move_slide(0)"></span><span class="gallary_dots" onclick="move_slide(1)"></span><span class="gallary_dots" onclick="move_slide(2)"></span></div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="easychat-sticky" style="background: white;">
+            <div id="easychat-sticky-intents" style="margin-bottom: 0px; overflow: hidden; width: 100%; margin-left: 0px;">
+                <div>
+                    <div class="easychat-sticky-menu">
+                        <div class="menu-heading">Menu</div>
+                        <div onclick="display_sticky_menu_items(this)" class="arrow_up" style="margin-right:3%"><img src="./img/arrow-down.svg"></div>
+                    </div>
+                    <div class=" easychat-sticky-menu-items" id="easychat_sticky_menu_items">
+                        <div class="easychat-sticky-menu-item">
+                            <div>
+
+                                <img src="./img/iris-icon.svg">
+                            </div>
+                            <div class="easychat-sticky-menu-item-text">What’s an IRIS</div>
+                        </div>
+                        <div class="easychat-sticky-menu-item">
+                            <div>
+
+                                <img src="./img/chat-with-expert-icon.svg">
+                            </div>
+                            <div class="easychat-sticky-menu-item-text">Connect with Expert</div>
+                        </div>
+                        <div class="easychat-sticky-menu-item">
+                            <div>
+
+                                <img src="./img/help-icon.svg">
+                            </div>
+                            <div class="easychat-sticky-menu-item-text">Help</div>
+                        </div>
+                        <div class="easychat-sticky-menu-item">
+                            <div>
+
+                                <img src="./img/others-icon.svg">
+                            </div>
+                            <div class="easychat-sticky-menu-item-text">Others</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="theme7-bot-footer" id="easychat-footer">
+            <div class="home-reset-button tooltip">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.03277 0.326348C5.59146 -0.108783 6.40854 -0.108783 6.96723 0.326348L11.4672 3.83113C11.8051 4.09425 12 4.48152 12 4.88957V10.9229C12 11.5178 11.4777 12 10.8333 12H8.83334C8.189 12 7.66667 11.5178 7.66667 10.9229V7.84562C7.66667 7.59069 7.44281 7.38402 7.16667 7.38402H4.83333C4.55719 7.38402 4.33333 7.59069 4.33333 7.84562V10.9229C4.33333 11.5178 3.811 12 3.16667 12H1.16667C0.522335 12 0 11.5178 0 10.9229V4.88957C0 4.48152 0.194937 4.09425 0.53277 3.83113L5.03277 0.326348Z" fill="#0085FF"/>
+                    </svg>
+                <span class="tooltiptext" id="tooltiptext-home">Home</span>
+
+
+            </div>
+            <div class="theme7-bot-user-input">
+                <input type="text" id="user_input" autocomplete="off" placeholder="Type here..." value="">
+            </div>
+            <div class="theme7-bot-mic-div tooltip">
+                <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 0C3.10203 0 1.96875 1.00736 1.96875 2.25001V6.25003C1.96875 7.49268 3.10203 8.50004 4.5 8.50004C5.89797 8.50004 7.03125 7.49268 7.03125 6.25003V2.25001C7.03125 1.00736 5.89797 0 4.5 0Z" fill="#0085FF"/>
+                    <path d="M0.84375 5.87527C0.84375 5.66817 0.65487 5.50027 0.421875 5.50027C0.18888 5.50027 0 5.66838 0 5.87548V6.24999C0 8.33268 1.79067 10.0436 4.07813 10.2327V11.625C4.07813 11.8321 4.26701 12 4.5 12C4.733 12 4.92188 11.8321 4.92188 11.625V10.2327C7.20934 10.0436 9 8.33268 9 6.24999V5.87528C9 5.66817 8.81112 5.50028 8.57812 5.50028C8.34513 5.50028 8.15625 5.6683 8.15625 5.8754V6.24999C8.15625 8.04492 6.51929 9.50001 4.5 9.50001C2.48071 9.50001 0.84375 8.04471 0.84375 6.24978V5.87527Z" fill="#0085FF"/>
+                    </svg>
+                <span class="tooltiptext">Mic</span>
+
+
+            </div>
+            <div class="theme7-bot-user-input-send-btn tooltip">
+                <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7057 5.55368L0.803176 0.0528143C0.709887 0.00969082 0.605102 -0.00758782 0.501436 0.00305893C0.39777 0.0137057 0.299644 0.0518238 0.218872 0.112824C0.141735 0.172579 0.0841607 0.251039 0.0526208 0.339381C0.0210808 0.427724 0.0168259 0.522447 0.0403345 0.612903L1.47404 5.49868H7.593V6.49883H1.47404L0.0186936 11.3696C-0.00336576 11.4451 -0.00594077 11.5244 0.0111757 11.601C0.0282922 11.6777 0.0646227 11.7495 0.117246 11.8108C0.169869 11.8721 0.237316 11.9211 0.314164 11.9539C0.391012 11.9867 0.475117 12.0024 0.559716 11.9997C0.644409 11.9992 0.727799 11.9804 0.803176 11.9447L12.7057 6.44382C12.7943 6.40186 12.8687 6.3381 12.9206 6.25957C12.9725 6.18104 13 6.09079 13 5.99875C13 5.90672 12.9725 5.81646 12.9206 5.73794C12.8687 5.65941 12.7943 5.59565 12.7057 5.55368Z" fill="#0067DD"/>
+                    </svg>
+                <span class="tooltiptext">Send</span>
+
+
+            </div>
+
+        </div>
+        <div class="brand-name-section" id="brand-name-section">
+            <svg width="90" height="11" viewBox="0 0 90 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.8" d="M0.74 8V1H3.04C3.58667 1 4.03667 1.09 4.39 1.27C4.74333 1.45 5.00333 1.69333 5.17 2C5.34333 2.30667 5.43 2.65333 5.43 3.04C5.43 3.42 5.34667 3.76333 5.18 4.07C5.01333 4.37667 4.75333 4.62333 4.4 4.81C4.04667 4.99 3.59333 5.08 3.04 5.08H1.58V8H0.74ZM1.58 4.37H3.02C3.58 4.37 3.97667 4.25333 4.21 4.02C4.45 3.78 4.57 3.45333 4.57 3.04C4.57 2.62 4.45 2.29333 4.21 2.06C3.97667 1.82 3.58 1.7 3.02 1.7H1.58V4.37ZM7.94805 8.12C7.48138 8.12 7.06138 8.01333 6.68805 7.8C6.31471 7.58667 6.01805 7.28667 5.79805 6.9C5.58471 6.50667 5.47805 6.04667 5.47805 5.52C5.47805 4.99333 5.58805 4.53667 5.80805 4.15C6.02805 3.75667 6.32471 3.45333 6.69805 3.24C7.07805 3.02667 7.50138 2.92 7.96805 2.92C8.43471 2.92 8.85471 3.02667 9.22805 3.24C9.60138 3.45333 9.89471 3.75667 10.108 4.15C10.328 4.53667 10.438 4.99333 10.438 5.52C10.438 6.04667 10.328 6.50667 10.108 6.9C9.88805 7.28667 9.58805 7.58667 9.20805 7.8C8.83471 8.01333 8.41471 8.12 7.94805 8.12ZM7.94805 7.4C8.23471 7.4 8.50138 7.33 8.74805 7.19C8.99471 7.05 9.19471 6.84 9.34805 6.56C9.50138 6.28 9.57805 5.93333 9.57805 5.52C9.57805 5.10667 9.50138 4.76 9.34805 4.48C9.20138 4.2 9.00471 3.99 8.75805 3.85C8.51138 3.71 8.24805 3.64 7.96805 3.64C7.68138 3.64 7.41471 3.71 7.16805 3.85C6.92138 3.99 6.72138 4.2 6.56805 4.48C6.41471 4.76 6.33805 5.10667 6.33805 5.52C6.33805 5.93333 6.41471 6.28 6.56805 6.56C6.72138 6.84 6.91805 7.05 7.15805 7.19C7.40471 7.33 7.66805 7.4 7.94805 7.4ZM11.9205 8L10.4705 3.04H11.3105L12.3605 6.93L13.5205 3.04H14.4705L15.6405 6.93L16.6805 3.04H17.5305L16.0805 8H15.2205L14.0005 3.91L12.7805 8H11.9205ZM20.004 8.12C19.5307 8.12 19.1107 8.01333 18.744 7.8C18.3773 7.58 18.0873 7.27667 17.874 6.89C17.6673 6.50333 17.564 6.04667 17.564 5.52C17.564 5 17.6673 4.54667 17.874 4.16C18.0807 3.76667 18.3673 3.46333 18.734 3.25C19.1073 3.03 19.5373 2.92 20.024 2.92C20.504 2.92 20.9173 3.03 21.264 3.25C21.6173 3.46333 21.8873 3.74667 22.074 4.1C22.2607 4.45333 22.354 4.83333 22.354 5.24C22.354 5.31333 22.3507 5.38667 22.344 5.46C22.344 5.53333 22.344 5.61667 22.344 5.71H18.394C18.414 6.09 18.5007 6.40667 18.654 6.66C18.814 6.90667 19.0107 7.09333 19.244 7.22C19.484 7.34667 19.7373 7.41 20.004 7.41C20.3507 7.41 20.6407 7.33 20.874 7.17C21.1073 7.01 21.2773 6.79333 21.384 6.52H22.214C22.0807 6.98 21.824 7.36333 21.444 7.67C21.0707 7.97 20.5907 8.12 20.004 8.12ZM20.004 3.63C19.604 3.63 19.2473 3.75333 18.934 4C18.6273 4.24 18.4507 4.59333 18.404 5.06H21.524C21.504 4.61333 21.3507 4.26333 21.064 4.01C20.7773 3.75667 20.424 3.63 20.004 3.63ZM22.9673 8V3.04H23.7273L23.7973 3.99C23.9507 3.66333 24.184 3.40333 24.4973 3.21C24.8107 3.01667 25.1973 2.92 25.6573 2.92V3.8H25.4273C25.134 3.8 24.864 3.85333 24.6173 3.96C24.3707 4.06 24.174 4.23333 24.0273 4.48C23.8807 4.72667 23.8073 5.06667 23.8073 5.5V8H22.9673ZM28.1446 8.12C27.6713 8.12 27.2513 8.01333 26.8846 7.8C26.5179 7.58 26.2279 7.27667 26.0146 6.89C25.8079 6.50333 25.7046 6.04667 25.7046 5.52C25.7046 5 25.8079 4.54667 26.0146 4.16C26.2213 3.76667 26.5079 3.46333 26.8746 3.25C27.2479 3.03 27.6779 2.92 28.1646 2.92C28.6446 2.92 29.0579 3.03 29.4046 3.25C29.7579 3.46333 30.0279 3.74667 30.2146 4.1C30.4013 4.45333 30.4946 4.83333 30.4946 5.24C30.4946 5.31333 30.4913 5.38667 30.4846 5.46C30.4846 5.53333 30.4846 5.61667 30.4846 5.71H26.5346C26.5546 6.09 26.6413 6.40667 26.7946 6.66C26.9546 6.90667 27.1513 7.09333 27.3846 7.22C27.6246 7.34667 27.8779 7.41 28.1446 7.41C28.4913 7.41 28.7813 7.33 29.0146 7.17C29.2479 7.01 29.4179 6.79333 29.5246 6.52H30.3546C30.2213 6.98 29.9646 7.36333 29.5846 7.67C29.2113 7.97 28.7313 8.12 28.1446 8.12ZM28.1446 3.63C27.7446 3.63 27.3879 3.75333 27.0746 4C26.7679 4.24 26.5913 4.59333 26.5446 5.06H29.6646C29.6446 4.61333 29.4913 4.26333 29.2046 4.01C28.9179 3.75667 28.5646 3.63 28.1446 3.63ZM33.358 8.12C32.8646 8.12 32.4313 8.00667 32.058 7.78C31.6913 7.55333 31.4046 7.24333 31.198 6.85C30.998 6.45667 30.898 6.01 30.898 5.51C30.898 5.01 31.0013 4.56667 31.208 4.18C31.4146 3.78667 31.7013 3.48 32.068 3.26C32.4346 3.03333 32.868 2.92 33.368 2.92C33.7746 2.92 34.1346 3.00333 34.448 3.17C34.7613 3.33667 35.0046 3.57 35.178 3.87V0.8H36.018V8H35.258L35.178 7.18C35.018 7.42 34.788 7.63667 34.488 7.83C34.188 8.02333 33.8113 8.12 33.358 8.12ZM33.448 7.39C33.7813 7.39 34.0746 7.31333 34.328 7.16C34.588 7 34.788 6.78 34.928 6.5C35.0746 6.22 35.148 5.89333 35.148 5.52C35.148 5.14667 35.0746 4.82 34.928 4.54C34.788 4.26 34.588 4.04333 34.328 3.89C34.0746 3.73 33.7813 3.65 33.448 3.65C33.1213 3.65 32.828 3.73 32.568 3.89C32.3146 4.04333 32.1146 4.26 31.968 4.54C31.828 4.82 31.758 5.14667 31.758 5.52C31.758 5.89333 31.828 6.22 31.968 6.5C32.1146 6.78 32.3146 7 32.568 7.16C32.828 7.31333 33.1213 7.39 33.448 7.39ZM41.6838 8.12C41.2771 8.12 40.9138 8.03667 40.5938 7.87C40.2804 7.70333 40.0404 7.47 39.8738 7.17L39.7938 8H39.0338V0.8H39.8738V3.86C40.0338 3.62 40.2604 3.40333 40.5538 3.21C40.8538 3.01667 41.2338 2.92 41.6938 2.92C42.1871 2.92 42.6171 3.03333 42.9838 3.26C43.3504 3.48667 43.6338 3.79667 43.8338 4.19C44.0404 4.58333 44.1438 5.03 44.1438 5.53C44.1438 6.03 44.0404 6.47667 43.8338 6.87C43.6338 7.25667 43.3471 7.56333 42.9738 7.79C42.6071 8.01 42.1771 8.12 41.6838 8.12ZM41.5938 7.39C41.9271 7.39 42.2204 7.31333 42.4738 7.16C42.7271 7 42.9271 6.78 43.0738 6.5C43.2204 6.22 43.2938 5.89333 43.2938 5.52C43.2938 5.14667 43.2204 4.82 43.0738 4.54C42.9271 4.26 42.7271 4.04333 42.4738 3.89C42.2204 3.73 41.9271 3.65 41.5938 3.65C41.2604 3.65 40.9671 3.73 40.7138 3.89C40.4604 4.04333 40.2604 4.26 40.1138 4.54C39.9671 4.82 39.8938 5.14667 39.8938 5.52C39.8938 5.89333 39.9671 6.22 40.1138 6.5C40.2604 6.78 40.4604 7 40.7138 7.16C40.9671 7.31333 41.2604 7.39 41.5938 7.39ZM44.9527 10.2L46.1827 7.52H45.8927L43.9227 3.04H44.8327L46.4727 6.9L48.2127 3.04H49.0827L45.8327 10.2H44.9527ZM54.7758 8.12C54.0691 8.12 53.4624 7.97 52.9558 7.67C52.4491 7.36333 52.0591 6.94 51.7858 6.4C51.5124 5.85333 51.3758 5.22333 51.3758 4.51C51.3758 3.79667 51.5124 3.16667 51.7858 2.62C52.0591 2.07333 52.4491 1.64667 52.9558 1.34C53.4624 1.03333 54.0691 0.88 54.7758 0.88C55.6158 0.88 56.3024 1.09 56.8358 1.51C57.3758 1.92333 57.7124 2.50667 57.8458 3.26H56.4358C56.3491 2.88 56.1624 2.58333 55.8758 2.37C55.5958 2.15 55.2224 2.04 54.7558 2.04C54.1091 2.04 53.6024 2.26 53.2358 2.7C52.8691 3.14 52.6858 3.74333 52.6858 4.51C52.6858 5.27667 52.8691 5.88 53.2358 6.32C53.6024 6.75333 54.1091 6.97 54.7558 6.97C55.2224 6.97 55.5958 6.87 55.8758 6.67C56.1624 6.46333 56.3491 6.18 56.4358 5.82H57.8458C57.7124 6.54 57.3758 7.10333 56.8358 7.51C56.3024 7.91667 55.6158 8.12 54.7758 8.12ZM60.8288 8.12C60.3488 8.12 59.9155 8.01 59.5288 7.79C59.1488 7.57 58.8455 7.26667 58.6188 6.88C58.3988 6.48667 58.2888 6.03333 58.2888 5.52C58.2888 5.00667 58.4022 4.55667 58.6288 4.17C58.8555 3.77667 59.1588 3.47 59.5388 3.25C59.9255 3.03 60.3588 2.92 60.8388 2.92C61.3122 2.92 61.7388 3.03 62.1188 3.25C62.5055 3.47 62.8088 3.77667 63.0288 4.17C63.2555 4.55667 63.3688 5.00667 63.3688 5.52C63.3688 6.03333 63.2555 6.48667 63.0288 6.88C62.8088 7.26667 62.5055 7.57 62.1188 7.79C61.7322 8.01 61.3022 8.12 60.8288 8.12ZM60.8288 7.01C61.1622 7.01 61.4522 6.88667 61.6988 6.64C61.9455 6.38667 62.0688 6.01333 62.0688 5.52C62.0688 5.02667 61.9455 4.65667 61.6988 4.41C61.4522 4.15667 61.1655 4.03 60.8388 4.03C60.4988 4.03 60.2055 4.15667 59.9588 4.41C59.7188 4.65667 59.5988 5.02667 59.5988 5.52C59.5988 6.01333 59.7188 6.38667 59.9588 6.64C60.2055 6.88667 60.4955 7.01 60.8288 7.01ZM65.8008 6.52C65.5608 6.52 65.3374 6.49333 65.1308 6.44L64.7608 6.81C64.8741 6.87 65.0274 6.92 65.2208 6.96C65.4141 7 65.7274 7.04 66.1608 7.08C66.8208 7.14 67.3008 7.29667 67.6008 7.55C67.9008 7.80333 68.0508 8.15333 68.0508 8.6C68.0508 8.89333 67.9708 9.17 67.8108 9.43C67.6508 9.69667 67.4041 9.91 67.0708 10.07C66.7374 10.2367 66.3108 10.32 65.7908 10.32C65.0841 10.32 64.5141 10.1867 64.0808 9.92C63.6474 9.66 63.4308 9.26667 63.4308 8.74C63.4308 8.29333 63.6474 7.90667 64.0808 7.58C63.9474 7.52 63.8308 7.45667 63.7308 7.39C63.6374 7.32333 63.5541 7.25333 63.4808 7.18V6.95L64.3508 6.03C63.9641 5.69 63.7708 5.25333 63.7708 4.72C63.7708 4.38667 63.8508 4.08333 64.0108 3.81C64.1774 3.53667 64.4108 3.32 64.7108 3.16C65.0108 3 65.3741 2.92 65.8008 2.92C66.0808 2.92 66.3408 2.96 66.5808 3.04H68.4608V3.82L67.6108 3.88C67.7441 4.13333 67.8108 4.41333 67.8108 4.72C67.8108 5.05333 67.7308 5.35667 67.5708 5.63C67.4108 5.90333 67.1774 6.12 66.8708 6.28C66.5708 6.44 66.2141 6.52 65.8008 6.52ZM65.8008 5.54C66.0608 5.54 66.2741 5.47 66.4408 5.33C66.6141 5.19 66.7008 4.99 66.7008 4.73C66.7008 4.47 66.6141 4.27 66.4408 4.13C66.2741 3.99 66.0608 3.92 65.8008 3.92C65.5274 3.92 65.3074 3.99 65.1408 4.13C64.9741 4.27 64.8908 4.47 64.8908 4.73C64.8908 4.99 64.9741 5.19 65.1408 5.33C65.3074 5.47 65.5274 5.54 65.8008 5.54ZM64.6008 8.61C64.6008 8.85667 64.7141 9.04 64.9408 9.16C65.1741 9.28667 65.4574 9.35 65.7908 9.35C66.1108 9.35 66.3708 9.28333 66.5708 9.15C66.7708 9.02333 66.8708 8.85 66.8708 8.63C66.8708 8.45 66.8041 8.3 66.6708 8.18C66.5441 8.06 66.2874 7.98667 65.9008 7.96C65.6274 7.94 65.3741 7.91 65.1408 7.87C64.9474 7.97667 64.8074 8.09333 64.7208 8.22C64.6408 8.34667 64.6008 8.47667 64.6008 8.61ZM68.8941 8V3.04H70.0241L70.1241 3.88C70.2775 3.58667 70.4975 3.35333 70.7841 3.18C71.0775 3.00667 71.4208 2.92 71.8141 2.92C72.4275 2.92 72.9041 3.11333 73.2441 3.5C73.5841 3.88667 73.7541 4.45333 73.7541 5.2V8H72.4741V5.32C72.4741 4.89333 72.3875 4.56667 72.2141 4.34C72.0408 4.11333 71.7708 4 71.4041 4C71.0441 4 70.7475 4.12667 70.5141 4.38C70.2875 4.63333 70.1741 4.98667 70.1741 5.44V8H68.8941ZM76.8581 8.12C76.3781 8.12 75.9448 8.01 75.5581 7.79C75.1781 7.57 74.8748 7.26667 74.6481 6.88C74.4281 6.48667 74.3181 6.03333 74.3181 5.52C74.3181 5.00667 74.4315 4.55667 74.6581 4.17C74.8848 3.77667 75.1881 3.47 75.5681 3.25C75.9548 3.03 76.3881 2.92 76.8681 2.92C77.3415 2.92 77.7681 3.03 78.1481 3.25C78.5348 3.47 78.8381 3.77667 79.0581 4.17C79.2848 4.55667 79.3981 5.00667 79.3981 5.52C79.3981 6.03333 79.2848 6.48667 79.0581 6.88C78.8381 7.26667 78.5348 7.57 78.1481 7.79C77.7615 8.01 77.3315 8.12 76.8581 8.12ZM76.8581 7.01C77.1915 7.01 77.4815 6.88667 77.7281 6.64C77.9748 6.38667 78.0981 6.01333 78.0981 5.52C78.0981 5.02667 77.9748 4.65667 77.7281 4.41C77.4815 4.15667 77.1948 4.03 76.8681 4.03C76.5281 4.03 76.2348 4.15667 75.9881 4.41C75.7481 4.65667 75.6281 5.02667 75.6281 5.52C75.6281 6.01333 75.7481 6.38667 75.9881 6.64C76.2348 6.88667 76.5248 7.01 76.8581 7.01ZM81.5054 8L84.0654 1H85.5054L88.0654 8H86.7054L86.1454 6.38H83.4154L82.8454 8H81.5054ZM83.7654 5.38H85.7954L84.7754 2.47L83.7654 5.38ZM88.4671 8V1H89.7471V8H88.4671Z" fill="#4D4D4D"/>
+                </svg>
+
+        </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> -->
+
+    <script>
+        setTimeout(function() {
+            $("#easychat-datepicker-startDate").datepicker({
+
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                showAnim: "clip",
+                format: "d/m/yyyy",
+                minDate: "01/01/1900",
+                maxDate: "31/12/2050",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "1900:2050",
+                regional: "it",
+
+                firstDay: 1,
+                minDate: Date.parse("1900-01-01"),
+                maxDate: Date.parse("2100-01-01"),
+                yearRange: "c-90:c+150"
+            })
+        }, 200);
+        setTimeout(function() {
+            $("#easychat-datepicker-endDate").datepicker({
+
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                showAnim: "clip",
+                format: "d/m/yyyy",
+                minDate: "01/01/1900",
+                maxDate: "31/12/2050",
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "1900:2050",
+                regional: "it",
+
+                firstDay: 1,
+                minDate: Date.parse("1900-01-01"),
+                maxDate: Date.parse("2100-01-01"),
+                yearRange: "c-90:c+150"
+            })
+        }, 200);
+
+        setTimeout(function() {
+
+            $("#easychat-timepicker-startTime").timepicker({
+                timeFormat: 'h:i a',
+                appendTo: 'body',
+                className: null,
+                closeOnWindow: false,
+                disableTextInput: false,
+                disableTimeRanges: [],
+                disableTouchKeyboard: false,
+                durationTime: null,
+                forceRoundTime: false,
+                maxTime: null,
+                minTime: null,
+                noneOption: false,
+                orientation: 'l',
+                scrollDefault: null,
+                selectOnBlur: false,
+                show2400: true,
+                showDuration: false,
+                showOnFocus: true,
+                step: 15,
+                stopScrollPropagation: false,
+                typeaheadHighlight: false,
+                useSelect: false,
+                autoclose: true,
+            })
+        }, 200);
+        setTimeout(function() {
+
+            $("#easychat-timepicker-endTime").timepicker({
+                timeFormat: 'h:i a',
+                appendTo: 'body',
+                className: null,
+                closeOnWindow: false,
+                disableTextInput: false,
+                disableTimeRanges: [],
+                disableTouchKeyboard: false,
+                durationTime: null,
+                forceRoundTime: false,
+                maxTime: null,
+                minTime: null,
+                noneOption: false,
+                orientation: 'l',
+                scrollDefault: null,
+                selectOnBlur: false,
+                show2400: true,
+                showDuration: false,
+                showOnFocus: true,
+                step: 15,
+                stopScrollPropagation: false,
+                typeaheadHighlight: false,
+                useSelect: false,
+                autoclose: true,
+            })
+        }, 200);
+    </script>
+
+
+
+
+    <script>
+        var EASYCHAT_IMG_PATH = "./img/";
+
+        function display_sticky_menu_items(elem) {
+            var EASYCHAT_IMG_PATH = "./img/";
+
+            if (elem.classList.contains('arrow_up')) {
+                elem.className = 'arrow_down';
+                elem.firstChild.src = EASYCHAT_IMG_PATH + 'arrow-up.svg';
+
+                let sticky_menu = document.getElementById('easychat_sticky_menu_items');
+                sticky_menu.className += ' easychat-sticky-menu-items-show';
+                resize_chabot_window(1);
+
+            } else {
+                elem.className = 'arrow_up';
+                elem.firstChild.src = EASYCHAT_IMG_PATH + 'arrow-down.svg';
+
+                let sticky_menu = document.getElementById('easychat_sticky_menu_items');
+                sticky_menu.className = 'easychat-sticky-menu-items';
+
+
+                resize_chabot_window(2);
+            }
+
+            scrollTopFunc();
+
+        }
+
+        function resize_chabot_window(count) {
+            const realheight = document.getElementById('easychat-chat-container').clientHeight;
+
+
+            if (count == 1) {
+
+
+                let messageDiv = document.getElementById('easychat-chat-container').clientHeight;
+
+                let stickyDiv = document.getElementById('easychat-sticky').clientHeight;
+
+                let navBar = document.getElementById("easychat-navbar").clientHeight;
+                // console.log(navBar, typeof(navBar));
+                let sticky_intent_height = document.getElementById("easychat-footer").clientHeight;
+
+
+
+                document.getElementById('easychat-chat-container').style.height = (messageDiv - stickyDiv + navBar + sticky_intent_height).toString() + "px";
+
+            }
+            if (count == 2) {
+
+                let newHeight = (document.getElementById('easychat-chat-container').clientHeight + document.getElementById('easychat-sticky').clientHeight + document.getElementById("easychat-navbar").clientHeight + document.getElementById("easychat-footer").clientHeight - 21).toString() + "px";
+                document.getElementById('easychat-chat-container').style.height = newHeight;
+
+            }
+
+
+
+
+
+
+        }
+
+        function click_dropdown() {
+            $(".easychat-widget-dropdown-content").toggleClass("easychat-display-dropdown");
+
+            $(".without-flip").toggleClass("flip-svg");
+
+
+
+
+        }
+
+
+
+        $(document).on("change", "input[type='checkbox']", function() {
+            $(this).parent()[this.checked ? "addClass" : "removeClass"]("checked");
+        });
+
+        $(document).on("change", ".checkbox-btn-container-item input[type='checkbox']", function() {
+            $(this).parent()[this.checked ? "addClass" : "removeClass"]("border-around");
+        });
+
+        $(document).ready(function() {
+
+            $('.radio-btn-container input:radio').change(function() {
+
+                $('div.border-around-radio').removeClass('border-around-radio');
+                $(this).closest('.radio-btn-container-item').addClass('border-around-radio');
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            var showChar = 100;
+            var ellipsestext = "...";
+            var moretext = "Read more";
+            var lesstext = "Read less";
+            $('.more').each(function() {
+                var content = $(this).html();
+
+                if (content.length > showChar) {
+
+                    var c = content.substr(0, showChar);
+                    var h = content.substr(showChar - 1, content.length - showChar);
+
+                    var html = c + '<span class="moreelipses">' + ellipsestext + '</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+                    $(this).html(html);
+                }
+
+            });
+
+            $(".morelink").click(function() {
+                if ($(this).hasClass("less")) {
+                    $(this).removeClass("less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
