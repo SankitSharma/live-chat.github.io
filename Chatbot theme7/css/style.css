@@ -199,7 +199,7 @@ body {
     max-width: 100%;
     max-height: 608px;
     width: 398px;
-    height: 700px;
+    height: 85vh;
     overflow: hidden;
     bottom: 0px;
     right: 10px;
@@ -1482,6 +1482,9 @@ a.morelink {
     .message-section-message-from-user-text-content {
         max-width: 270px;
     }
+    .easychat-feedback-wrapper {
+        max-width: 270px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -1490,16 +1493,17 @@ a.morelink {
         height: 480px !important;
     }
     .message-section-area {
-        height: 310px; */
+        height: 310px;
+} */
+    .message-section-message-from-admin-text-content,
+    .message-section-message-from-user-text-content {
+        max-width: 250px;
+    }
+    .easychat-feedback-wrapper {
+        max-width: 250px;
+    }
 }
 
-.message-section-message-from-admin-text-content,
-.message-section-message-from-user-text-content {
-    max-width: 250px;
-}
-
-
-}
 @media screen and (max-width: 375px) {
     /* .wrapper {
         width: 97%;
@@ -1509,12 +1513,15 @@ a.morelink {
     .message-section-area {
         height: 350px;
     } */
-    
     .message-section-message-from-admin-text-content,
     .message-section-message-from-user-text-content {
         max-width: 280px;
     }
+    .easychat-feedback-wrapper {
+        max-width: 280px;
+    }
 }
+
 
 /* @media screen and (max-height: 700px) {
     .wrapper {
