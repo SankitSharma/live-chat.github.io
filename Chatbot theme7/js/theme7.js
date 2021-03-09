@@ -18,14 +18,21 @@ function scrollTopFunc() {
 
 }
 
-// function hideBotFunc() {
-//     document.getElementById('main-container').style.opacity = "0";
+function hideBotFunc() {
 
+    $(".wrapper").toggleClass("display-bot-div");
+    document.getElementById("click").checked = false;
+
+
+}
+// function openBotFunc() {
+//     $(".wrapper").toggleClass("display-bot-div");
 
 // }
 
 function callfunc() {
     //document.getElementById('main-container').style.opacity = "1";
+    $(".wrapper").toggleClass("display-bot-div");
 
     init_gallery();
     messageDivHeight();

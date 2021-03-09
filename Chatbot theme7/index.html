@@ -18,6 +18,8 @@
     <script type="text/javascript" src="js/select2.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
 
@@ -26,9 +28,9 @@
 <body>
 
 
-
-    <input type="checkbox" id="click" style="visibility: hidden;">
-    <label class="bot-opener" for="click" onclick="callfunc();">
+    <div class="bot-opener-div" onclick="openBotFunc()">
+        <input type="checkbox" id="click" style="visibility: hidden;">
+        <label class="bot-opener" for="click" onclick="callfunc();">
     <span class="minimized-view-icon" >
         <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d)">
@@ -55,7 +57,9 @@
             </svg>
 
 </label>
-    <div class="wrapper" id="main-container">
+    </div>
+
+    <div class="wrapper animate__animated animate__slideInUp" id="main-container">
         <div class="head-text" id="easychat-navbar">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="#0085FF"/>
@@ -533,6 +537,7 @@
                 // console.log(navBar, typeof(navBar));
                 let sticky_intent_height = document.getElementById("easychat-footer").clientHeight;
 
+                var botBrandname = document.getElementById('brand-name-section').clientHeight;
 
 
                 document.getElementById('easychat-chat-container').style.height = (messageDiv - stickyDiv + navBar + sticky_intent_height).toString() + "px";
@@ -540,7 +545,7 @@
             }
             if (count == 2) {
 
-                let newHeight = (document.getElementById('easychat-chat-container').clientHeight + document.getElementById('easychat-sticky').clientHeight + document.getElementById("easychat-navbar").clientHeight + document.getElementById("easychat-footer").clientHeight - 21).toString() + "px";
+                let newHeight = (document.getElementById('easychat-chat-container').clientHeight + document.getElementById('easychat-sticky').clientHeight + document.getElementById("easychat-navbar").clientHeight + document.getElementById("easychat-footer").clientHeight - 24).toString() + "px";
                 document.getElementById('easychat-chat-container').style.height = newHeight;
 
             }
