@@ -128,18 +128,18 @@
 
 
 
-            <img id="angry-emoji-div" style="width: 60px; height: 60px;" src="./img/angry-emoji-animate.gif">
-            <img id="sad-emoji-div" src="./img/sad-emoji.svg">
+            <img id="angry-emoji-div" onclick="document.getElementById('feedback-value').value = 8; setValue(); feedbackValueFunc();" style="width: 60px; height: 60px;" src="./img/angry-emoji-animate.gif">
+            <img id="sad-emoji-div" onclick="document.getElementById('feedback-value').value = 38; setValue(); feedbackValueFunc()" src="./img/sad-emoji.svg">
 
-            <img id="happy-emoji-div" src="./img/happy-emoji.svg">
+            <img id="happy-emoji-div" onclick="document.getElementById('feedback-value').value = 65; setValue(); feedbackValueFunc()" src="./img/happy-emoji.svg">
 
-            <img id="inlove-emoji-div" src="./img/in-love-emoji.svg">
+            <img id="inlove-emoji-div" onclick="document.getElementById('feedback-value').value = 94; setValue(); feedbackValueFunc()" src="./img/in-love-emoji.svg">
 
 
         </div>
         <div class="feedback-slider-div">
             <div class="range-value" id="rangeV"></div>
-            <input id="feedback-value" oninput="feedbackValueFunc()" type="range" min="0" max="100" value="5" class="slider" name="rangeInput">
+            <input id="feedback-value" oninput="feedbackValueFunc();" type="range" min="0" max="100" value="5" class="slider" name="rangeInput">
             <!-- <p style="height: 20px;" id="append-feedback-value">Very unsatisfied</p> -->
             <!-- <p style="height: 20px;" id="append-feedback-value1"></p> -->
 
