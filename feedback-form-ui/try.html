@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-height: 100vh;
+            padding: 0 10vh;
+            margin: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        input[type=range] {
+            -webkit-appearance: none;
+            margin: 20px 0;
+            width: 100%;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+        }
+        
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: #03a9f4;
+            border-radius: 25px;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 1);
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -8px;
+        }
+        
+        input[type=range]:focus::-webkit-slider-runnable-track {
+            background: #03a9f4;
+        }
+        
+        .range-wrap {
+            width: 500px;
+            position: relative;
+        }
+        
+        .range-value {
+            position: absolute;
+            top: 90%;
+        }
+        
+        .range-value span {
+            width: 30px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            background: #03a9f4;
+            color: #fff;
+            font-size: 12px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="range-wrap">
+
+        <input id="range" type="range" min="0" max="100" value="5" step="1">
+        <div class="range-value" id="rangeV"></div>
+    </div>
+
+    <script>
+        const
+            range = document.getElementById('range'),
+            rangeV = document.getElementById('rangeV'),
+            setValue = () => {
+                const
+                    newValue = Number((range.value - range.min) * 100 / (range.max - range.min)),
+                    newPosition = 10 - (newValue * 0.2);
+
+
+                if (range.value <= 25) {
+                    rangeV.innerHTML = `<span>${'Not satishfied'}</span>`;
+                    rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+                }
+                if (range.value >= 25 && range.value <= 50) {
+                    rangeV.innerHTML = `<span>${'Unsatishfied'}</span>`;
+                    rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+                }
+                if (range.value >= 50 && range.value <= 75) {
+                    rangeV.innerHTML = `<span>${'happy'}</span>`;
+                    rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+                }
+                if (range.value >= 75) {
+                    rangeV.innerHTML = `<span>${'Uhappy'}</span>`;
+                    rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+                }
+
+            };
+        document.addEventListener("DOMContentLoaded", setValue);
+        range.addEventListener('input', setValue);
+    </script>
+</body>
+
+</html>

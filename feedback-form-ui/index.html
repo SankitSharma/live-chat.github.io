@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        .slider {
+            -webkit-appearance: none;
+            margin: 10px 0;
+            width: 100%;
+        }
+        
+        .slider:focus {
+            outline: none;
+        }
+        
+        .slider::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 12.8px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #DFF0FF 0%, #168FFF 98.29%);
+            border: 2px solid #E0DFE0;
+            border-radius: 10px;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            border: 2px solid #E0DFE0;
+            height: 20px;
+            width: 20px;
+            border-radius: 7px;
+            background: #0085FF;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -5.6px;
+            border-radius: 50%;
+        }
+        
+        .slider:focus::-webkit-slider-runnable-track {
+            background: linear-gradient(90deg, #DFF0FF 0%, #168FFF 98.29%);
+        }
+        
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 10.8px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #DFF0FF 0%, #168FFF 98.29%);
+            border: 2px solid #E0DFE0;
+            border-radius: 10px;
+        }
+        
+        input[type=range]::-moz-range-thumb {
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            border: 2px solid #E0DFE0;
+            height: 16px;
+            width: 16px;
+            border-radius: 7px;
+            background: #0085FF;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -6px;
+            border-radius: 50%;
+        }
+        
+        input[type=range]::-ms-track {
+            width: 100%;
+            height: 10.8px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #DFF0FF 0%, #168FFF 98.29%);
+            border: 2px solid #E0DFE0;
+            border-radius: 10px;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+        
+        input[type=range]::-ms-fill-lower {
+            background: linear-gradient(90deg, #DFF0FF 0%, #168FFF 98.29%);
+            border: 2px solid #E0DFE0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        }
+        
+        input[type=range]::-ms-fill-upper {
+            background: linear-gradient(90deg, #DFF0FF 0%, #168FFF 98.29%);
+            border: 2px solid #E0DFE0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        }
+        
+        input[type=range]::-ms-thumb {
+            box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+            border: 2px solid #E0DFE0;
+            height: 16px;
+            width: 16px;
+            border-radius: 7px;
+            background: #0085FF;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -6px;
+            border-radius: 50%;
+        }
+        
+        input[type=range]:focus::-ms-fill-lower {
+            background: linear-gradient(90deg, #DFF0FF 0%, #168FFF 98.29%);
+        }
+        
+        input[type=range]:focus::-ms-fill-upper {
+            background: linear-gradient(90deg, #DFF0FF 0%, #168FFF 98.29%);
+        }
+        
+        body {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <style data="test" type="text/css"></style>
+    <div class="chatbot-feedback-div">
+        <div class="feedback-heading-div">Share your feedback</div>
+        <div class="feedback-emoji-div">
+
+
+
+            <img id="angry-emoji-div" style="width: 60px; height: 60px;" src="./img/angry-emoji-animate.gif">
+            <img id="sad-emoji-div" src="./img/sad-emoji.svg">
+
+            <img id="happy-emoji-div" src="./img/happy-emoji.svg">
+
+            <img id="inlove-emoji-div" src="./img/in-love-emoji.svg">
+
+
+        </div>
+        <div class="feedback-slider-div">
+            <div class="range-value" id="rangeV"></div>
+            <input id="feedback-value" oninput="feedbackValueFunc()" type="range" min="0" max="100" value="5" class="slider" name="rangeInput">
+            <!-- <p style="height: 20px;" id="append-feedback-value">Very unsatisfied</p> -->
+            <!-- <p style="height: 20px;" id="append-feedback-value1"></p> -->
+
+
+
+        </div>
+        <div class="feedback-textarea">
+            <textarea autocomplete="off" placeholder="Tell us about your experience(Optional)"></textarea>
+        </div>
+        <div class="feedback-button-div">
+            <button id="no-thanks-btn">No, Thanks</button>
+            <button id="submit-btn">Submit</button>
+        </div>
+
+
+
+    </div>
+    <script>
+        var
+            range = document.getElementById('feedback-value'),
+            rangeV = document.getElementById('rangeV');
+
+        function setValue() {
+
+
+            var
+                newValue = Number((range.value - range.min) * 100 / (range.max - range.min)),
+                newPosition = 10 - (newValue * 0.2);
+
+
+            if (range.value <= 25) {
+                rangeV.innerHTML = `<span>${'Very unsatisfied'}</span>`;
+                rangeV.style.left = `calc(${newValue + 14}% + (${newPosition}px))`;
+            }
+            if (range.value >= 25 && range.value <= 50) {
+                rangeV.innerHTML = `<span>${'Unsatisfied'}</span>`;
+                rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+            }
+            if (range.value >= 50 && range.value <= 75) {
+                rangeV.innerHTML = `<span>${'Satisfied'}</span>`;
+                rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+            }
+            if (range.value >= 75) {
+                rangeV.innerHTML = `<span>${'Very satisfied'}</span>`;
+                rangeV.style.left = `calc(${newValue - 12}% + (${newPosition}px))`;
+            }
+
+        };
+        document.addEventListener("DOMContentLoaded", setValue);
+        range.addEventListener('input', setValue);
+
+
+
+
+
+
+
+
+
+
+        // const range = document.getElementById("feedback-value");
+        // var style = document.querySelector('[data="test"]');
+
+        // range.addEventListener("input", () => {
+        //     const slider_value = range.value;
+        //     let thumb_color;
+        //     if (slider_value <= 25) {
+        //         thumb_color = "#e97b3c";
+        //     } else if (slider_value >= 25 && slider_value <= 50) {
+        //         thumb_color = "rgb(255, 255, 0)";
+        //     } else if (slider_value >= 50 && slider_value <= 75) {
+        //         thumb_color = "rgb(29, 259, 0)";
+        //     } else {
+        //         thumb_color = "rgb(0, 5, 0)";
+        //     }
+        //     style.innerHTML = `.slider::-webkit-slider-thumb { background-color: ${thumb_color} !important; } .slider:-moz-range-thumb {  ${thumb_color} !important; }`;
+        // });
+
+
+
+
+
+
+        function feedbackValueFunc() {
+            var rangevalue = document.getElementById('feedback-value').value;
+            //document.getElementById('append-feedback-value1').innerText = rangevalue;
+
+            if (rangevalue <= 25) {
+                // document.getElementById('append-feedback-value').innerText = "Very unsatisfied";
+                document.getElementById('angry-emoji-div').src = './img/angry-emoji-animate.gif';
+                document.getElementById('sad-emoji-div').src = './img/sad-emoji.svg';
+                document.getElementById('happy-emoji-div').src = './img/happy-emoji.svg';
+                document.getElementById('inlove-emoji-div').src = './img/in-love-emoji.svg';
+                document.getElementById('angry-emoji-div').style.width = '60px';
+                document.getElementById('angry-emoji-div').style.height = '60px';
+
+
+            } else {
+                document.getElementById('angry-emoji-div').style.width = '52px';
+                document.getElementById('angry-emoji-div').style.height = '52px';
+            }
+            if (rangevalue >= 25 && rangevalue <= 50) {
+                //  document.getElementById('append-feedback-value').innerText = "Unsatisfied";
+                document.getElementById('sad-emoji-div').src = './img/sad-emoji-animate.gif';
+                document.getElementById('angry-emoji-div').src = './img/angry-emoji.svg';
+
+                document.getElementById('happy-emoji-div').src = './img/happy-emoji.svg';
+                document.getElementById('inlove-emoji-div').src = './img/in-love-emoji.svg';
+                document.getElementById('sad-emoji-div').style.width = '60px';
+                document.getElementById('sad-emoji-div').style.height = '60px';
+
+
+
+            } else {
+                document.getElementById('sad-emoji-div').style.width = '52px';
+                document.getElementById('sad-emoji-div').style.height = '52px';
+            }
+            if (rangevalue >= 50 && rangevalue <= 75) {
+                //  document.getElementById('append-feedback-value').innerText = "Satisfied";
+                document.getElementById('happy-emoji-div').src = './img/happy-emoji-animate.gif';
+
+                document.getElementById('angry-emoji-div').src = './img/angry-emoji.svg';
+
+                document.getElementById('sad-emoji-div').src = './img/sad-emoji.svg';
+
+                document.getElementById('inlove-emoji-div').src = './img/in-love-emoji.svg';
+                document.getElementById('happy-emoji-div').style.width = '60px';
+                document.getElementById('happy-emoji-div').style.height = '60px';
+
+
+            } else {
+                document.getElementById('happy-emoji-div').style.width = '52px';
+                document.getElementById('happy-emoji-div').style.height = '52px';
+            }
+
+            if (rangevalue >= 75) {
+                //document.getElementById('append-feedback-value').innerText = "Very satisfied";
+                document.getElementById('inlove-emoji-div').src = './img/in-love-emoji-animate.gif';
+                document.getElementById('angry-emoji-div').src = './img/angry-emoji.svg';
+                document.getElementById('sad-emoji-div').src = './img/sad-emoji.svg';
+                document.getElementById('happy-emoji-div').src = './img/happy-emoji.svg';
+                document.getElementById('inlove-emoji-div').style.width = '60px';
+                document.getElementById('inlove-emoji-div').style.height = '60px';
+
+
+
+            } else {
+                document.getElementById('inlove-emoji-div').style.width = '52px';
+                document.getElementById('inlove-emoji-div').style.height = '52px';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
